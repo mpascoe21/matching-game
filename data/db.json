@@ -1,0 +1,3183 @@
+{
+    "employees": [
+        {
+            "id":1311,
+            "date":"2021-03-01T10:11:58",
+            "title":"Sean McGrath",
+            "title_seo":"Sean McGrath | Twogether",
+            "slug":"sean-mcgrath",
+            "first_name":"Sean",
+            "last_name":"McGrath",
+            "email":"sean.mcgrath@wearetwogether.com",
+            "position":"Senior Copywriter",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-male-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-male.jpg"
+            },
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":1310,
+            "date":"2021-03-01T10:06:16",
+            "title":"Olly Caunce",
+            "title_seo":"Olly Caunce | Twogether",
+            "slug":"olly-caunce",
+            "first_name":"Olly ",
+            "last_name":"Caunce",
+            "email":"olly.caunce@wearetwogether.com",
+            "position":"Media Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-male-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-male.jpg"
+            },
+            "order":0,
+            "department":[
+                "media"
+            ]
+        },
+        {
+            "id":1309,
+            "date":"2021-03-01T10:05:16",
+            "title":"Hannah Partington",
+            "title_seo":"Hannah Partington | Twogether",
+            "slug":"hannah-partington",
+            "first_name":"Hannah",
+            "last_name":"Partington",
+            "email":"hannah.partington@wearetwogether.com",
+            "position":"Media Account Executive",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female.jpg"
+            },
+            "order":0,
+            "department":[
+                "media"
+            ]
+        },
+        {
+            "id":1308,
+            "date":"2021-03-01T10:04:15",
+            "title":"Bally Heer",
+            "title_seo":"Bally Heer | Twogether",
+            "slug":"bally-heer",
+            "first_name":"Bally",
+            "last_name":"Heer",
+            "email":"bally.heer@wearetwogether.com",
+            "position":"Senior Financial Accountant",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female.jpg"
+            },
+            "order":0,
+            "department":[
+                "business-support"
+            ]
+        },
+        {
+            "id":1290,
+            "date":"2021-02-05T22:23:41",
+            "title":"Kate Dohren",
+            "title_seo":"Kate Dohren | Twogether",
+            "slug":"kate-dohren",
+            "first_name":"Kate",
+            "last_name":"Dohren",
+            "email":"kate.dohren@wearetwogether.com",
+            "position":"Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female.jpg"
+            },
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":1289,
+            "date":"2021-02-05T22:07:40",
+            "title":"Ana Cardona",
+            "title_seo":"Ana Cardona | Twogether",
+            "slug":"ana-cardona",
+            "first_name":"Ana",
+            "last_name":"Cardona",
+            "email":"ana.cardona@wearetwogether.com",
+            "position":"Account Manager, Concierge",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female.jpg"
+            },
+            "order":0,
+            "department":[
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":1240,
+            "date":"2021-01-14T12:06:58",
+            "title":"Eve Fantom",
+            "title_seo":"Eve Fantom | Twogether",
+            "slug":"eve-fantom",
+            "first_name":"Eve",
+            "last_name":"Fantom",
+            "position":"Senior Digital Marketing Strategist",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female.jpg"
+            },
+            "email":"eve.fantom@wearetwogether.com",
+            "order":0,
+            "department":[
+                "strategy"
+            ]
+        },
+        {
+            "id":1239,
+            "date":"2021-01-14T12:06:03",
+            "title":"Anousha Ramcharun",
+            "title_seo":"Anousha Ramcharun | Twogether",
+            "slug":"anousha-ramcharun",
+            "first_name":"Anousha",
+            "last_name":"Ramcharun",
+            "position":"Assistant Management Accountant",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-anousha-ramcharun-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-anousha-ramcharun.jpg"
+            },
+            "email":"anousha.ramcharun@wearetwogether.com",
+            "order":0,
+            "department":[
+                "business-support"
+            ]
+        },
+        {
+            "id":1235,
+            "date":"2021-01-13T15:08:37",
+            "title":"Thu-Mai Oram",
+            "title_seo":"Thu-Mai Oram | Twogether",
+            "slug":"thu-mai",
+            "first_name":"Thu-Mai",
+            "last_name":"Oram",
+            "position":"Senior Media Planner and Strategist",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-thu.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-thu.jpg"
+            },
+            "email":"thu.mai@wearetwogether.com",
+            "order":0,
+            "department":[
+                "media",
+                "strategy"
+            ]
+        },
+        {
+            "id":1207,
+            "date":"2021-01-06T16:30:44",
+            "title":"Noora Rautiainen",
+            "title_seo":"Noora Rautiainen | Twogether",
+            "slug":"noora-rautiainen",
+            "first_name":"Noora",
+            "last_name":"Rautiainen",
+            "position":"Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-noora-rautiainen-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-noora-rautiainen.jpg"
+            },
+            "email":"noora.rautiainen@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":1206,
+            "date":"2021-01-06T16:29:45",
+            "title":"Glenn Carey",
+            "title_seo":"Glenn Carey | Twogether",
+            "slug":"glenn-carey",
+            "first_name":"Glenn",
+            "last_name":"Carey",
+            "position":"Senior Copywriter",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-male-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-male.jpg"
+            },
+            "email":"glenn.carey@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":1205,
+            "date":"2021-01-06T16:28:57",
+            "title":"Dan Forsyth",
+            "title_seo":"Dan Forsyth | Twogether",
+            "slug":"dan-forsyth",
+            "first_name":"Dan",
+            "last_name":"Forsyth",
+            "position":"Senior Creative Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-dan-forsyth-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-dan-forsyth.jpg"
+            },
+            "email":"dan.forsyth@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":1204,
+            "date":"2021-01-06T16:27:22",
+            "title":"Ola Olaide-Abidoye",
+            "title_seo":"Ola Olaide-Abidoye | Twogether",
+            "slug":"ola-olaide-abidoye",
+            "first_name":"Ola",
+            "last_name":"Olaide-Abidoye",
+            "position":"Digital Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-ola-olaide-abidoye-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-ola-olaide-abidoye.jpg"
+            },
+            "email":"ola.olaide-abidoye@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":1203,
+            "date":"2021-01-06T16:21:22",
+            "title":"Jess Gowdy",
+            "title_seo":"Jess Gowdy | Twogether",
+            "slug":"jess-gowdy",
+            "first_name":"Jess",
+            "last_name":"Gowdy",
+            "position":"Junior Digital Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-jessica-gowdy-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-jessica-gowdy.jpg"
+            },
+            "email":"jess.gowdy@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":1202,
+            "date":"2021-01-06T16:19:34",
+            "title":"Jonathan Hodgson",
+            "title_seo":"Jonathan Hodgson | Twogether",
+            "slug":"jonathan-hodgson",
+            "first_name":"Jonathan",
+            "last_name":"Hodgson",
+            "position":"Data Analyst",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-jonathan-hodgson-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-jonathan-hodgson.jpg"
+            },
+            "email":"jonathan.hodgson@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":1201,
+            "date":"2021-01-06T16:18:27",
+            "title":"Luke Sprague",
+            "title_seo":"Luke Sprague | Twogether",
+            "slug":"luke-sprague",
+            "first_name":"Luke",
+            "last_name":"Sprague",
+            "position":"Business Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-luke-sprague-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2021\/01\/img-team-luke-sprague.jpg"
+            },
+            "email":"luke.sprague@wearetwogether.com",
+            "order":0,
+            "department":[
+                "business-support"
+            ]
+        },
+        {
+            "id":1170,
+            "date":"2020-12-10T16:49:18",
+            "title":"Roosa Laakkonen",
+            "title_seo":"Roosa Laakkonen | Twogether",
+            "slug":"roosa-laakkonen",
+            "first_name":"Roosa",
+            "last_name":"Laakkonen",
+            "position":"Media Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/12\/img-team-roosa-laakkonen-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/12\/img-team-roosa-laakkonen.jpg"
+            },
+            "email":"roosa.laakkonen@wearetwogether.com",
+            "order":0,
+            "department":[
+                "media"
+            ]
+        },
+        {
+            "id":1156,
+            "date":"2020-11-20T18:42:38",
+            "title":"Naomi Trevor",
+            "title_seo":"Naomi Trevor | Twogether",
+            "slug":"naomi-trevor",
+            "first_name":"Naomi",
+            "last_name":"Trevor",
+            "position":"Developer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-naomi-trevor-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-naomi-trevor.jpg"
+            },
+            "email":"naomi.trevor@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":1155,
+            "date":"2020-11-20T18:41:49",
+            "title":"Amy Sanchez",
+            "title_seo":"Amy Sanchez | Twogether",
+            "slug":"amy-sanchez",
+            "first_name":"Amy",
+            "last_name":"Sanchez",
+            "position":"Senior Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female.jpg"
+            },
+            "email":"amy.sanchez@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":1154,
+            "date":"2020-11-20T18:40:19",
+            "title":"Patricija Lisovskaja",
+            "title_seo":"Patricija Lisovskaja | Twogether",
+            "slug":"patricija-lisovskaja",
+            "first_name":"Patricija",
+            "last_name":"Lisovskaja",
+            "position":"Junior Project Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-patricija-lisovskaja-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-patricija-lisovskaja.jpg"
+            },
+            "email":"patricija.lisovskaja@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":1153,
+            "date":"2020-11-20T18:37:57",
+            "title":"Colin McAllister",
+            "title_seo":"Colin McAllister | Twogether",
+            "slug":"colin-mcallister",
+            "first_name":"Colin",
+            "last_name":"McAllister",
+            "position":"Solutions Architect",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-colin-mcallister-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-colin-mcallister.jpg"
+            },
+            "email":"colin.mcallister@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":1152,
+            "date":"2020-11-20T18:36:27",
+            "title":"Helen Jacob",
+            "title_seo":"Helen Jacob | Twogether",
+            "slug":"helen-jacob",
+            "first_name":"Helen",
+            "last_name":"Jacob",
+            "position":"Artworker",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-helen-jacob-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-helen-jacob.jpg"
+            },
+            "email":"helen.jacob@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":1151,
+            "date":"2020-11-20T18:34:36",
+            "title":"Charlotte Buchholdt",
+            "title_seo":"Charlotte Buchholdt | Twogether",
+            "slug":"charlotte-buchholdt",
+            "first_name":"Charlotte",
+            "last_name":"Buchholdt",
+            "position":"Account Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-charlotteb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-charlotteb.jpg"
+            },
+            "email":"charlotte.buchholdt@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":1150,
+            "date":"2020-11-20T18:32:48",
+            "title":"Sian Roberts",
+            "title_seo":"Sian Roberts | Twogether",
+            "slug":"sian-roberts",
+            "first_name":"Sian",
+            "last_name":"Roberts",
+            "position":"Senior Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-sian-roberts.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-sian-roberts-mobile.jpg"
+            },
+            "email":"sian.roberts@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":1149,
+            "date":"2020-11-20T18:31:58",
+            "title":"Jack Whitaker",
+            "title_seo":"Jack Whitaker | Twogether",
+            "slug":"jack-whitaker",
+            "first_name":"Jack",
+            "last_name":"Whitaker",
+            "position":"Media Account Executive",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-jack-whitaker-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-jack-whitaker.jpg"
+            },
+            "email":"jack.whitaker@wearetwogether.com",
+            "order":0,
+            "department":[
+                "media"
+            ]
+        },
+        {
+            "id":1148,
+            "date":"2020-11-20T18:31:03",
+            "title":"Alex Latham",
+            "title_seo":"Alex Latham | Twogether",
+            "slug":"alex-latham",
+            "first_name":"Alex",
+            "last_name":"Latham",
+            "position":"Senior Developer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-alex-latham-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-alex-latham.jpg"
+            },
+            "email":"alex.latham@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":1147,
+            "date":"2020-11-20T18:29:13",
+            "title":"Hope Burridge",
+            "title_seo":"Hope Burridge | Twogether",
+            "slug":"hope-burridge",
+            "first_name":"Hope",
+            "last_name":"Burridge",
+            "position":"Media Account Executive",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-hope-burridge-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-hope-burridge.jpg"
+            },
+            "email":"hope.burridge@wearetwogether.com",
+            "order":0,
+            "department":[
+                "media"
+            ]
+        },
+        {
+            "id":1146,
+            "date":"2020-11-20T18:27:03",
+            "title":"Lewis Farnell",
+            "title_seo":"Lewis Farnell | Twogether",
+            "slug":"lewis-farnell",
+            "first_name":"Lewis",
+            "last_name":"Farnell",
+            "position":"Media Account Executive",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-lewis-farnell-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-lewis-farnell.jpg"
+            },
+            "email":"lewis.farnell@wearetwogether.com",
+            "order":0,
+            "department":[
+                "media"
+            ]
+        },
+        {
+            "id":1145,
+            "date":"2020-11-20T18:25:54",
+            "title":"Gemma Munro",
+            "title_seo":"Gemma Munro | Twogether",
+            "slug":"gemma-munro",
+            "first_name":"Gemma",
+            "last_name":"Munro",
+            "position":"Senior Account Executive, partnermarketing.com",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-gemma-munro-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-gemma-munro.jpg"
+            },
+            "email":"gemma.munro@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":1144,
+            "date":"2020-11-20T18:23:58",
+            "title":"Amy Banner",
+            "title_seo":"Amy Banner | Twogether",
+            "slug":"amy-banner",
+            "first_name":"Amy",
+            "last_name":"Banner",
+            "position":"QA Lead",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-amyb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/11\/img-team-amyb.jpg"
+            },
+            "email":"amy.banner@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":1072,
+            "date":"2020-10-06T15:07:24",
+            "title":"Alison Hales",
+            "title_seo":"Alison Hales | Twogether",
+            "slug":"alison-hales",
+            "first_name":"Alison",
+            "last_name":"Hales",
+            "position":"Management Accountant",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female.jpg"
+            },
+            "email":"alison.hales@wearetwogether.com",
+            "order":0,
+            "department":[
+                "business-support"
+            ]
+        },
+        {
+            "id":1064,
+            "date":"2020-09-10T10:13:04",
+            "title":"Georgia Excell",
+            "title_seo":"Georgia Excell | Twogether",
+            "slug":"georgia-excell",
+            "first_name":"Georgia",
+            "last_name":"Excell",
+            "position":"Senior Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/09\/img-team-georgia-excell-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/09\/img-team-georgia-excell.jpg"
+            },
+            "email":"georgia.excell@wearetwogether.com",
+            "order":0,
+            "department":[
+                
+            ]
+        },
+        {
+            "id":1063,
+            "date":"2020-09-10T09:47:16",
+            "title":"Louisa Wolfe",
+            "title_seo":"Louisa Wolfe | Twogether",
+            "slug":"lousia-wolfe",
+            "first_name":"Louisa",
+            "last_name":"Wolfe",
+            "position":"Lead Writer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/09\/img-team-louisaw-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/09\/img-team-louisaw.jpg"
+            },
+            "email":"louisa.wolfe@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":1062,
+            "date":"2020-09-10T09:46:31",
+            "title":"Lydia Slaughter",
+            "title_seo":"Lydia Slaughter | Twogether",
+            "slug":"lydia-slaughter",
+            "first_name":"Lydia",
+            "last_name":"Slaughter",
+            "position":"Copywriter",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/09\/img-team-lydias-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/09\/img-team-lydias.jpg"
+            },
+            "email":"lydia.slaughter@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":1032,
+            "date":"2020-08-21T07:55:52",
+            "title":"James Stow",
+            "title_seo":"James Stow | Twogether",
+            "slug":"james-stow",
+            "first_name":"James",
+            "last_name":"Stow",
+            "position":"Presentation Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/08\/img-team-jamess-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/08\/img-team-jamess.jpg"
+            },
+            "email":"james.stow@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":1031,
+            "date":"2020-08-19T13:46:48",
+            "title":"Debbie Clark",
+            "title_seo":"Debbie Clark | Twogether",
+            "slug":"debbie-clark",
+            "first_name":"Debbie",
+            "last_name":"Clark",
+            "position":"Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/08\/img-team-debbiec-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/08\/img-team-debbiec.jpg"
+            },
+            "email":"debbie.clark@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":1023,
+            "date":"2020-08-07T13:26:04",
+            "title":"Tessa Burrows",
+            "title_seo":"Tessa Burrows | Twogether",
+            "slug":"tessa-burrows",
+            "first_name":"Tessa",
+            "last_name":"Burrows",
+            "position":"Senior Strategist",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-avatar-female-mobile.jpg"
+            },
+            "email":"tessa.burrows@wearetwogether.com",
+            "order":0,
+            "department":[
+                "strategy"
+            ]
+        },
+        {
+            "id":618,
+            "date":"2020-04-29T16:54:06",
+            "title":"Alan Matthews",
+            "title_seo":"Alan Matthews | Twogether",
+            "slug":"alan-matthews",
+            "first_name":"Alan",
+            "last_name":"Matthews",
+            "position":"Account Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alanm-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alanm.jpg"
+            },
+            "email":"alan.matthews@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":619,
+            "date":"2020-04-29T16:51:55",
+            "title":"Alan Scott",
+            "title_seo":"Alan Scott | Twogether",
+            "slug":"alan-scott",
+            "first_name":"Alan",
+            "last_name":"Scott",
+            "position":"Technical Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alans-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alans.jpg"
+            },
+            "email":"alan.scott@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":620,
+            "date":"2020-04-29T16:49:45",
+            "title":"Alex Ellis",
+            "title_seo":"Alex Ellis | Twogether",
+            "slug":"alex-ellis",
+            "first_name":"Alex",
+            "last_name":"Ellis",
+            "position":"Senior Creative Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alexe-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alexe.jpg"
+            },
+            "email":"alex.ellis@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":291,
+            "date":"2020-04-29T16:47:36",
+            "title":"Alex Norbury",
+            "title_seo":"Alex Norbury | Twogether",
+            "slug":"alex-norbury",
+            "first_name":"Alex",
+            "last_name":"Norbury",
+            "position":"Managing Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alexn-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alexn.jpg"
+            },
+            "email":"alex.norbury@wearetwogether.com",
+            "order":190,
+            "department":[
+                "management",
+                "business-support"
+            ]
+        },
+        {
+            "id":292,
+            "date":"2020-04-29T16:45:28",
+            "title":"Alex Webber",
+            "title_seo":"Alex Webber | Twogether",
+            "slug":"alex-webber",
+            "first_name":"Alex",
+            "last_name":"Webber",
+            "position":"Marketing Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alexw-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alexw.jpg"
+            },
+            "email":"alex.webber@wearetwogether.com",
+            "order":0,
+            "department":[
+                "business-support"
+            ]
+        },
+        {
+            "id":621,
+            "date":"2020-04-29T16:43:21",
+            "title":"Alexx Mackenzie",
+            "title_seo":"Alexx Mackenzie | Twogether",
+            "slug":"alexx-mackenzie",
+            "first_name":"Alexx",
+            "last_name":"Mackenzie",
+            "position":"Group Account Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alexxm-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alexxm.jpg"
+            },
+            "email":"alexx.mackenzie@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":622,
+            "date":"2020-04-29T16:41:15",
+            "title":"Alison Jarabo",
+            "title_seo":"Alison Jarabo | Twogether",
+            "slug":"alison-jarabo",
+            "first_name":"Alison",
+            "last_name":"Jarabo",
+            "position":"Senior Strategist",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alisonj-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-alisonj.jpg"
+            },
+            "email":"alison.jarabo@wearetwogether.com",
+            "order":0,
+            "department":[
+                "strategy"
+            ]
+        },
+        {
+            "id":623,
+            "date":"2020-04-29T16:39:10",
+            "title":"Aminah Abbas",
+            "title_seo":"Aminah Abbas | Twogether",
+            "slug":"aminah-abbas",
+            "first_name":"Aminah",
+            "last_name":"Abbas",
+            "position":"Management Accountant",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-aminaha-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-aminaha.jpg"
+            },
+            "email":"aminah.abbas@wearetwogether.com",
+            "order":0,
+            "department":[
+                "business-support"
+            ]
+        },
+        {
+            "id":625,
+            "date":"2020-04-29T16:35:03",
+            "title":"Andrea Accornero",
+            "title_seo":"Andrea Accornero | Twogether",
+            "slug":"andrea-accornero",
+            "first_name":"Andrea",
+            "last_name":"Accornero",
+            "position":"Media Account Executive",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-andreaa-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-andreaa.jpg"
+            },
+            "email":"andrea.accornero@wearetwogether.com",
+            "order":0,
+            "department":[
+                "media"
+            ]
+        },
+        {
+            "id":626,
+            "date":"2020-04-29T16:33:01",
+            "title":"Andy Herbert",
+            "title_seo":"Andy Herbert | Twogether",
+            "slug":"andy-herbert",
+            "first_name":"Andy",
+            "last_name":"Herbert",
+            "position":"Digital Project Coordinator",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-andyh-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-andyh.jpg"
+            },
+            "email":"andy.herbert@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":627,
+            "date":"2020-04-29T16:31:00",
+            "title":"Angus Winnard",
+            "title_seo":"Angus Winnard | Twogether",
+            "slug":"angus-winnard",
+            "first_name":"Angus",
+            "last_name":"Winnard",
+            "position":"QA Tester",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-angusw-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-angusw.jpg"
+            },
+            "email":"angus.winnard@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":628,
+            "date":"2020-04-29T16:29:00",
+            "title":"Annabel Woodbridge",
+            "title_seo":"Annabel Woodbridge | Twogether",
+            "slug":"annabel-woodbridge",
+            "first_name":"Annabel",
+            "last_name":"Woodbridge",
+            "position":"Account Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-annabelw-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-annabelw.jpg"
+            },
+            "email":"annabel@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":629,
+            "date":"2020-04-29T16:27:01",
+            "title":"Anya Newton",
+            "title_seo":"Anya Newton | Twogether",
+            "slug":"anya-newton",
+            "first_name":"Anya",
+            "last_name":"Newton",
+            "position":"Media Planning Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-anya-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-anya.jpg"
+            },
+            "email":"anya.newton@wearetwogether.com",
+            "order":0,
+            "department":[
+                "media",
+                "strategy"
+            ]
+        },
+        {
+            "id":289,
+            "date":"2020-04-29T16:25:03",
+            "title":"Arjen Buenk",
+            "title_seo":"Arjen Buenk | Twogether",
+            "slug":"arjen-buenk",
+            "first_name":"Arjen",
+            "last_name":"Buenk",
+            "position":"Head of Video Production",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-arjenb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-arjenb.jpg"
+            },
+            "email":"arjen.buenk@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":631,
+            "date":"2020-04-29T16:21:10",
+            "title":"Cherrie Ip",
+            "title_seo":"Cherrie Ip | Twogether",
+            "slug":"cherrie-ip",
+            "first_name":"Cherrie",
+            "last_name":"Ip",
+            "position":"Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-cherriei-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-cherriei.jpg"
+            },
+            "email":"cherrie.ip@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":632,
+            "date":"2020-04-29T16:19:15",
+            "title":"Chloe Carson",
+            "title_seo":"Chloe Carson | Twogether",
+            "slug":"chloe-carson",
+            "first_name":"Chloe",
+            "last_name":"Carson",
+            "position":"Project Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-chloec-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-chloec.jpg"
+            },
+            "email":"chloe.carson@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":633,
+            "date":"2020-04-29T16:17:21",
+            "title":"Chris Bradwell",
+            "title_seo":"Chris Bradwell | Twogether",
+            "slug":"chris-bradwell",
+            "first_name":"Chris",
+            "last_name":"Bradwell",
+            "position":"Marketing Automation Executive",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-chrisb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-chrisb.jpg"
+            },
+            "email":"chris.bradwell@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":634,
+            "date":"2020-04-29T16:15:28",
+            "title":"Chris Hill",
+            "title_seo":"Chris Hill | Twogether",
+            "slug":"chris-hill",
+            "first_name":"Chris",
+            "last_name":"Hill",
+            "position":"Design Manager, partnermarketing.com",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-chrish-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-chrish.jpg"
+            },
+            "email":"chris.hill@wearetwogether.com",
+            "order":0,
+            "department":[
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":635,
+            "date":"2020-04-29T16:11:45",
+            "title":"Claire Davidson",
+            "title_seo":"Claire Davidson | Twogether",
+            "slug":"claire-davidson",
+            "first_name":"Claire",
+            "last_name":"Davidson",
+            "position":"Head of Strategy & Planning",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-claired-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-claired.jpg"
+            },
+            "email":"claire.davidson@wearetwogether.com",
+            "order":0,
+            "department":[
+                "strategy"
+            ]
+        },
+        {
+            "id":636,
+            "date":"2020-04-29T16:09:55",
+            "title":"Claire Hammond",
+            "title_seo":"Claire Hammond | Twogether",
+            "slug":"claire-hammond",
+            "first_name":"Claire",
+            "last_name":"Hammond",
+            "position":"Account Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-claireh-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-claireh.jpg"
+            },
+            "email":"claire.hammond@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":637,
+            "date":"2020-04-29T16:08:06",
+            "title":"Claire McAughtry",
+            "title_seo":"Claire McAughtry | Twogether",
+            "slug":"claire-mcaughtry",
+            "first_name":"Claire",
+            "last_name":"McAughtry",
+            "position":"Group Account Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-clairem-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-clairem.jpg"
+            },
+            "email":"claire.mcaughtry@wearetwogether.com",
+            "order":0,
+            "department":[
+                "partnermarketing-com",
+                "strategy"
+            ]
+        },
+        {
+            "id":638,
+            "date":"2020-04-29T16:06:18",
+            "title":"Claire Weedon",
+            "title_seo":"Claire Weedon | Twogether",
+            "slug":"claire-weedon",
+            "first_name":"Claire",
+            "last_name":"Weedon",
+            "position":"Senior Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-clairew-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-clairew.jpg"
+            },
+            "email":"claire.weedon@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":639,
+            "date":"2020-04-29T16:04:31",
+            "title":"Damien Langkamer",
+            "title_seo":"Damien Langkamer | Twogether",
+            "slug":"damien-langkamer",
+            "first_name":"Damien",
+            "last_name":"Langkamer",
+            "position":"Product Owner, partnermarketing.com",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-damienl-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-damienl.jpg"
+            },
+            "email":"damien.langkamer@wearetwogether.com",
+            "order":0,
+            "department":[
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":299,
+            "date":"2020-04-29T16:02:45",
+            "title":"Dan Rooms",
+            "title_seo":"Dan Rooms | Twogether",
+            "slug":"dan-rooms",
+            "first_name":"Dan",
+            "last_name":"Rooms",
+            "position":"Head of Design",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-danr-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-danr.jpg"
+            },
+            "email":"dan.rooms@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":640,
+            "date":"2020-04-29T16:01:00",
+            "title":"Danny O&#8217;Neill",
+            "title_seo":"Danny O&#039;Neill | Twogether",
+            "slug":"danny-oneill",
+            "first_name":"Danny",
+            "last_name":"O'Neill",
+            "position":"Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-dannyo-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-dannyo.jpg"
+            },
+            "email":"danny.oneil@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":641,
+            "date":"2020-04-29T15:59:16",
+            "title":"Darren Hayday",
+            "title_seo":"Darren Hayday | Twogether",
+            "slug":"darren-hayday",
+            "first_name":"Darren",
+            "last_name":"Hayday",
+            "position":"Client Engagement Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-darrenh-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-darrenh.jpg"
+            },
+            "email":"darren.hayday@wearetwogether.com",
+            "order":0,
+            "department":[
+                "business-support"
+            ]
+        },
+        {
+            "id":642,
+            "date":"2020-04-29T15:57:33",
+            "title":"David Ryan",
+            "title_seo":"David Ryan | Twogether",
+            "slug":"david-ryan",
+            "first_name":"David",
+            "last_name":"Ryan",
+            "position":"Senior Art Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-davidr-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-davidr.jpg"
+            },
+            "email":"david.ryan@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":644,
+            "date":"2020-04-29T15:54:10",
+            "title":"Diogo Costa",
+            "title_seo":"Diogo Costa | Twogether",
+            "slug":"diogo-costa",
+            "first_name":"Diogo",
+            "last_name":"Costa",
+            "position":"Digital Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-diogoc-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-diogoc.jpg"
+            },
+            "email":"diogo.costa@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":645,
+            "date":"2020-04-29T15:52:30",
+            "title":"Dominik Cichon",
+            "title_seo":"Dominik Cichon | Twogether",
+            "slug":"dominik-cichon",
+            "first_name":"Dominik",
+            "last_name":"Cichon",
+            "position":"Digital Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-dominikc-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-dominikc.jpg"
+            },
+            "email":"dominik.cichon@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":646,
+            "date":"2020-04-29T15:50:51",
+            "title":"Eleri Smith",
+            "title_seo":"Eleri Smith | Twogether",
+            "slug":"eleri-smith",
+            "first_name":"Eleri",
+            "last_name":"Smith",
+            "position":"UX Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-eleris-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-eleris.jpg"
+            },
+            "email":"eleri.smith@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":647,
+            "date":"2020-04-29T15:49:13",
+            "title":"Ella Theile",
+            "title_seo":"Ella Theile | Twogether",
+            "slug":"ella-theile",
+            "first_name":"Ella",
+            "last_name":"Theile",
+            "position":"Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-ellat-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-ellat.jpg"
+            },
+            "email":"ella.theile@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":648,
+            "date":"2020-04-29T15:47:36",
+            "title":"Ellen Nobels",
+            "title_seo":"Ellen Nobels | Twogether",
+            "slug":"ellen-nobels",
+            "first_name":"Ellen",
+            "last_name":"Nobels",
+            "position":"Account Manager, Concierge",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-ellenn-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-ellenn.jpg"
+            },
+            "email":"ellen.nobels@wearetwogether.com",
+            "order":0,
+            "department":[
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":649,
+            "date":"2020-04-29T15:46:00",
+            "title":"Ellie Wyness",
+            "title_seo":"Ellie Wyness | Twogether",
+            "slug":"ellie-wyness",
+            "first_name":"Ellie",
+            "last_name":"Wyness",
+            "position":"Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-elliew-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-elliew.jpg"
+            },
+            "email":"ellie.wyness@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":650,
+            "date":"2020-04-29T15:44:25",
+            "title":"Emilie Bordbar",
+            "title_seo":"Emilie Bordbar | Twogether",
+            "slug":"emilie-bordbar",
+            "first_name":"Emilie",
+            "last_name":"Bordbar",
+            "position":"Media Account Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-emilieb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-emilieb.jpg"
+            },
+            "email":"emilie.bordbar@wearetwogether.com",
+            "order":0,
+            "department":[
+                "media"
+            ]
+        },
+        {
+            "id":651,
+            "date":"2020-04-29T15:42:51",
+            "title":"Emma Kemble",
+            "title_seo":"Emma Kemble | Twogether",
+            "slug":"emma-kemble",
+            "first_name":"Emma",
+            "last_name":"Kemble",
+            "position":"Senior Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-emmakem-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-emmakem.jpg"
+            },
+            "email":"emma.kemble@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":652,
+            "date":"2020-04-29T15:39:46",
+            "title":"Emma Tinker",
+            "title_seo":"Emma Tinker | Twogether",
+            "slug":"emma-tinker",
+            "first_name":"Emma",
+            "last_name":"Tinker",
+            "position":"Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-emmat-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-emmat.jpg"
+            },
+            "email":"emma.tinker@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":653,
+            "date":"2020-04-29T15:38:15",
+            "title":"Erin Dunsford",
+            "title_seo":"Erin Dunsford | Twogether",
+            "slug":"erin-dunsford",
+            "first_name":"Erin",
+            "last_name":"Dunsford",
+            "position":"Media Strategy Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-erind-mobile-1.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-erind-1.jpg"
+            },
+            "email":"erin.dunsford@wearetwogether.com",
+            "order":0,
+            "department":[
+                "media",
+                "strategy"
+            ]
+        },
+        {
+            "id":304,
+            "date":"2020-04-29T15:35:16",
+            "title":"Fi Shailes",
+            "title_seo":"Fi Shailes | Twogether",
+            "slug":"fi-shailes",
+            "first_name":"Fi",
+            "last_name":"Shailes",
+            "position":"Social Strategist",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-fis-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-fis.jpg"
+            },
+            "email":"fi.shailes@wearetwogether.com",
+            "order":0,
+            "department":[
+                "strategy"
+            ]
+        },
+        {
+            "id":655,
+            "date":"2020-04-29T15:33:48",
+            "title":"Flora Kiddle",
+            "title_seo":"Flora Kiddle | Twogether",
+            "slug":"flora-kiddle",
+            "first_name":"Flora",
+            "last_name":"Kiddle",
+            "position":"Senior Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-florak-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-florak.jpg"
+            },
+            "email":"flora.kiddle@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":656,
+            "date":"2020-04-29T15:32:21",
+            "title":"Francesca Barber",
+            "title_seo":"Francesca Barber | Twogether",
+            "slug":"francesca-barber",
+            "first_name":"Francesca",
+            "last_name":"Barber",
+            "position":"Copywriter",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-francescab-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-francescab.jpg"
+            },
+            "email":"francesca.barber@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":657,
+            "date":"2020-04-29T15:30:55",
+            "title":"Gabriele Mastrilli",
+            "title_seo":"Gabriele Mastrilli | Twogether",
+            "slug":"gabriele-mastrilli",
+            "first_name":"Gabriele",
+            "last_name":"Mastrilli",
+            "position":"Creative Operations Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-gabm-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-gabm.jpg"
+            },
+            "email":"gabriele.mastrilli@wearetwogether.com",
+            "order":170,
+            "department":[
+                "management",
+                "creative"
+            ]
+        },
+        {
+            "id":658,
+            "date":"2020-04-29T15:29:30",
+            "title":"Gareth Kershaw",
+            "title_seo":"Gareth Kershaw | Twogether",
+            "slug":"gareth-kershaw",
+            "first_name":"Gareth",
+            "last_name":"Kershaw",
+            "position":"Senior Copywriter",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-garethk-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-garethk.jpg"
+            },
+            "email":"gareth.kershaw@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":659,
+            "date":"2020-04-29T15:28:06",
+            "title":"Garry Haldane",
+            "title_seo":"Garry Haldane | Twogether",
+            "slug":"garry-haldane",
+            "first_name":"Garry",
+            "last_name":"Haldane",
+            "position":"Project Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-garryh-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-garryh.jpg"
+            },
+            "email":"garry.haldane@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":660,
+            "date":"2020-04-29T15:26:43",
+            "title":"Gemma Smith",
+            "title_seo":"Gemma Smith | Twogether",
+            "slug":"gemma-smith",
+            "first_name":"Gemma",
+            "last_name":"Smith",
+            "position":"Account Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-gemmas-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-gemmas.jpg"
+            },
+            "email":"gemma.smith@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":661,
+            "date":"2020-04-29T15:25:21",
+            "title":"George Higgins",
+            "title_seo":"George Higgins | Twogether",
+            "slug":"george-higgins",
+            "first_name":"George",
+            "last_name":"Higgins",
+            "position":"Senior Motion Graphics Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-georgeh-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-georgeh.jpg"
+            },
+            "email":"george.higgins@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":301,
+            "date":"2020-04-29T15:22:40",
+            "title":"Harry Radcliffe",
+            "title_seo":"Harry Radcliffe | Twogether",
+            "slug":"harry-radcliffe",
+            "first_name":"Harry",
+            "last_name":"Radcliffe",
+            "position":"Audio Producer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-harryr-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-harryr.jpg"
+            },
+            "email":"harry.radcliffe@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":663,
+            "date":"2020-04-29T15:21:21",
+            "title":"Isabel Geenes",
+            "title_seo":"Isabel Geenes | Twogether",
+            "slug":"isabel-geenes",
+            "first_name":"Isabel",
+            "last_name":"Geenes",
+            "position":"Client Operations Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-isabelg-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-isabelg.jpg"
+            },
+            "email":"isabel.geenes@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":664,
+            "date":"2020-04-29T15:20:03",
+            "title":"Jack Campbell",
+            "title_seo":"Jack Campbell | Twogether",
+            "slug":"jack-campbell",
+            "first_name":"Jack",
+            "last_name":"Campbell",
+            "position":"Account Executive",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jackc-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jackc.jpg"
+            },
+            "email":"jack.campbell@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":665,
+            "date":"2020-04-29T15:18:46",
+            "title":"Jack Tyler",
+            "title_seo":"Jack Tyler | Twogether",
+            "slug":"jack-tyler",
+            "first_name":"Jack",
+            "last_name":"Tyler",
+            "position":"Art Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jackt-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jackt.jpg"
+            },
+            "email":"jack.tyler@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":666,
+            "date":"2020-04-29T15:17:30",
+            "title":"Jamie MacDow",
+            "title_seo":"Jamie MacDow | Twogether",
+            "slug":"jamie-macdow",
+            "first_name":"Jamie",
+            "last_name":"MacDow",
+            "position":"Account Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jamiemac-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jamiemac.jpg"
+            },
+            "email":"jamie.macdow@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":667,
+            "date":"2020-04-29T15:16:15",
+            "title":"Jamie Short",
+            "title_seo":"Jamie Short | Twogether",
+            "slug":"jamie-short",
+            "first_name":"Jamie",
+            "last_name":"Short",
+            "position":"Senior Project Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jamies-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jamies.jpg"
+            },
+            "email":"jamie.short@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":668,
+            "date":"2020-04-29T15:15:01",
+            "title":"Jane Bayton",
+            "title_seo":"Jane Bayton | Twogether",
+            "slug":"jane-bayton",
+            "first_name":"Jane",
+            "last_name":"Bayton",
+            "position":"Senior Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-janeb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-janeb.jpg"
+            },
+            "email":"jane.bayton@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":669,
+            "date":"2020-04-29T15:13:48",
+            "title":"Jenny Han",
+            "title_seo":"Jenny Han | Twogether",
+            "slug":"jenny-han",
+            "first_name":"Jenny",
+            "last_name":"Han",
+            "position":"Finance Assistant",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jennyh-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jennyh.jpg"
+            },
+            "email":"jenny.han@wearetwogether.com",
+            "order":0,
+            "department":[
+                "business-support"
+            ]
+        },
+        {
+            "id":672,
+            "date":"2020-04-29T15:10:15",
+            "title":"Joana Calderon",
+            "title_seo":"Joana Calderon | Twogether",
+            "slug":"joana-calderon",
+            "first_name":"Joana",
+            "last_name":"Calderon",
+            "position":"Senior Project Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-joanac-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-joanac.jpg"
+            },
+            "email":"joana.calderon@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":673,
+            "date":"2020-04-29T15:09:06",
+            "title":"Joe Glanville",
+            "title_seo":"Joe Glanville | Twogether",
+            "slug":"joe-glanville",
+            "first_name":"Joe",
+            "last_name":"Glanville",
+            "position":"Developer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-joeg-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-joeg.jpg"
+            },
+            "email":"joseph.glanville@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":297,
+            "date":"2020-04-29T15:07:58",
+            "title":"John Breedon",
+            "title_seo":"John Breedon | Twogether",
+            "slug":"john-breedon",
+            "first_name":"John",
+            "last_name":"Breedon",
+            "position":"Martech Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-johnb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-johnb.jpg"
+            },
+            "email":"john.breedon@wearetwogether.com",
+            "order":150,
+            "department":[
+                "management",
+                "digital"
+            ]
+        },
+        {
+            "id":674,
+            "date":"2020-04-29T15:06:51",
+            "title":"Jon Bartlett Sim",
+            "title_seo":"Jon Bartlett Sim | Twogether",
+            "slug":"jon-bartlett-sim",
+            "first_name":"Jon",
+            "last_name":"Bartlett Sim",
+            "position":"Senior Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jonbs-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jonbs.jpg"
+            },
+            "email":"jon.bartlettsim@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":287,
+            "date":"2020-04-29T15:05:45",
+            "title":"Jon Busby",
+            "title_seo":"Jon Busby | Twogether",
+            "slug":"jon-busby",
+            "first_name":"Jon",
+            "last_name":"Busby",
+            "position":"Chief Technology Officer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jonb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-jonb.jpg"
+            },
+            "email":"jon.busby@wearetwogether.com",
+            "order":160,
+            "department":[
+                "management",
+                "digital"
+            ]
+        },
+        {
+            "id":676,
+            "date":"2020-04-29T15:02:33",
+            "title":"Kate Driver",
+            "title_seo":"Kate Driver | Twogether",
+            "slug":"kate-driver",
+            "first_name":"Kate",
+            "last_name":"Driver",
+            "position":"Digital Project Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-kated-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-kated.jpg"
+            },
+            "email":"kate.driver@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":678,
+            "date":"2020-04-29T15:01:31",
+            "title":"Kate Terzieva",
+            "title_seo":"Kate Terzieva | Twogether",
+            "slug":"kate-terzieva",
+            "first_name":"Kate",
+            "last_name":"Terzieva",
+            "position":"Digital Project Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-katet-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-katet.jpg"
+            },
+            "email":"kate.terzieva@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":680,
+            "date":"2020-04-29T14:59:30",
+            "title":"Kim Macknay",
+            "title_seo":"Kim Macknay | Twogether",
+            "slug":"kim-macknay",
+            "first_name":"Kim",
+            "last_name":"Macknay",
+            "position":"Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-kimm-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-kimm.jpg"
+            },
+            "email":"kim.macknay@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":284,
+            "date":"2020-04-29T14:58:31",
+            "title":"Kirsty Gilchrist",
+            "title_seo":"Kirsty Gilchrist | Twogether",
+            "slug":"kirsty-gilchrist",
+            "first_name":"Kirsty",
+            "last_name":"Gilchrist",
+            "position":"Chief Executive Officer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-kirstyg-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-kirstyg.jpg"
+            },
+            "email":"kirsty.gilchrist@wearetwogether.com",
+            "order":200,
+            "department":[
+                "management"
+            ]
+        },
+        {
+            "id":682,
+            "date":"2020-04-29T14:57:33",
+            "title":"Leanne Fisher",
+            "title_seo":"Leanne Fisher | Twogether",
+            "slug":"leanne-fisher",
+            "first_name":"Leanne",
+            "last_name":"Fisher",
+            "position":"Senior Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-leannef-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-leannef.jpg"
+            },
+            "email":"leanne.fisher@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":686,
+            "date":"2020-04-29T14:56:36",
+            "title":"Leigh Holdway",
+            "title_seo":"Leigh Holdway | Twogether",
+            "slug":"leigh-holdway",
+            "first_name":"Leigh",
+            "last_name":"Holdway",
+            "position":"Senior Copywriter",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-leigh-holdway-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-leigh-holdway.jpg"
+            },
+            "email":"leigh.holdway@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":681,
+            "date":"2020-04-29T14:55:40",
+            "title":"Lisa Ruddy",
+            "title_seo":"Lisa Ruddy | Twogether",
+            "slug":"lisa-ruddy",
+            "first_name":"Lisa",
+            "last_name":"Ruddy",
+            "position":"Vice President, US",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-lisar-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-lisar.jpg"
+            },
+            "email":"lisa.ruddy@wearetwogether.com",
+            "order":180,
+            "department":[
+                "management"
+            ]
+        },
+        {
+            "id":683,
+            "date":"2020-04-29T14:54:45",
+            "title":"Liz Rafferty",
+            "title_seo":"Liz Rafferty | Twogether",
+            "slug":"liz-rafferty",
+            "first_name":"Liz",
+            "last_name":"Rafferty",
+            "position":"Client Operations Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-lizr-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-lizr.jpg"
+            },
+            "email":"liz.rafferty@wearetwogether.com",
+            "order":110,
+            "department":[
+                "management",
+                "client-services"
+            ]
+        },
+        {
+            "id":684,
+            "date":"2020-04-29T14:53:51",
+            "title":"Louisa Chan",
+            "title_seo":"Louisa Chan | Twogether",
+            "slug":"louisa-chan",
+            "first_name":"Louisa",
+            "last_name":"Chan",
+            "position":"Senior Media Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-louisac-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-louisac.jpg"
+            },
+            "email":"lousia.chan@wearetwogether.com",
+            "order":0,
+            "department":[
+                "media"
+            ]
+        },
+        {
+            "id":685,
+            "date":"2020-04-29T14:52:58",
+            "title":"Lucy Dell",
+            "title_seo":"Lucy Dell | Twogether",
+            "slug":"lucy-dell",
+            "first_name":"Lucy",
+            "last_name":"Dell",
+            "position":"Account Manager, partnermarketing.com",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-lucyd-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-lucyd.jpg"
+            },
+            "email":"lucy.dell@wearetwogether.com",
+            "order":0,
+            "department":[
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":687,
+            "date":"2020-04-29T14:52:06",
+            "title":"Manreet Bancil",
+            "title_seo":"Manreet Bancil | Twogether",
+            "slug":"manreet-bancil",
+            "first_name":"Manreet",
+            "last_name":"Bancil",
+            "position":"Senior Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-manreetb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-manreetb.jpg"
+            },
+            "email":"manreet.bancil@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":688,
+            "date":"2020-04-29T14:51:15",
+            "title":"Marcus Bishop",
+            "title_seo":"Marcus Bishop | Twogether",
+            "slug":"marcus-bishop",
+            "first_name":"Marcus",
+            "last_name":"Bishop",
+            "position":"Head of Digital Design",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-marcusb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-marcusb.jpg"
+            },
+            "email":"marcus.bishop@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":689,
+            "date":"2020-04-29T14:50:25",
+            "title":"Marie Ehring",
+            "title_seo":"Marie Ehring | Twogether",
+            "slug":"marie-ehring",
+            "first_name":"Marie",
+            "last_name":"Ehring",
+            "position":"Media Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-mariee-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-mariee.jpg"
+            },
+            "email":"marie.ehring@wearetwogether.com",
+            "order":0,
+            "department":[
+                "media"
+            ]
+        },
+        {
+            "id":690,
+            "date":"2020-04-29T14:48:48",
+            "title":"Megan Blackham",
+            "title_seo":"Megan Blackham | Twogether",
+            "slug":"megan-blackham",
+            "first_name":"Megan",
+            "last_name":"Blackham",
+            "position":"Account Manager, partnermarketing.com",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-meganb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-meganb.jpg"
+            },
+            "email":"megan.blackham@wearetwogether.com",
+            "order":0,
+            "department":[
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":293,
+            "date":"2020-04-29T14:48:01",
+            "title":"Michele Reale",
+            "title_seo":"Michele Reale | Twogether",
+            "slug":"michele-reale",
+            "first_name":"Michele",
+            "last_name":"Reale",
+            "position":"Media Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-micheler-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-micheler.jpg"
+            },
+            "email":"michele.reale@wearetwogether.com",
+            "order":140,
+            "department":[
+                "management",
+                "media",
+                "strategy"
+            ]
+        },
+        {
+            "id":691,
+            "date":"2020-04-29T14:47:15",
+            "title":"Mike Singleton",
+            "title_seo":"Mike Singleton | Twogether",
+            "slug":"mike-singleton",
+            "first_name":"Mike",
+            "last_name":"Singleton",
+            "position":"Account Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-mikes-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-mikes.jpg"
+            },
+            "email":"mike.singleton@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":692,
+            "date":"2020-04-29T14:46:30",
+            "title":"Mike Wandsworth",
+            "title_seo":"Mike Wandsworth | Twogether",
+            "slug":"mike-wandsworth",
+            "first_name":"Mike",
+            "last_name":"Wandsworth",
+            "position":"IT Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-mikew-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-mikew.jpg"
+            },
+            "email":"mike.wandsworth@wearetwogether.com",
+            "order":0,
+            "department":[
+                "business-support"
+            ]
+        },
+        {
+            "id":300,
+            "date":"2020-04-29T14:45:46",
+            "title":"Minaz Tejani",
+            "title_seo":"Minaz Tejani | Twogether",
+            "slug":"minaz-tejani",
+            "first_name":"Minaz",
+            "last_name":"Tejani",
+            "position":"Client Services Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-minazt-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-minazt.jpg"
+            },
+            "email":"minaz.tejani@wearetwogether.com",
+            "order":0,
+            "department":[
+                "strategy"
+            ]
+        },
+        {
+            "id":694,
+            "date":"2020-04-29T14:45:03",
+            "title":"Natasha Cherayath",
+            "title_seo":"Natasha Cherayath | Twogether",
+            "slug":"natasha-cherayath",
+            "first_name":"Natasha",
+            "last_name":"Cherayath",
+            "position":"Senior Data Analyst",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-natashac-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-natashac.jpg"
+            },
+            "email":"natasha.cherayath@wearetwogether.com",
+            "order":0,
+            "department":[
+                "media"
+            ]
+        },
+        {
+            "id":693,
+            "date":"2020-04-29T14:44:21",
+            "title":"Natasha Hastings",
+            "title_seo":"Natasha Hastings | Twogether",
+            "slug":"natasha-hastings",
+            "first_name":"Natasha",
+            "last_name":"Hastings",
+            "position":"Receptionist",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-natashah-mobile-1.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-natashah-1.jpg"
+            },
+            "email":"natasha.hastings@wearetwogether.com",
+            "order":0,
+            "department":[
+                "business-support"
+            ]
+        },
+        {
+            "id":695,
+            "date":"2020-04-29T14:43:40",
+            "title":"Neda Ranaie",
+            "title_seo":"Neda Ranaie | Twogether",
+            "slug":"neda-ranaie",
+            "first_name":"Neda",
+            "last_name":"Ranaie",
+            "position":"Finance Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-nedar-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-nedar.jpg"
+            },
+            "email":"neda.ranaie@wearetwogether.com",
+            "order":0,
+            "department":[
+                "business-support"
+            ]
+        },
+        {
+            "id":696,
+            "date":"2020-04-29T14:43:00",
+            "title":"Nia Turner",
+            "title_seo":"Nia Turner | Twogether",
+            "slug":"nia-turner",
+            "first_name":"Nia",
+            "last_name":"Turner",
+            "position":"Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-niat-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-niat.jpg"
+            },
+            "email":"nia.turner@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":697,
+            "date":"2020-04-29T14:42:21",
+            "title":"Nikki Wilson",
+            "title_seo":"Nikki Wilson | Twogether",
+            "slug":"nikki-wilson",
+            "first_name":"Nikki",
+            "last_name":"Wilson",
+            "position":"Support Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-nikkiw-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-nikkiw.jpg"
+            },
+            "email":"nikki.wilson@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":698,
+            "date":"2020-04-29T14:41:06",
+            "title":"Pauric Barrett",
+            "title_seo":"Pauric Barrett | Twogether",
+            "slug":"pauric-barrett",
+            "first_name":"Pauric",
+            "last_name":"Barrett",
+            "position":"Lead Writer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-pauric-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-pauric.jpg"
+            },
+            "email":"pauric.barrett@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":699,
+            "date":"2020-04-29T14:40:30",
+            "title":"Pavneet Jheeta",
+            "title_seo":"Pavneet Jheeta | Twogether",
+            "slug":"pavneet-jheeta",
+            "first_name":"Pavneet",
+            "last_name":"Jheeta",
+            "position":"Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-pavneetj-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-pavneetj.jpg"
+            },
+            "email":"pavneet.jheeta@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":700,
+            "date":"2020-04-29T14:39:55",
+            "title":"Pip Davies",
+            "title_seo":"Pip Davies | Twogether",
+            "slug":"pip-davies",
+            "first_name":"Pip",
+            "last_name":"Davies",
+            "position":"Senior Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-philipad-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-philipad.jpg"
+            },
+            "email":"pip.davies@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":701,
+            "date":"2020-04-29T14:39:21",
+            "title":"Pippa Holland",
+            "title_seo":"Pippa Holland | Twogether",
+            "slug":"pippa-holland",
+            "first_name":"Pippa",
+            "last_name":"Holland",
+            "position":"Digital Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-pippah-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-pippah.jpg"
+            },
+            "email":"pippa.holland@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":702,
+            "date":"2020-04-29T14:38:48",
+            "title":"Rachael Kennedy",
+            "title_seo":"Rachael Kennedy | Twogether",
+            "slug":"rachael-kennedy",
+            "first_name":"Rachael",
+            "last_name":"Elliot",
+            "position":"Project Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rachaelk-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rachaelk.jpg"
+            },
+            "email":"rachael.elliot@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":704,
+            "date":"2020-04-29T14:38:16",
+            "title":"Rachael Shields",
+            "title_seo":"Rachael Shields | Twogether",
+            "slug":"rachael-shields",
+            "first_name":"Rachael",
+            "last_name":"Shields",
+            "position":"UX Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rachaels-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rachaels.jpg"
+            },
+            "email":"rachael.shields@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":703,
+            "date":"2020-04-29T14:37:45",
+            "title":"Rachael Wilson",
+            "title_seo":"Rachael Wilson | Twogether",
+            "slug":"rachael-wilson",
+            "first_name":"Rachael",
+            "last_name":"Wilson",
+            "position":"Senior Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rachaelw-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rachaelw.jpg"
+            },
+            "email":"rachael.wilson@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":705,
+            "date":"2020-04-29T14:37:15",
+            "title":"Rachel Wynn",
+            "title_seo":"Rachel Wynn | Twogether",
+            "slug":"rachel-wynn",
+            "first_name":"Rachel",
+            "last_name":"Wynn",
+            "position":"Senior Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rachelw-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rachelw.jpg"
+            },
+            "email":"rachel.wynn@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":706,
+            "date":"2020-04-29T14:36:46",
+            "title":"Rhi Hughes",
+            "title_seo":"Rhi Hughes | Twogether",
+            "slug":"rhi-hughes",
+            "first_name":"Rhi",
+            "last_name":"Hughes",
+            "position":"Operations Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rhiannanh-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rhiannanh.jpg"
+            },
+            "email":"rhi.hughes@wearetwogether.com",
+            "order":0,
+            "department":[
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":707,
+            "date":"2020-04-29T14:36:18",
+            "title":"Rhys Mitchell",
+            "title_seo":"Rhys Mitchell | Twogether",
+            "slug":"rhys-mitchell",
+            "first_name":"Rhys",
+            "last_name":"Mitchell",
+            "position":"Head of Digital",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rhysm-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rhysm.jpg"
+            },
+            "email":"rhys.mitchell@wearetwogether.com",
+            "order":70,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":708,
+            "date":"2020-04-29T14:35:51",
+            "title":"Richard Blagden",
+            "title_seo":"Richard Blagden | Twogether",
+            "slug":"richard-blagden",
+            "first_name":"Richard",
+            "last_name":"Blagden",
+            "position":"3D Motion Graphics Designer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-richardb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-richardb.jpg"
+            },
+            "email":"richard.blagden@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":303,
+            "date":"2020-04-29T14:35:25",
+            "title":"Richard Sapsed",
+            "title_seo":"Richard Sapsed | Twogether",
+            "slug":"richard-sapsed",
+            "first_name":"Richard",
+            "last_name":"Sapsed",
+            "position":"Chief Operating Officer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-richards-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-richards.jpg"
+            },
+            "email":"richard.sapsed@wearetwogether.com",
+            "order":100,
+            "department":[
+                "management",
+                "business-support"
+            ]
+        },
+        {
+            "id":709,
+            "date":"2020-04-29T14:35:00",
+            "title":"Ricky Cowley",
+            "title_seo":"Ricky Cowley | Twogether",
+            "slug":"ricky-cowley",
+            "first_name":"Ricky",
+            "last_name":"Cowley",
+            "position":"Art Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rickyc-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rickyc.jpg"
+            },
+            "email":"ricky.cowley@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":710,
+            "date":"2020-04-29T14:34:13",
+            "title":"Rob Morris",
+            "title_seo":"Rob Morris | Twogether",
+            "slug":"rob-morris",
+            "first_name":"Rob",
+            "last_name":"Morris",
+            "position":"Operations Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-robm-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-robm.jpg"
+            },
+            "email":"rob.morris@wearetwogether.com",
+            "order":0,
+            "department":[
+                "business-support"
+            ]
+        },
+        {
+            "id":711,
+            "date":"2020-04-29T14:33:51",
+            "title":"Robby Hewitt",
+            "title_seo":"Robby Hewitt | Twogether",
+            "slug":"robby-hewitt",
+            "first_name":"Robby",
+            "last_name":"Hewitt",
+            "position":"Senior Artworker",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-robbyh-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-robbyh.jpg"
+            },
+            "email":"robby.hewitt@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":712,
+            "date":"2020-04-29T14:33:30",
+            "title":"Roger Laing",
+            "title_seo":"Roger Laing | Twogether",
+            "slug":"roger-laing",
+            "first_name":"Roger",
+            "last_name":"Laing",
+            "position":"Content Strategist",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rogerl-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-rogerl.jpg"
+            },
+            "email":"roger.laing@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":713,
+            "date":"2020-04-29T14:33:10",
+            "title":"Sabine Kohlen",
+            "title_seo":"Sabine Kohlen | Twogether",
+            "slug":"sabine-kohlen",
+            "first_name":"Sabine",
+            "last_name":"Kohlen",
+            "position":"Account Manager, Concierge",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-sabinek-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-sabinek.jpg"
+            },
+            "email":"sabine.kohlen@wearetwogether.com",
+            "order":0,
+            "department":[
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":714,
+            "date":"2020-04-29T14:32:51",
+            "title":"Sally Busby",
+            "title_seo":"Sally Busby | Twogether",
+            "slug":"sally-busby",
+            "first_name":"Sally",
+            "last_name":"Busby",
+            "position":"Product Owner, partnermarketing.com",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-sallyb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-sallyb.jpg"
+            },
+            "email":"sally.busby@wearetwogether.com",
+            "order":0,
+            "department":[
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":715,
+            "date":"2020-04-29T14:32:33",
+            "title":"Sam Bear",
+            "title_seo":"Sam Bear | Twogether",
+            "slug":"sam-bear",
+            "first_name":"Sam",
+            "last_name":"Bear",
+            "position":"Group Account Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-samb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-samb.jpg"
+            },
+            "email":"sam.bear@wearetwogether.com",
+            "order":0,
+            "department":[
+                "strategy"
+            ]
+        },
+        {
+            "id":716,
+            "date":"2020-04-29T14:32:16",
+            "title":"Samantha McDevitt",
+            "title_seo":"Samantha McDevitt | Twogether",
+            "slug":"samantha-mcdevitt",
+            "first_name":"Samantha",
+            "last_name":"McDevitt",
+            "position":"Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-samantham-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-samantham.jpg"
+            },
+            "email":"samantha.mcdevitt@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":718,
+            "date":"2020-04-29T14:31:31",
+            "title":"Seb Tyack",
+            "title_seo":"Seb Tyack | Twogether",
+            "slug":"seb-tyack",
+            "first_name":"Seb",
+            "last_name":"Tyack",
+            "position":"Director, Channel Solutions",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-sebt-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-sebt.jpg"
+            },
+            "email":"seb.tyack@wearetwogether.com",
+            "order":90,
+            "department":[
+                "management",
+                "partnermarketing-com",
+                "strategy"
+            ]
+        },
+        {
+            "id":719,
+            "date":"2020-04-29T14:31:06",
+            "title":"Sophie Baker",
+            "title_seo":"Sophie Baker | Twogether",
+            "slug":"sophie-baker",
+            "first_name":"Sophie",
+            "last_name":"Baker",
+            "position":"Account Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-sophieb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-sophieb.jpg"
+            },
+            "email":"sophie.baker@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":720,
+            "date":"2020-04-29T14:30:55",
+            "title":"Stefania Arioli",
+            "title_seo":"Stefania Arioli | Twogether",
+            "slug":"stefania-arioli",
+            "first_name":"Stefania",
+            "last_name":"Arioli",
+            "position":"Group Account Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-stefaniaa-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-stefaniaa.jpg"
+            },
+            "email":"stefania.aroli@wearetwogether.com",
+            "order":0,
+            "department":[
+                "media"
+            ]
+        },
+        {
+            "id":721,
+            "date":"2020-04-29T14:30:45",
+            "title":"Stephen McIntyre",
+            "title_seo":"Stephen McIntyre | Twogether",
+            "slug":"stephen-mcintyre",
+            "first_name":"Stephen",
+            "last_name":"McIntyre",
+            "position":"Senior Developer",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-stephenm-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-stephenm.jpg"
+            },
+            "email":"stephen.mcintyre@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":722,
+            "date":"2020-04-29T14:30:36",
+            "title":"Stephen Penn",
+            "title_seo":"Stephen Penn | Twogether",
+            "slug":"stephen-penn",
+            "first_name":"Stephen",
+            "last_name":"Penn",
+            "position":"QA Tester, partnermarketing.com",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-stephenp-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-stephenp.jpg"
+            },
+            "email":"stephen.penn@wearetwogether.com",
+            "order":0,
+            "department":[
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":288,
+            "date":"2020-04-29T14:30:28",
+            "title":"Stuart Constable",
+            "title_seo":"Stuart Constable | Twogether",
+            "slug":"stuart-constable",
+            "first_name":"Stuart",
+            "last_name":"Constable",
+            "position":"Head of Copy & Content",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-stuartc-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-stuartc.jpg"
+            },
+            "email":"stuart.constable@wearetwogether.com",
+            "order":0,
+            "department":[
+                "creative"
+            ]
+        },
+        {
+            "id":723,
+            "date":"2020-04-29T14:30:21",
+            "title":"Susanne Laidler",
+            "title_seo":"Susanne Laidler | Twogether",
+            "slug":"susanne-laidler",
+            "first_name":"Susanne",
+            "last_name":"Laidler",
+            "position":"Group Account Director",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-susiel-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-susiel.jpg"
+            },
+            "email":"susanne.laidler@wearetwogether.com",
+            "order":0,
+            "department":[
+                "client-services"
+            ]
+        },
+        {
+            "id":724,
+            "date":"2020-04-29T14:30:15",
+            "title":"Tony Bradford",
+            "title_seo":"Tony Bradford | Twogether",
+            "slug":"tony-bradford",
+            "first_name":"Tony",
+            "last_name":"Bradford",
+            "position":"Studio & Production Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-tonyb-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-tonyb.jpg"
+            },
+            "email":"tony.bradford@wearetwogether.com",
+            "order":120,
+            "department":[
+                "management",
+                "creative"
+            ]
+        },
+        {
+            "id":725,
+            "date":"2020-04-29T14:30:10",
+            "title":"Tracy Walker",
+            "title_seo":"Tracy Walker | Twogether",
+            "slug":"tracy-walker",
+            "first_name":"Tracy",
+            "last_name":"Walker",
+            "position":"Director, partnermarketing.com",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-tracyw-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-tracyw.jpg"
+            },
+            "email":"tracy.walker@wearetwogether.com",
+            "order":130,
+            "department":[
+                "management",
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":726,
+            "date":"2020-04-29T14:30:06",
+            "title":"Uzma Ullah",
+            "title_seo":"Uzma Ullah | Twogether",
+            "slug":"uzma-ullah",
+            "first_name":"Uzma",
+            "last_name":"Ullah",
+            "position":"Account Director, partnermarketing.com",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-uzmau-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-uzmau.jpg"
+            },
+            "email":"uzma.ullah@wearetwogether.com",
+            "order":0,
+            "department":[
+                "partnermarketing-com"
+            ]
+        },
+        {
+            "id":296,
+            "date":"2020-04-29T14:30:03",
+            "title":"Zac Sturgess",
+            "title_seo":"Zac Sturgess | Twogether",
+            "slug":"zac-sturgess",
+            "first_name":"Zac",
+            "last_name":"Sturgess",
+            "position":"Solutions Architect",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-zacs-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-zacs.jpg"
+            },
+            "email":"zac.sturgess@wearetwogether.com",
+            "order":0,
+            "department":[
+                "digital"
+            ]
+        },
+        {
+            "id":727,
+            "date":"2020-04-29T14:30:01",
+            "title":"Zena Charles",
+            "title_seo":"Zena Charles | Twogether",
+            "slug":"zena-charles",
+            "first_name":"Zena",
+            "last_name":"Charles",
+            "position":"People Manager",
+            "image":{
+                "13":null,
+                "mobile":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-zenac-mobile.jpg",
+                "23":null,
+                "desktop":"https:\/\/d2kjb19p2g1som.cloudfront.net\/s2d-prod\/uploads\/2020\/04\/img-team-zenac.jpg"
+            },
+            "email":"zena.charles@wearetwogether.com",
+            "order":0,
+            "department":[
+                "business-support"
+            ]
+        }
+    ]
+}

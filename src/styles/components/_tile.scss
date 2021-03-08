@@ -1,0 +1,198 @@
+.tile {
+  display: flex;
+  cursor: pointer;
+  perspective: 1000px;
+  position: relative;
+
+  &__inner {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    //transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.8);
+  }
+  &__front,
+  &__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  &__front {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #27a2c7;
+    background-size: contain;
+  }
+  &__logo {
+    //width: 18vh;
+    //height: 18vh;
+    width: 28%;
+    height: 28%;
+    background: url("assets/rhino.png") no-repeat center;
+    background-size: contain;
+  }
+  &__back {
+    transform: rotateY(180deg);
+    overflow: hidden;
+    background: linear-gradient(90deg, #99b9c8, #6d9eb1);
+    display: flex;
+  }
+
+  &.right-top .tile__back {
+    justify-content: center;
+    align-items: center;
+  }
+  &.center-bottom .tile__back {
+    justify-content: center;
+    align-items: center;
+  }
+  &.center .tile__back {
+    justify-content: center;
+    align-items: center;
+  }
+  &.right-bottom .tile__back {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(#000, 0.2);
+    transition: all 0.3s;
+
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.done {
+    cursor: default;
+    border-radius: 3px;
+    overflow: hidden;
+    //transition: all 0.3s;
+    box-shadow: 0 0 5px 3px rgba(#ccc, 0.4);
+
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  & .img-responsive img {
+    width: 100%;
+    max-width: initial;
+    max-height: initial;
+  }
+
+  // &__container {
+  //   // max-width: 211px;
+  //   // max-height: 137px;
+  //   // overflow: hidden;
+  //   // position: relative;
+  //   // margin-bottom: 20px;
+
+  //   @media (max-width: 750px) {
+  //     // margin: 10px;
+  //     // width: calc(33% - 20px);
+  //   }
+
+  //   @media (max-width: 670px) {
+  //     // margin: 10px;
+  //     // width: calc(50% - 20px);
+  //   }
+
+  //   & img {
+  //     width: 100%;
+  //     // transform: translateY(-15%);
+    
+  //     @media (max-width: 426px) {
+  //       // transform: translateY(0%);
+  //     }
+  //   }
+  // }
+  
+  &__text {
+    position: absolute;
+    bottom: 0;
+    padding: 15px 20px;
+    background: #486681;
+    opacity: .78;
+    width: 100%;
+
+    & h2 {
+      font-family: 'Prometo';
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 25px;
+      margin-bottom: 6px;
+    }
+
+    & p {
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.level-2 .tile {
+  &__text {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 15px;
+    background: #486681;
+    opacity: .78;
+    width: 100%;
+
+    & h2 {
+      font-family: 'Prometo';
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 23px;
+      margin-bottom: 4px;
+    }
+
+    & p {
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.level-3 .tile {
+  &__text {
+    position: absolute;
+    bottom: 0;
+    padding: 5px 10px;
+    background: #486681;
+    opacity: .78;
+    width: 100%;
+
+    & h2 {
+      font-family: 'Prometo';
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 3px;
+    }
+
+    & p {
+      font-size: 10px;
+      line-height: 12px;
+      margin-bottom: 0 !important;
+    }
+  }
+}

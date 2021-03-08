@@ -1,0 +1,14 @@
+@import 'base/normalize';
+@import 'base/vars';
+@import 'base/fonts';
+@import 'base/base';
+
+@import 'components/button';
+@import 'components/tile';
+@import 'components/tiles-head';
+@import 'components/tile-list';
+
+@import 'pages/intro';
+@import 'pages/game';
+@import 'pages/result';
+@import 'pages/leader-board';
