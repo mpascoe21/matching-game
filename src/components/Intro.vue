@@ -41,7 +41,7 @@ export default {
   },
 
   mounted () {
-    axios.get('http://localhost:3000/employees')
+    axios.get('http://twom061-003.s3.amazonaws.com/s2d-prod/api/team.json')
       .then(response => {
         const fullTemp = response.data
         fullTemp.forEach(element => {

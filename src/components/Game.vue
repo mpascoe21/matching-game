@@ -42,7 +42,7 @@ export default {
     const level = 'level' + this.currentLevel
 
     let employees = []
-    await axios.get('http://localhost:3000/employees')
+    await axios.get('http://twom061-003.s3.amazonaws.com/s2d-prod/api/team.json')
       .then(response => {
         const fullTemp = response.data
         const tempEmployees = []
