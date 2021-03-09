@@ -8,6 +8,8 @@ pages:
   script:
     - npm install
     - npm run build
+    - mv public public-vue
+    - mv dist public
     - echo $CI_PAGES_URL
   artifacts:
     paths:
