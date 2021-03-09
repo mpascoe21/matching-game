@@ -7,7 +7,6 @@ pages:
     url: http://$CI_PROJECT_NAMESPACE.pages.twogether.io/$CI_PROJECT_NAME/
   script:
     - npm install
-    - npm run serve
     - npm run build
     - echo $CI_PAGES_URL
   artifacts:
