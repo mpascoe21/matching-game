@@ -8,7 +8,6 @@
       <div class="content-wrapper">
         <div class="content">
           <template v-if="currentLevelResult">
-            <img :src="successBg[currentLevel - 1]" alt="">
             <h1>You’re a real pro!</h1>
             <h4>You completed LEVEL {{ currentLevel }} <br> in {{ levelTime }}!</h4>
             <a href="#"
