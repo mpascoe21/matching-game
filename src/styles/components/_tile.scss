@@ -10,7 +10,6 @@
     width: 100%;
     height: 100%;
     position: relative;
-    //transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.8);
   }
@@ -31,8 +30,6 @@
     background-size: contain;
   }
   &__logo {
-    //width: 18vh;
-    //height: 18vh;
     width: 28%;
     height: 28%;
     background: url("assets/rhino.png") no-repeat center;
@@ -62,32 +59,11 @@
     align-items: center;
   }
 
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-  //   margin: auto;
-  //   background: rgba(#000, 0.2);
-  //   transition: all 0.3s;
-
-  //   opacity: 0;
-  //   visibility: hidden;
-  // }
-
   &.done {
     cursor: default;
     border-radius: 3px;
     overflow: hidden;
-    //transition: all 0.3s;
     box-shadow: 0 0 5px 3px rgba(#ccc, 0.4);
-
-    // &::after {
-    //   // opacity: 1;
-    //   visibility: visible;
-    // }
   }
 
   & .img-responsive img {
@@ -95,33 +71,6 @@
     max-width: initial;
     max-height: initial;
   }
-
-  // &__container {
-  //   // max-width: 211px;
-  //   // max-height: 137px;
-  //   // overflow: hidden;
-  //   // position: relative;
-  //   // margin-bottom: 20px;
-
-  //   @media (max-width: 750px) {
-  //     // margin: 10px;
-  //     // width: calc(33% - 20px);
-  //   }
-
-  //   @media (max-width: 670px) {
-  //     // margin: 10px;
-  //     // width: calc(50% - 20px);
-  //   }
-
-  //   & img {
-  //     width: 100%;
-  //     // transform: translateY(-15%);
-    
-  //     @media (max-width: 426px) {
-  //       // transform: translateY(0%);
-  //     }
-  //   }
-  // }
   
   &__text {
     position: absolute;
