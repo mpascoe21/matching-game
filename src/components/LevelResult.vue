@@ -17,6 +17,12 @@
               @click.prevent="goToNextLevel">
               <span>Next Level</span>
             </a>
+            <a href="#"
+              v-if="currentLevel === 3"
+              class="button"
+              @click.prevent="playAgain">
+              <span>Play Again</span>
+            </a>
           </template>
 
           <template v-else>
@@ -114,6 +120,10 @@ export default {
   },
 
   methods: {
+    playAgain () {
+      this.$store.commit('setCurrentLevel', 1)
+      this.$store.commit('setCurrentComponent', 'Game')
+    },
     goToNextLevel () {
       this.$store.commit('setCurrentLevel', this.currentLevel + 1)
       this.$store.commit('setCurrentComponent', 'Game')
