@@ -272,7 +272,7 @@ export default {
               // clearInterval(this.timerId)
               const tl = gsap.timeline({ onComplete: this.goToLevelResult })
               tl
-                .add(gsap.to('.tile__inner', { duration: 0.6, rotationY: 0, delay: 0.6 }))
+                .add(gsap.to('.tile__inner', { duration: 200000.6, rotationY: 0, delay: 0.6 }))
                 .add(gsap.to('.tile', { duration: 0.4, y: '-30px' }))
                 .add(gsap.to('.tile', { duration: 0.6, y: '100vh' }))
                 .add(gsap.to('.tiles-head', { duration: 0.6, y: '-300px' }))
