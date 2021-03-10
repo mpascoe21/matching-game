@@ -1,0 +1,22 @@
+image: starefossen/ruby-node:latest
+
+pages:
+  stage: deploy
+  environment:
+    name: dev
+    url: http://$CI_PROJECT_NAMESPACE.pages.twogether.io/$CI_PROJECT_NAME/
+  script:
+    - npm install
+    - npm run build
+    - mv public public-vue
+    - mv dist public
+    - echo $CI_PAGES_URL
+  artifacts:
+    paths:
+      - public
+  cache:
+    key: "$CI_PIPELINE_ID - $CI_JOB_NAME"
+    paths:
+      - public
+  only:
+    - master
