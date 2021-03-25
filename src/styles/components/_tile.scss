@@ -80,18 +80,32 @@
     opacity: .78;
     width: 100%;
 
+    @media (max-width: 600px) {
+      padding: 10px;
+    }
+
     & h2 {
       font-family: 'Prometo';
       font-weight: bold;
       font-size: 19px;
       line-height: 25px;
       margin-bottom: 6px;
+
+      @media (max-width: 600px) {
+        font-size: 15px;
+        line-height: 20px;
+      }
     }
 
     & p {
       font-size: 14px;
       line-height: 17px;
       margin-bottom: 0 !important;
+
+      @media (max-width: 600px) {
+        font-size: 11px;
+        line-height: 14px;
+      }
     }
   }
 }
@@ -105,18 +119,31 @@
     opacity: .78;
     width: 100%;
 
+    @media (max-width: 600px) {
+      padding: 10px;
+    }
+
     & h2 {
       font-family: 'Prometo';
       font-weight: bold;
       font-size: 18px;
       line-height: 23px;
       margin-bottom: 4px;
+
+      @media (max-width: 600px) {
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
 
     & p {
       font-size: 12px;
       line-height: 14px;
       margin-bottom: 0 !important;
+
+      @media (max-width: 600px) {
+        display: none;
+      }
     }
   }
 }
@@ -130,18 +157,31 @@
     opacity: .78;
     width: 100%;
 
+    @media (max-width: 600px) {
+      padding: 5px 0px 5px 5px;
+    }
+
     & h2 {
       font-family: 'Prometo';
       font-weight: bold;
       font-size: 14px;
       line-height: 18px;
       margin-bottom: 3px;
+
+      @media (max-width: 600px) {
+        font-size: 9px;
+        line-height: 14px;
+      }
     }
 
     & p {
       font-size: 10px;
       line-height: 12px;
       margin-bottom: 0 !important;
+
+      @media (max-width: 600px) {
+        display: none;
+      }
     }
   }
 }
