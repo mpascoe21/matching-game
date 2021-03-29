@@ -35,7 +35,6 @@ export default {
 
   data () {
     return {
-      tempEmployees: [],
       employees: []
     }
   },
@@ -43,14 +42,13 @@ export default {
   mounted () {
     axios.get('http://twom061-003.s3.amazonaws.com/s2d-prod/api/team.json')
       .then(response => {
+        const teamArr = ['seb-tyack', 'tracy-walker', 'garry-haldane', 'alan-scott', 'rhi-hughes', 'claire-mcaughtry']
         const fullTemp = response.data
         fullTemp.forEach(element => {
-          if (element.department.find(el => el === 'partnermarketing-com')) {
-            this.tempEmployees.push({ name: element.title.replace('&#8217;', ' '), role: element.position, image: element.image.desktop })
+          if (teamArr.indexOf(element.slug) !== -1) {
+            this.employees.push({ name: element.title, role: element.position, image: element.image.desktop })
           }
         })
-        this.employees = this.tempEmployees.sort(() => 0.5 - Math.random()).slice(0, 6)
-        console.log(this.employees)
       })
   },
 
