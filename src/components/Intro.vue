@@ -42,13 +42,22 @@ export default {
   mounted () {
     axios.get('http://twom061-003.s3.amazonaws.com/s2d-prod/api/team.json')
       .then(response => {
-        const teamArr = ['seb-tyack', 'tracy-walker', 'garry-haldane', 'alan-scott', 'rhi-hughes', 'claire-mcaughtry']
+        const tempArr = [{ slug: 'seb-tyack' }, { slug: 'tracy-walker' }, { slug: 'garry-haldane' }, { slug: 'alan-scott' }, { slug: 'rhi-hughes' }, { slug: 'claire-mcaughtry' }]
         const fullTemp = response.data
         fullTemp.forEach(element => {
-          if (teamArr.indexOf(element.slug) !== -1) {
-            this.employees.push({ name: element.title, role: element.position, image: element.image.desktop })
+          if (tempArr.find(o => o.slug === element.slug)) {
+            console.log(element.slug)
+            tempArr.forEach(el => {
+              if (el.slug === element.slug) {
+                el.name = element.title
+                el.role = element.position
+                el.image = element.image.desktop
+              }
+            })
           }
         })
+        this.employees = tempArr
+        console.log(this.employees)
       })
   },
 
