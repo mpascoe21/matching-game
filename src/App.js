@@ -2,10 +2,14 @@ import React from "react";
 import './App.module.scss';
 
 import CountdownTimer from "./components/CountdownTimer";
+import Intro from "./components/Intro";
 
 const App = () => {
   return (
-    <p><CountdownTimer /></p>
+    <div>
+      < CountdownTimer />
+      < Intro />
+    </div>
 
   );
 }
