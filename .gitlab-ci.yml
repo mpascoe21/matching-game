@@ -1,22 +1,27 @@
-image: starefossen/ruby-node:latest
+include: 'http://platform.pages.twogether.io/cicd/templates/staticsite.gitlab-ci.yml'
 
-pages:
-  stage: deploy
-  environment:
-    name: dev
-    url: http://$CI_PROJECT_NAMESPACE.pages.twogether.io/$CI_PROJECT_NAME/
+variables:
+  PUBLIC_URL: https://$CI_PROJECT_NAMESPACE.pages.twogether.io/$CI_PROJECT_NAME/
+  REACT_APP_BASENAME: /$CI_PROJECT_NAME
+
+cache:
+  paths:
+    - ./node_modules
+
+build:
+  image: node:18-alpine
+  stage: build
   script:
     - npm install
     - npm run build
-    - mv public public-vue
-    - mv dist public
-    - echo $CI_PAGES_URL
+    - cp build/index.html build/404.html
   artifacts:
     paths:
-      - public
-  cache:
-    key: "$CI_PIPELINE_ID - $CI_JOB_NAME"
-    paths:
-      - public
-  only:
-    - master
+      - build
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+
+pages:
+  before_script:
+    - rm -rf public
+    - mv build public
