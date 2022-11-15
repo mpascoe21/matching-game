@@ -3,9 +3,6 @@ import styles from './styles.module.scss';
 
 const CountdownTimer = () => {
 
-  // let timeLeft = 10;
-
-
     const hasLoaded = useRef(false);
     const [timeLeft, setTimeLeft] = useState(10);
 
