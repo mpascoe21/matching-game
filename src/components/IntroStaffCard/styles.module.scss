@@ -1,0 +1,37 @@
+.staff {
+  //border: 1px solid greenyellow;
+  position: relative;
+  display: flex;
+  width: 210px;
+  height: auto;
+
+  .staffImg {
+    //border: 1px solid red;
+    bottom: 0;
+    width: 210px;
+    height: auto;
+  }
+
+  .staffDetails {
+    position: absolute;
+    bottom: 0;
+    padding: 5px 10px;
+    background: #486681;
+    opacity: .78;
+    width: 100%;
+
+    h4 {
+      font-family: Prometo;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    p {
+      font-family: proxima-nova, sans-serif, Arial, Helvetica;
+      font-size: 10px;
+      line-height: 12px;
+      margin-bottom: 0;
+    }
+  }
+}

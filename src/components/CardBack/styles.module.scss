@@ -1,0 +1,12 @@
+.cardBack {
+  height: 365px;
+  width: 450px;
+  background-color: #27A2C7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .cardBackImg {
+    height: 100px;
+  }
+}

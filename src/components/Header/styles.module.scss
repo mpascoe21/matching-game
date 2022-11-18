@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background: #fff;
+  padding: 0 20px;
+
+  img {
+    height: 30px;
+  }
+
+  p {
+    font-family: Prometo;
+    color: #202349;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 700;
+    margin: 0;
+  }
+}

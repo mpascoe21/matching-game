@@ -1,10 +1,10 @@
 import React from "react";
 import './styles.module.scss';
 
-const Leaderboard = () => {
+const Loading = () => {
   return (
-    <div></div>
+    <div>Loading...</div>
   );
 }
 
-export default Leaderboard;
+export default Loading;

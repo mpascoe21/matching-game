@@ -1,0 +1,52 @@
+.cardFront {
+  position: absolute;
+  display: flex;
+  height: 365px;
+  width: 450px;
+  transform: rotateY(90deg);
+
+  //.staffImg {
+  //  bottom: 0;
+  //  //height: 150px;
+  //  //width: 100%;
+  //  //width: 120px;
+  //}
+
+  //&.flipped {
+  //  transform: rotateY(0deg);
+  //}
+
+  .cardFrontImg {
+    display: block;
+    height: 365px;
+    width: 450px;
+  }
+
+  .staffDetails {
+    position: absolute;
+    bottom: 0;
+    padding: 5px 10px;
+    background: #486681;
+    opacity: .78;
+    width: 100%;
+
+    h4 {
+      font-family: Prometo;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    p {
+      font-family: proxima-nova, sans-serif, Arial, Helvetica;
+      font-size: 10px;
+      line-height: 12px;
+      margin-bottom: 0;
+
+    }
+  }
+}
+
+.flipped .cardFront {
+  transform: rotateY(0deg);
+}

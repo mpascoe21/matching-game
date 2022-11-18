@@ -1,18 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from './styles.module.scss';
 import IntroStaffCard from "../IntroStaffCard";
-import Tile from "../Tile";
-import LevelError from "../LevelError";
-import CountdownTimer from "../CountdownTimer";
 
+const Intro = ({ staffImages }) => {
 
-const Intro = () => {
+  console.log(staffImages);
 
-  const startGame = () => {
-
-  }
-
-
+  // onClick={shuffleCards} to go on button - it happens on the page load
   return (
     <div className={styles.background}>
       <div className={styles.copyContainer}>
@@ -20,7 +15,7 @@ const Intro = () => {
         <p>Can you match all the team pairs before the time runs out?</p>
         <p>Simply click two identical card in succession to create a match.<br/>The fastest player to complete all three levels wins a spin.</p>
         <h4>Welcome</h4>
-        <a className={styles.button} onClick={() => startGame()}>LET'S PLAY</a>
+        <Link to='/card-list' className={styles.button} >LET'S PLAY</Link>
       </div>
       <div className={styles.imgContainer}>
         < IntroStaffCard />
@@ -30,11 +25,7 @@ const Intro = () => {
         < IntroStaffCard />
         < IntroStaffCard />
       </div>
-
-
     </div>
-
-
   );
 }
 
