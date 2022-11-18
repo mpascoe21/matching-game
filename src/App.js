@@ -31,13 +31,21 @@ console.log(staffImages);
 
 const App = () => {
   const [currentLevel, setCurrentLevel] = useState(1);
-  console.log(currentLevel);
+  const [levelCompleted, setLevelCompleted] = useState();
+
+  console.log(currentLevel + ' in app.js');
+  console.log(levelCompleted + ' in app.js');
 
   const nextLevel = () => {
     if (currentLevel === 1) {
       setCurrentLevel(2);
+      setLevelCompleted(1)
     } else if (currentLevel === 2) {
       setCurrentLevel(3);
+      setLevelCompleted(2)
+    } else if (currentLevel === 3) {
+      setCurrentLevel(4);
+      setLevelCompleted(3)
     }
   }
 
@@ -79,10 +87,25 @@ const App = () => {
       <Suspense fallback={<Loading />}>
         <Header />
         <Routes>
-          <Route path='/' element={<Intro staffImages={staffImages} />}/>
-          <Route path='/card-list' element={<CardList staffImages={staffImages} currentLevel={currentLevel} nextLevel={nextLevel} />}/>
-          <Route path='/level-error' element={<LevelError />}/>
-          <Route path='/level-results' element={<LevelResults />}/>
+          <Route
+            path='/'
+            element={<Intro
+              staffImages={staffImages} />}/>
+          <Route
+            path='/card-list'
+            element={<CardList
+              staffImages={staffImages}
+              currentLevel={currentLevel}
+              nextLevel={nextLevel} />}/>
+          <Route
+            path='/level-error'
+            element={<LevelError />}/>
+          <Route
+            path='/level-results'
+            element={<LevelResults
+              currentLevel={currentLevel}
+              levelCompleted={levelCompleted}
+            />}/>
         </Routes>
       </Suspense>
     </BrowserRouter>

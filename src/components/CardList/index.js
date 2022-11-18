@@ -115,7 +115,7 @@ const CardList = ({ staffImages, currentLevel, nextLevel }) => {
       navigate("/level-results");
       console.log('Well done!'); // WORKING!
       nextLevel();
-      console.log(currentLevel);
+      console.log(currentLevel + ' in cardList');
     }
   }, [cards]);
 
