@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import Card from "../Card";
 import {useNavigate} from "react-router-dom";
 
-const CardList = ({ staffImages, currentLevel, nextLevel }) => {
+const CardList = ({ staffImages, currentLevel, nextLevel, currentPage }) => {
 
   const hasLoaded = useRef(false);
   const [cards, setCards] = useState([]);
@@ -14,6 +14,9 @@ const CardList = ({ staffImages, currentLevel, nextLevel }) => {
   const [disabled, setDisabled] = useState(false);
   // const [currentLevel, setCurrentLevel] = useState(1);
   const navigate = useNavigate();
+
+  currentPage = 'cardList';
+  console.log(currentPage);
 
   // randomizes dummy images
   staffImages.sort(() => Math.random() - 0.5);
@@ -129,6 +132,7 @@ const CardList = ({ staffImages, currentLevel, nextLevel }) => {
           handleChoice={handleChoice}
           flipped={card === choiceOne || card === choiceTwo || card.matched}
           disabled={disabled}
+          currentLevel={currentLevel}
         />
       ))}
     </div>

@@ -3,7 +3,9 @@ import styles from './styles.module.scss';
 import CardBack from "../CardBack";
 import CardFront from "../CardFront";
 
-const Card = ({ card, handleChoice, flipped, disabled }) => {
+const Card = ({ card, handleChoice, flipped, disabled, currentLevel }) => {
+
+  console.log(currentLevel + ' in Card');
 
   const handleClick = () => {
     if (!disabled) {
@@ -12,7 +14,7 @@ const Card = ({ card, handleChoice, flipped, disabled }) => {
   }
 
   return (
-    <div className={styles.card + ' ' + (flipped ? styles.flipped : '')}>
+    <div className={styles.card + ' ' + (flipped ? styles.flipped : '') + ' ' + (currentLevel === 1 ? styles.cardLevel1 : currentLevel === 2 ? styles.cardLevel2 : styles.cardLevel3)}>
       <div className={styles.cardFront}>
         <img className={styles.cardFrontImg} src={card.src} alt="card front"/>
         <div className={styles.staffDetails}>

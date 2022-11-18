@@ -32,6 +32,7 @@ console.log(staffImages);
 const App = () => {
   const [currentLevel, setCurrentLevel] = useState(1);
   const [levelCompleted, setLevelCompleted] = useState();
+  let currentPage;
 
   console.log(currentLevel + ' in app.js');
   console.log(levelCompleted + ' in app.js');
@@ -85,7 +86,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
-        <Header />
+        <Header currentPage={currentPage} />
         <Routes>
           <Route
             path='/'
@@ -96,7 +97,8 @@ const App = () => {
             element={<CardList
               staffImages={staffImages}
               currentLevel={currentLevel}
-              nextLevel={nextLevel} />}/>
+              nextLevel={nextLevel}
+              currentPage={currentPage} />}/>
           <Route
             path='/level-error'
             element={<LevelError />}/>
