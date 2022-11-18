@@ -3,11 +3,11 @@ import styles from './styles.module.scss';
 import Card from "../Card";
 import {useNavigate} from "react-router-dom";
 
-const CardList = ({ staffImages, currentLevel, nextLevel, currentPage }) => {
+const CardList = ({ staffImages, allStaff, currentLevel, nextLevel, currentPage }) => {
 
   const hasLoaded = useRef(false);
   const [cards, setCards] = useState([]);
-  const [allStaff, setAllStaff] = useState([]);
+  // const [allStaff, setAllStaff] = useState([]);
   const [turns, setTurns] = useState(0);
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
@@ -20,20 +20,20 @@ const CardList = ({ staffImages, currentLevel, nextLevel, currentPage }) => {
 
   // randomizes dummy images
   staffImages.sort(() => Math.random() - 0.5);
-  console.log(staffImages);
+  // console.log(staffImages);
 
 
   let dummyGameArr = [];
 // Cuts array dependent on game level. WORKING
   if (currentLevel === 1) {
     dummyGameArr = staffImages.slice(0, 3);
-    console.log(dummyGameArr);
+    // console.log(dummyGameArr);
   } else if (currentLevel === 2) {
     dummyGameArr = staffImages.slice(0, 6);
-    console.log(dummyGameArr);
+    // console.log(dummyGameArr);
   } else if (currentLevel === 3) {
     dummyGameArr = staffImages.slice(0, 12);
-    console.log(dummyGameArr);
+    // console.log(dummyGameArr);
   }
 
   //* Adds 'matched' to each staff member

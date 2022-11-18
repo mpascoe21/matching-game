@@ -12,26 +12,28 @@ const LevelResults = lazy(() => import('./components/LevelResults'));
 const LevelError = lazy(() => import('./components/LevelError'));
 
 
-const staffImages = [
-  {'src': '/images/car.png', 'name': 'Car'},
-  {'src': '/images/dog.png', 'name': 'Dog'},
-  {'src': '/images/flowers.png', 'name': 'Flowers'},
-  {'src': '/images/house.png', 'name': 'House'},
-  {'src': '/images/sun.png', 'name': 'Sun'},
-  {'src': '/images/tree.png', 'name': 'Tree'},
-  {'src': '/images/car.png', 'name': 'CAR'},
-  {'src': '/images/dog.png', 'name': 'DOG'},
-  {'src': '/images/flowers.png', 'name': 'FLOWERS'},
-  {'src': '/images/house.png', 'name': 'HOUSE'},
-  {'src': '/images/sun.png', 'name': 'SUN'},
-  {'src': '/images/tree.png', 'name': 'TREE'}
-]
-console.log(staffImages);
+// const staffImages = [
+//   {'src': '/images/car.png', 'name': 'Car'},
+//   {'src': '/images/dog.png', 'name': 'Dog'},
+//   {'src': '/images/flowers.png', 'name': 'Flowers'},
+//   {'src': '/images/house.png', 'name': 'House'},
+//   {'src': '/images/sun.png', 'name': 'Sun'},
+//   {'src': '/images/tree.png', 'name': 'Tree'},
+//   {'src': '/images/car.png', 'name': 'CAR'},
+//   {'src': '/images/dog.png', 'name': 'DOG'},
+//   {'src': '/images/flowers.png', 'name': 'FLOWERS'},
+//   {'src': '/images/house.png', 'name': 'HOUSE'},
+//   {'src': '/images/sun.png', 'name': 'SUN'},
+//   {'src': '/images/tree.png', 'name': 'TREE'}
+// ]
+// console.log(staffImages);
 
 
 const App = () => {
   const [currentLevel, setCurrentLevel] = useState(1);
   const [levelCompleted, setLevelCompleted] = useState();
+  const [allStaff, setAllStaff] = useState([]);
+
   let currentPage;
 
   console.log(currentLevel + ' in app.js');
@@ -50,37 +52,33 @@ const App = () => {
     }
   }
 
-  // const hasLoaded = useRef(false);
 
-  // const getStaffData = () => {
-  //   fetch(`https://twom061-003.s3.amazonaws.com/s2d-prod/api/team.json`)
-  //     .then((response) => response.json())
-  //     .then((jsonResponse) => setAllStaff(jsonResponse));
-  //   // console.log(allStaff)
-  // };
+
+  const hasLoaded = useRef(false);
+
+  const getStaffData = () => {
+    fetch(`https://twom061-003.s3.amazonaws.com/s2d-prod/api/team.json`)
+      .then((response) => response.json())
+      .then((jsonResponse) => setAllStaff(jsonResponse));
+    // console.log(allStaff)
+  };
   // getStaffData();
 
 
-  // useEffect(() => {
-  //   if (hasLoaded.current) return;
-  //   hasLoaded.current = true;
-  //   getStaffData();
-  // }, []);
+  useEffect(() => {
+    if (hasLoaded.current) return;
+    hasLoaded.current = true;
+    getStaffData();
+  }, []);
   // console.log(allStaff);
-  //
-  // const digitalTeam = allStaff.filter(staffMember => staffMember.department[0] === 'digital');
-  // console.log(digitalTeam);
-  //
-  // digitalTeam.sort(() => Math.random() - 0.5);
-  // console.log(digitalTeam);
-  // // console.log(digitalTeam[1].position); // not working
-  //
-  // let gameArr = digitalTeam.slice(0, 6);
-  // console.log(gameArr);
-  //
-  // let staffImgArr = gameArr.map(staff => staff.image.mobile)
-  // console.log(staffImgArr);
-  // // console.log(gameArr.title); //not working
+
+  const digitalTeam = allStaff.filter(staffMember => staffMember.department[0] === 'digital');
+  console.log(digitalTeam);
+
+  digitalTeam.sort(() => Math.random() - 0.5);
+  console.log(digitalTeam);
+
+  const staffImages = digitalTeam;
 
 
   return (
@@ -96,6 +94,7 @@ const App = () => {
             path='/card-list'
             element={<CardList
               staffImages={staffImages}
+              allStaff={allStaff}
               currentLevel={currentLevel}
               nextLevel={nextLevel}
               currentPage={currentPage} />}/>
