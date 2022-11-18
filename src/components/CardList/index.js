@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import Card from "../Card";
 import {useNavigate} from "react-router-dom";
 
-const CardList = ({ staffImages }) => {
+const CardList = ({ staffImages, currentLevel, nextLevel }) => {
 
   const hasLoaded = useRef(false);
   const [cards, setCards] = useState([]);
@@ -12,7 +12,7 @@ const CardList = ({ staffImages }) => {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
-  const [currentLevel, setCurrentLevel] = useState(1);
+  // const [currentLevel, setCurrentLevel] = useState(1);
   const navigate = useNavigate();
 
   // randomizes dummy images
@@ -107,37 +107,17 @@ const CardList = ({ staffImages }) => {
   //   }
   // }
 
-
-
-  // // Checking if all cards are matched
-  // const success = () => {
-  //   if (cards.every(card => card.matched === true)) {
-  //     console.log('Well done!'); // WORKING!
-  //     // display <LevelResults/>
-  //     // on button click go to next level (<Card/>) setCurrentLevel(2)
-  //   }
-  // }
-  // success();
-
-
   useEffect(() => {
     console.log(cards);
     if (cards.length === 0) return;
+    // Checks if all cards are matched
     if (cards.every(card => card.matched === true)) {
       navigate("/level-results");
       console.log('Well done!'); // WORKING!
-      // display <LevelResults/>
-      // on button click go to next level (<Card/>) setCurrentLevel(2)
+      nextLevel();
+      console.log(currentLevel);
     }
   }, [cards]);
-
-
-  // if (matchedCards === true) {
-  //   console.log('Well done!'); // WORKING!
-  //   // setCurrentLevel(2);
-  //   // display <LevelResults/>
-  //   // on button click go to next level (<Card/>) setCurrentLevel(2)
-  // }
 
 
   return (

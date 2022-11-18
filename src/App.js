@@ -18,12 +18,28 @@ const staffImages = [
   {'src': '/images/flowers.png', 'name': 'Flowers'},
   {'src': '/images/house.png', 'name': 'House'},
   {'src': '/images/sun.png', 'name': 'Sun'},
-  {'src': '/images/tree.png', 'name': 'Tree'}
+  {'src': '/images/tree.png', 'name': 'Tree'},
+  {'src': '/images/car.png', 'name': 'CAR'},
+  {'src': '/images/dog.png', 'name': 'DOG'},
+  {'src': '/images/flowers.png', 'name': 'FLOWERS'},
+  {'src': '/images/house.png', 'name': 'HOUSE'},
+  {'src': '/images/sun.png', 'name': 'SUN'},
+  {'src': '/images/tree.png', 'name': 'TREE'}
 ]
 console.log(staffImages);
 
 
 const App = () => {
+  const [currentLevel, setCurrentLevel] = useState(1);
+  console.log(currentLevel);
+
+  const nextLevel = () => {
+    if (currentLevel === 1) {
+      setCurrentLevel(2);
+    } else if (currentLevel === 2) {
+      setCurrentLevel(3);
+    }
+  }
 
   // const hasLoaded = useRef(false);
 
@@ -64,7 +80,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path='/' element={<Intro staffImages={staffImages} />}/>
-          <Route path='/card-list' element={<CardList staffImages={staffImages} />}/>
+          <Route path='/card-list' element={<CardList staffImages={staffImages} currentLevel={currentLevel} nextLevel={nextLevel} />}/>
           <Route path='/level-error' element={<LevelError />}/>
           <Route path='/level-results' element={<LevelResults />}/>
         </Routes>
