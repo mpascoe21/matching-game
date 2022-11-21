@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 import styles from './styles.module.scss';
 import IntroStaffCard from "../IntroStaffCard";
 
-const Intro = ({ staffImages }) => {
+const Intro = ({ staffArr }) => {
 
-  console.log(staffImages);
+  console.log('StaffArr in Intro', staffArr);
 
-  // onClick={shuffleCards} to go on button - it happens on the page load
+  staffArr.sort(() => Math.random() - 0.5);
+
+  let staffGridArr = staffArr.slice(0, 6);
+  console.log('StaffGrid in Intro', staffGridArr);
+
   return (
     <div className={styles.background}>
       <div className={styles.copyContainer}>
@@ -18,12 +22,9 @@ const Intro = ({ staffImages }) => {
         <Link to='/card-list' className={styles.button} >LET'S PLAY</Link>
       </div>
       <div className={styles.imgContainer}>
-        < IntroStaffCard />
-        < IntroStaffCard />
-        < IntroStaffCard />
-        < IntroStaffCard />
-        < IntroStaffCard />
-        < IntroStaffCard />
+        {staffGridArr.map(staffMember => (
+          <IntroStaffCard key={staffMember.id} staffMember={staffMember}/>
+        ))}
       </div>
     </div>
   );
