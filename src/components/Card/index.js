@@ -5,8 +5,6 @@ import CardFront from "../CardFront";
 
 const Card = ({ card, handleChoice, flipped, disabled, currentLevel }) => {
 
-  // console.log(currentLevel + ' in Card');
-
   const handleClick = () => {
     if (!disabled) {
       handleChoice(card)

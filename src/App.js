@@ -12,23 +12,6 @@ const LevelResults = lazy(() => import('./components/LevelResults'));
 const LevelError = lazy(() => import('./components/LevelError'));
 
 
-// const staffImages = [
-//   {'src': '/images/car.png', 'name': 'Car'},
-//   {'src': '/images/dog.png', 'name': 'Dog'},
-//   {'src': '/images/flowers.png', 'name': 'Flowers'},
-//   {'src': '/images/house.png', 'name': 'House'},
-//   {'src': '/images/sun.png', 'name': 'Sun'},
-//   {'src': '/images/tree.png', 'name': 'Tree'},
-//   {'src': '/images/car.png', 'name': 'CAR'},
-//   {'src': '/images/dog.png', 'name': 'DOG'},
-//   {'src': '/images/flowers.png', 'name': 'FLOWERS'},
-//   {'src': '/images/house.png', 'name': 'HOUSE'},
-//   {'src': '/images/sun.png', 'name': 'SUN'},
-//   {'src': '/images/tree.png', 'name': 'TREE'}
-// ]
-// console.log(staffImages);
-
-
 const App = () => {
   const [currentLevel, setCurrentLevel] = useState(1);
   const [levelCompleted, setLevelCompleted] = useState();
@@ -36,8 +19,8 @@ const App = () => {
 
   let currentPage;
 
-  console.log(currentLevel + ' in app.js');
-  console.log(levelCompleted + ' in app.js');
+  console.log('current level in app.js:', currentLevel);
+  console.log('levelCompleted in app.js:', levelCompleted);
 
   const nextLevel = () => {
     if (currentLevel === 1) {
@@ -52,25 +35,19 @@ const App = () => {
     }
   }
 
-
-
   const hasLoaded = useRef(false);
 
   const getStaffData = () => {
     fetch(`https://twom061-003.s3.amazonaws.com/s2d-prod/api/team.json`)
       .then((response) => response.json())
       .then((jsonResponse) => setAllStaff(jsonResponse));
-    // console.log(allStaff)
   };
-  // getStaffData();
-
 
   useEffect(() => {
     if (hasLoaded.current) return;
     hasLoaded.current = true;
     getStaffData();
   }, []);
-  // console.log(allStaff);
 
   const digitalTeam = allStaff.filter(staffMember => staffMember.department[0] === 'digital');
   console.log(digitalTeam);
@@ -78,7 +55,7 @@ const App = () => {
   digitalTeam.sort(() => Math.random() - 0.5);
   console.log(digitalTeam);
 
-  const staffImages = digitalTeam;
+  const staffArr = digitalTeam;
 
 
   return (
@@ -89,11 +66,11 @@ const App = () => {
           <Route
             path='/'
             element={<Intro
-              staffImages={staffImages} />}/>
+              staffArr={staffArr} />}/>
           <Route
             path='/card-list'
             element={<CardList
-              staffImages={staffImages}
+              staffArr={staffArr}
               allStaff={allStaff}
               currentLevel={currentLevel}
               nextLevel={nextLevel}

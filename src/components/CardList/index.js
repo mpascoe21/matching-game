@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import Card from "../Card";
 import {useNavigate} from "react-router-dom";
 
-const CardList = ({ staffImages, allStaff, currentLevel, nextLevel, currentPage }) => {
+const CardList = ({ staffArr, allStaff, currentLevel, nextLevel, currentPage }) => {
 
   const hasLoaded = useRef(false);
   const [cards, setCards] = useState([]);
@@ -18,33 +18,28 @@ const CardList = ({ staffImages, allStaff, currentLevel, nextLevel, currentPage 
   currentPage = 'cardList';
   console.log(currentPage);
 
-  // randomizes dummy images
-  staffImages.sort(() => Math.random() - 0.5);
-  // console.log(staffImages);
+  // Randomizes dummy images
+  staffArr.sort(() => Math.random() - 0.5);
 
-
-  let dummyGameArr = [];
-// Cuts array dependent on game level. WORKING
+  let gameArr = [];
+// Cuts array dependent on game level
   if (currentLevel === 1) {
-    dummyGameArr = staffImages.slice(0, 3);
-    // console.log(dummyGameArr);
+    gameArr = staffArr.slice(0, 3);
   } else if (currentLevel === 2) {
-    dummyGameArr = staffImages.slice(0, 6);
-    // console.log(dummyGameArr);
+    gameArr = staffArr.slice(0, 6);
   } else if (currentLevel === 3) {
-    dummyGameArr = staffImages.slice(0, 12);
-    // console.log(dummyGameArr);
+    gameArr = staffArr.slice(0, 12);
   }
 
   //* Adds 'matched' to each staff member
   allStaff.forEach((staffMember) => {
     staffMember.matched = false;
   });
-  console.log(cards.map(card => card.matched));
+  console.log('Checking if cards matched.', cards.map(card => card.matched));
 
   //* shuffle cards
   const shuffleCards = () => {
-    const shuffleCards = [...dummyGameArr, ...dummyGameArr]
+    const shuffleCards = [...gameArr, ...gameArr]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({...card, id: Math.random() }))
 
@@ -64,11 +59,11 @@ const CardList = ({ staffImages, allStaff, currentLevel, nextLevel, currentPage 
   useEffect(() => {
     if (choiceOne && choiceTwo) {
       setDisabled(true)
-      if (choiceOne.src === choiceTwo.src) {
+      if (choiceOne.image.desktop === choiceTwo.image.desktop) {
         console.log('cards match')
         setCards((prevCards) => {
           return prevCards.map(card => {
-            if (card.src === choiceOne.src) {
+            if (card.image.desktop === choiceOne.image.desktop) {
               return {...card, matched: true}
             } else {
               return card;
@@ -98,30 +93,17 @@ const CardList = ({ staffImages, allStaff, currentLevel, nextLevel, currentPage 
     shuffleCards()
   }, []);
 
-  // const matchedCards = cards.every(card => card.matched === true);
-  // console.log(matchedCards); //WORKING!
-  //
-  //
-  // const success = () => {
-  //   if (matchedCards === true) {
-  //     console.log('Well done!'); // WORKING!
-  //     // display <LevelResults/>
-  //     // on button click go to next level (<Card/>) setCurrentLevel(2)
-  //   }
-  // }
-
   useEffect(() => {
     console.log(cards);
     if (cards.length === 0) return;
-    // Checks if all cards are matched
+    // Checks if all cards are matched.
     if (cards.every(card => card.matched === true)) {
       navigate("/level-results");
-      console.log('Well done!'); // WORKING!
+      console.log('Well done!');
       nextLevel();
-      console.log(currentLevel + ' in cardList');
+      // console.log(currentLevel + ' in cardList');
     }
   }, [cards]);
-
 
   return (
     <div className={styles.cardGrid}>
