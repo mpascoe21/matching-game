@@ -18,8 +18,8 @@ const Card = ({ card, handleChoice, flipped, disabled, currentLevel }) => {
       <div className={styles.cardFront}>
         <img className={styles.cardFrontImg} src={card.image.desktop} alt="card front"/>
         <div className={styles.staffDetails}>
-          <h4>{card.name}</h4>
-          <p>Job title</p>
+          <h4>{card.title}</h4>
+          <p>{card.position}</p>
         </div>
       </div>
       <div className={styles.cardBack} onClick={handleClick}>
