@@ -1,11 +1,28 @@
 .cardGrid {
-  margin-top: 80px;
+  //height: 100%;
+  //margin-top: 80px;
   //display: grid;
   //grid-template-columns: 1fr 1fr 1fr;
   //gap: 20px;
 
+
+
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
+  justify-content: center;
+  //align-content: center;
   flex-wrap: wrap;
   row-gap: 10px;
+  column-gap: 10px;
+
+  //top: 50%;
+  //-ms-transform: translateY(-50%);
+  //transform: translateY(-50%);
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1000px) {
+    margin-top: 40px;
+  }
 }

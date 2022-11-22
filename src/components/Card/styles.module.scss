@@ -7,18 +7,58 @@
 }
 
 .cardLevel1 {
-  height: 365px;
-  width: 450px;
+  //height: 365px;
+  //width: 450px;
+  height: 196px;
+  width: 155px;
+
+  @media screen and (min-width: 768px) {
+    height: 281.59px;
+    width: 344px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    height: 340px;
+    width: 400px;
+  }
 }
 
 .cardLevel2 {
-  height: 237px;
-  width: 335px;
+  //height: 237px;
+  //width: 335px;
+  height: 148px;
+  width: 98.9px;
+
+  @media screen and (min-width: 768px) {
+    height: 204.79px;
+    width: 223.64px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    height: 235px;
+    width: 330px;
+  }
 }
 
 .cardLevel3 {
-  height: 182px;
-  width: 218px;
+  //height: 182px;
+  //width: 218px;
+  height: 96.2px;
+  width: 72.5px;
+
+  @media screen and (min-width: 768px) {
+    height: 138.24px;
+    width: 167px;
+
+  }
+
+  @media screen and (min-width: 1366px) {
+    //height: 182.4px;
+    //width: 218.88px;
+
+    height: 170px;
+    width: 210px;
+  }
 }
 
 .cardFront {
@@ -70,7 +110,17 @@
   transition-delay: 0.2s;
 
   .cardBackImg {
-    height: 100px;
+    height: 42px;
+
+    @media screen and (min-width: 768px) {
+      height: 57px;
+      //width: 223.64px;
+    }
+
+    @media screen and (min-width: 1366px) {
+      height: 66px;
+      //width: 330px;
+    }
   }
 }
 
