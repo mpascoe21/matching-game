@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import styles from './styles.module.scss';
 // import background from '../../../public/images/failed.jpg'
 
-const LevelError = () => {
+const LevelError = ({setCurrentPage}) => {
+
+
+
+  setCurrentPage('errorPage');
+
   return (
     <div className={styles.bgContainer}>
       <div className={styles.copyContainer}>

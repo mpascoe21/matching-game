@@ -2,10 +2,11 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import styles from './styles.module.scss';
 
-const LevelResults = ({currentLevel, levelCompleted}) => {
+const LevelResults = ({currentLevel, levelCompleted, setCurrentPage}) => {
 
 console.log(currentLevel + ' in results');
 
+  setCurrentPage('resultsPage');
 
   return (
     <div className={styles.bgContainer + ' ' + (currentLevel === 2 ? styles.completed1 : currentLevel === 3 ? styles.completed2 : styles.completed3)}>
