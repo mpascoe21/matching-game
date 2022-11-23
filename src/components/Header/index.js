@@ -10,7 +10,7 @@ const Header = ({currentPage, timeLeft, setTimeLeft, countdown, currentLevel, te
 
   return (
     <div className={styles.header + ' ' + (currentPage === 'cardList' ? styles.gameHeader : '')}>
-      <img src='/images/rhino-logo.png' alt="Twogether Rhino Logo"/>
+      <img src='/images/img-rhino-logo.png' alt="Twogether Rhino Logo"/>
       <div>
         <HeaderTitle currentPage={currentPage}
                      timeLeft={timeLeft}
