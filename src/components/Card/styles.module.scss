@@ -1,5 +1,6 @@
 .card {
   position: relative;
+  cursor: pointer;
 
   img {
     display: block;
@@ -7,19 +8,16 @@
 }
 
 .cardLevel1 {
-  //height: 365px;
-  //width: 450px;
   height: 196px;
-  width: 155px;
+  width: calc((100% - 10px) / 2);
 
   @media screen and (min-width: 768px) {
     height: 281.59px;
-    width: 344px;
   }
 
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1000px) {
     height: 340px;
-    width: 400px;
+    width: calc((80% - 20px) / 3);
   }
 }
 
@@ -27,37 +25,35 @@
   //height: 237px;
   //width: 335px;
   height: 148px;
-  width: 98.9px;
+  width: calc((100% - 20px) / 3);
+  //width: 98.9px;
 
   @media screen and (min-width: 768px) {
     height: 204.79px;
-    width: 223.64px;
+    //width: 223.64px;
   }
 
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1000px) {
     height: 235px;
-    width: 330px;
+    width: calc((90% - 30px) / 4);
   }
 }
 
 .cardLevel3 {
-  //height: 182px;
-  //width: 218px;
   height: 96.2px;
-  width: 72.5px;
+  //width: 72.5px;
+  width: calc((100% - 30px) / 4);
+  //width: calc((100% - 20px) / 3);
 
   @media screen and (min-width: 768px) {
     height: 138.24px;
-    width: 167px;
-
+    //width: 167px;
   }
 
-  @media screen and (min-width: 1366px) {
-    //height: 182.4px;
-    //width: 218.88px;
-
+  @media screen and (min-width: 1000px) {
     height: 170px;
-    width: 210px;
+    //width: 210px;
+    width: calc((90% - 50px) / 6);
   }
 }
 
@@ -83,18 +79,46 @@
     opacity: .78;
     width: 100%;
 
+    @media screen and (min-width: 768px) {
+      padding: 10px;
+    }
+
+    @media screen and (min-width: 1000px) {
+      //padding: 10px 10px;
+    }
+
     h4 {
       font-family: Prometo;
-      font-weight: 700;
+      //font-weight: 700; original
+      font-weight: 500;
       font-size: 14px;
       line-height: 18px;
+
+      @media screen and (min-width: 768px) {
+        font-size: 16px;
+        padding-bottom: 3px;
+      }
+
+      @media screen and (min-width: 1000px) {
+        font-size: 18px;
+        padding-bottom: 5px;
+      }
     }
 
     p {
       font-family: proxima-nova, sans-serif, Arial, Helvetica;
       font-size: 10px;
+      font-weight: 100;
       line-height: 12px;
       margin-bottom: 0;
+
+      @media screen and (min-width: 768px) {
+        font-size: 12px;
+      }
+
+      @media screen and (min-width: 1000px) {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -110,15 +134,16 @@
   transition-delay: 0.2s;
 
   .cardBackImg {
-    height: 42px;
+    //height: 42px;
+    width: 36%;
 
     @media screen and (min-width: 768px) {
-      height: 57px;
+      //height: 57px;
       //width: 223.64px;
     }
 
     @media screen and (min-width: 1366px) {
-      height: 66px;
+      //height: 66px;
       //width: 330px;
     }
   }

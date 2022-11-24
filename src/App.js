@@ -17,23 +17,25 @@ const App = () => {
   const [levelCompleted, setLevelCompleted] = useState();
   const [allStaff, setAllStaff] = useState([]);
   const [currentPage, setCurrentPage] = useState();
-  const [timeLeft, setTimeLeft] = useState(10);
+  const [timeLeft, setTimeLeft] = useState(null);
+  const timerRunning = useRef(false);
 
-  console.log('current level in app.js:', currentLevel);
-  console.log('levelCompleted in app.js:', levelCompleted);
+  // console.log('current level in app.js:', currentLevel);
+  // console.log('levelCompleted in app.js:', levelCompleted);
+  // let timer;
 
   const countdown = () => {
+    timerRunning.current = true;
     setTimeout(() => {
       setTimeLeft((timeLeft) => timeLeft > 0 ? timeLeft - 1 : timeLeft);
-      countdown();
+      if (timerRunning.current) countdown();
     }, 1000);
   };
 
   const stopTimer = () => {
-    return () => {
-      clearTimeout(countdown);
-    }
-  }
+    timerRunning.current = false;
+    console.log('stopped timer');
+  };
 
   const nextLevel = () => {
     if (currentLevel === 1) {
@@ -42,7 +44,7 @@ const App = () => {
       setLevelCompleted(1);
 
     } else if (currentLevel === 2) {
-      // setTimeLeft(20);
+      // setTimeLeft(30);
       setCurrentLevel(3);
       setLevelCompleted(2)
     } else if (currentLevel === 3) {
@@ -59,8 +61,7 @@ const App = () => {
       .then((jsonResponse) => setAllStaff(jsonResponse));
   };
 
-  console.log(allStaff);
-  console.log(allStaff.filter(staffmember => staffmember.department));
+  console.log('All Staff', allStaff);
 
   useEffect(() => {
     if (hasLoaded.current) return;
@@ -68,46 +69,70 @@ const App = () => {
     getStaffData();
   }, []);
 
+  const filteredAllStaff = allStaff.filter((teamMember) => {
+    if (!(teamMember.image.mobile || teamMember.image.desktop).includes('team-avatar')) {
+      return teamMember.title;
+    }
+  })
+  console.log('filteredAllStaff', filteredAllStaff);
 
-  const digitalTeam = allStaff.filter(staffMember => staffMember.department[0] === 'digital');
-  // console.log('digital Team', digitalTeam);
+  let teams = {
+    digitalTeam: [],
+    creativeTeam: [],
+    clientServicesTeam: [],
+    partnerMarketingTeam: [],
+    mediaTeam: [],
+    strategyTeam: [],
+    businessSupportTeam: [],
+    managementTeam: []
+  };
+  console.log('teams', teams);
 
-  const creativeTeam = allStaff.filter(staffMember => staffMember.department[0] === 'creative');
-  // console.log('creative Team', creativeTeam);
+  // filteredAllStaff.forEach((staffMember) => {
+  //
+  // }
 
-  const clientServicesTeam = allStaff.filter(staffMember => staffMember.department[0] === 'client-services');
-  // console.log('client Services Team', clientServicesTeam);
 
-  const partnerMarketingTeam = allStaff.filter(staffMember => staffMember.department[0] === 'partnermarketing-com');
-  // console.log('partner Marketing Team', partnerMarketingTeam);
+    filteredAllStaff.forEach((staffMember) => {
+    if(staffMember.department[0] === 'management' || staffMember.department[1] === 'management') {
+      teams.managementTeam.push(staffMember);
+    } else if (staffMember.department[0] === 'business-support' || staffMember.department[1] === 'business-support') {
+      teams.businessSupportTeam.push(staffMember);
+    } else if (staffMember.department[0] === 'strategy' || staffMember.department[1] === 'strategy') {
+      teams.strategyTeam.push(staffMember);
+    } else if (staffMember.department[0] === 'media' || staffMember.department[1] === 'media') {
+      teams.mediaTeam.push(staffMember);
+    } else if (staffMember.department[0] === 'partnermarketing-com' || staffMember.department[1] === 'partnermarketing-com') {
+      teams.partnerMarketingTeam.push(staffMember);
+    } else if (staffMember.department[0] === 'client-services' || staffMember.department[1] === 'client-services') {
+      teams.clientServicesTeam.push(staffMember);
+    } else if (staffMember.department[0] === 'creative' || staffMember.department[1] === 'creative') {
+      teams.creativeTeam.push(staffMember);
+    } else if (staffMember.department[0] === 'digital' || staffMember.department[1] === 'digital') {
+      teams.digitalTeam.push(staffMember);
+    }
+  })
 
-  const mediaTeam = allStaff.filter(staffMember => staffMember.department[0] === 'media');
-  // console.log('media Team', mediaTeam);
-
-  const strategyTeam = allStaff.filter(staffMember => staffMember.department[0] === 'strategy');
-  // console.log('strategy Team', strategyTeam);
-
-  const businessSupportTeam = allStaff.filter(staffMember => staffMember.department[0] === 'business-support');
-  // console.log('business support Team', businessSupportTeam);
-
-  const managementTeam = allStaff.filter(staffMember => staffMember.department[0] === 'management');
-  // console.log('Management Team', managementTeam);
+  console.log('teams', teams);
 
   let teamsArr = [];
 
-  teamsArr.push(
-    digitalTeam,
-    creativeTeam,
-    clientServicesTeam,
-    partnerMarketingTeam,
-    mediaTeam,
-    strategyTeam,
-    businessSupportTeam,
-    managementTeam
-  );
-  console.log('Teams arr:', teamsArr);
+  teamsArr.push(Object.values(teams));
 
-  teamsArr.sort(() => Math.random() - 0.5);
+  //
+  // teamsArr.push(
+  //   digitalTeam,
+  //   creativeTeam,
+  //   clientServicesTeam,
+  //   partnerMarketingTeam,
+  //   mediaTeam,
+  //   strategyTeam,
+  //   businessSupportTeam,
+  //   managementTeam
+  // );
+  console.log('Teams arr:', teamsArr[0]);
+
+  teamsArr[0].sort(() => Math.random() - 0.5);
   console.log('Randomized Teams arr:', teamsArr);
 
   if (currentLevel === 1) {
@@ -121,61 +146,62 @@ const App = () => {
     console.log('Level 3 teams arr:', teamsArr);
   }
 
-  const randomTeam = teamsArr[0];
+  const randomTeam = teamsArr[0][0];
   console.log('Random Team:', randomTeam);
 
   const staffArr = randomTeam;
   console.log('Staff Arr in App', staffArr);
 
-  let teamName;
-
-  if (staffArr === digitalTeam) {
-    teamName = 'Digital Team';
-    console.log(teamName);
-  } else if (staffArr === creativeTeam) {
-    teamName = 'Creative Team';
-    console.log(teamName);
-  } else if (staffArr === clientServicesTeam) {
-    teamName = 'Client Services Team';
-    console.log(teamName);
-  } else if (staffArr === partnerMarketingTeam) {
-    teamName = 'Partner Marketing Team';
-    console.log(teamName);
-  } else if (staffArr === mediaTeam) {
-    teamName = 'Media Team';
-    console.log(teamName);
-  } else if (staffArr === strategyTeam) {
-    teamName = 'Strategy Team';
-    console.log(teamName);
-  } else if (staffArr === businessSupportTeam) {
-    teamName = 'Business Support Team';
-    console.log(teamName);
-  } else if (staffArr === managementTeam) {
-    teamName = 'Management Team';
-    console.log(teamName);
-  }
+  // // passed to header
+  // let teamName;
+  //
+  // if (staffArr === digitalTeam) {
+  //   teamName = 'Digital Team';
+  //   console.log(teamName);
+  // } else if (staffArr === creativeTeam) {
+  //   teamName = 'Creative Team';
+  //   console.log(teamName);
+  // } else if (staffArr === clientServicesTeam) {
+  //   teamName = 'Client Services Team';
+  //   console.log(teamName);
+  // } else if (staffArr === partnerMarketingTeam) {
+  //   teamName = 'Partner Marketing Team';
+  //   console.log(teamName);
+  // } else if (staffArr === mediaTeam) {
+  //   teamName = 'Media Team';
+  //   console.log(teamName);
+  // } else if (staffArr === strategyTeam) {
+  //   teamName = 'Strategy Team';
+  //   console.log(teamName);
+  // } else if (staffArr === businessSupportTeam) {
+  //   teamName = 'Business Support Team';
+  //   console.log(teamName);
+  // } else if (staffArr === managementTeam) {
+  //   teamName = 'Management Team';
+  //   console.log(teamName);
+  // }
 
 
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
+        {/*<Loading />*/}
         <Header currentPage={currentPage}
                 timeLeft={timeLeft}
                 setTimeLeft={setTimeLeft}
                 countdown={countdown}
-                currentLevel={currentLevel}
-                teamName={teamName}/>
+                currentLevel={currentLevel}/>
         <Routes>
           <Route
             path='/'
             element={<Intro
-              staffArr={staffArr}
+              filteredAllStaff={filteredAllStaff}
               setCurrentPage={setCurrentPage} />}/>
           <Route
             path='/card-list'
             element={<CardList
               staffArr={staffArr}
-              allStaff={allStaff}
+              filteredAllStaff={filteredAllStaff}
               currentLevel={currentLevel}
               nextLevel={nextLevel}
               setCurrentPage={setCurrentPage}

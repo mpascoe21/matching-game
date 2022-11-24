@@ -1,9 +1,13 @@
 import React from "react";
-import './styles.module.scss';
+import styles from './styles.module.scss';
 
 const Loading = () => {
   return (
-    <div>Loading...</div>
+    <div className={styles.loading}>
+      <p>Loading...</p>
+      <div className={styles.loader}></div>
+      {/*<img src="/images/icon-spinner-solid.svg" alt=""/>*/}
+    </div>
   );
 }
 

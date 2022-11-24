@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 import styles from './styles.module.scss';
 import IntroStaffCard from "../IntroStaffCard";
 
-const Intro = ({ staffArr }) => {
+const Intro = ({ filteredAllStaff }) => {
 
-  console.log('StaffArr in Intro', staffArr);
+  filteredAllStaff.sort(() => Math.random() - 0.5);
 
-  staffArr.sort(() => Math.random() - 0.5);
-
-  let staffGridArr = staffArr.slice(0, 6);
+  let staffGridArr = filteredAllStaff.slice(0, 6);
   console.log('StaffGrid in Intro', staffGridArr);
 
   return (
