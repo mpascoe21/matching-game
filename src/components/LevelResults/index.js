@@ -13,7 +13,7 @@ console.log(currentLevel + ' in results');
       <div className={styles.copyContainer}>
         <h1>You’re a real pro!</h1>
         <h4>You completed level {levelCompleted} in x seconds!</h4>
-        <Link to='/card-list' className={styles.button}>Next Level</Link>
+        <a href='/card-list' className={styles.button}>Next Level</a>
       </div>
     </div>
   );

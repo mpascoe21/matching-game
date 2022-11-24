@@ -14,7 +14,7 @@ const LevelError = ({setCurrentPage}) => {
       <div className={styles.copyContainer}>
         <h1>Level failed!</h1>
         <h4>Better luck next time.</h4>
-        <Link to='/card-list' className={styles.button}><span>TRY AGAIN</span></Link>
+        <a href='/card-list' className={styles.button}><span>TRY AGAIN</span></a>
       </div>
     </div>
   );

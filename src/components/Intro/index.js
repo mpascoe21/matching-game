@@ -17,7 +17,7 @@ const Intro = ({ filteredAllStaff }) => {
         <p>Can you match all the team pairs before the time runs out?</p>
         <p>Simply click two identical card in succession to create a match.<br/>The fastest player to complete all three levels wins a spin.</p>
         <h4>Welcome</h4>
-        <Link to='/card-list' className={styles.button} >LET'S PLAY</Link>
+        <a href='/card-list' className={styles.button} >LET'S PLAY</a>
       </div>
       <div className={styles.imgContainer}>
         {staffGridArr.map(staffMember => (

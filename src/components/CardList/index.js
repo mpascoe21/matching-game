@@ -46,6 +46,18 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
     }
   }, [currentLevel, staffArr, setTimeLeft, hasLoaded, setGameArr]);
 
+  useEffect(() => {
+    // Duplicate each member for matching
+    const shuffledCards = [...gameArr, ...gameArr]
+      .sort(() => Math.random() - 0.5)
+      .map((card) => ({...card, id: Math.random() }))
+
+    setChoiceOne(null);
+    setChoiceTwo(null);
+    setCards(shuffledCards);
+    setTurns(0);
+  }, [gameArr]);
+
   // let gameArr = []; //set as state
 // Cuts array dependent on game level
 //   if (currentLevel === 1) {
@@ -60,19 +72,7 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
 //     setTimeLeft(45);
 //   }
 
-
-
   //* shuffle cards
-  const shuffleCards = () => {
-    const shuffleCards = [...gameArr, ...gameArr]
-      .sort(() => Math.random() - 0.5)
-      .map((card) => ({...card, id: Math.random() }))
-
-    setChoiceOne(null);
-    setChoiceTwo(null);
-    setCards(shuffleCards);
-    setTurns(0);
-  }
   console.log('cards in cardList', cards);
 
   //* handle a choice
@@ -113,21 +113,13 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
     setDisabled(false)
   }
 
-  // Start a new game automatically
-  useEffect(() => {
-    shuffleCards()
-  }, []);
-
-  if (timeLeft === 0) {
-    navigate("/level-error");
-    // setTimeLeft(currentLevel === 1 ? 15 : currentLevel === 2 ? 30 : currentLevel === 3 ? 45 : '')
-  }
-
   useEffect(() => {
     console.log(cards);
     if (cards.length === 0) return;
+
     // Checks if all cards are matched.
     if (cards.every(card => card.matched === true)) {
+      console.log('STOP THE TIMER');
       stopTimer();
       // setTimerRunning(false);
       // console.log('TIme left when all card match', timeLeft);

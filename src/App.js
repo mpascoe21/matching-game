@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
+import {BrowserRouter, Routes, Route, Navigate, Link} from "react-router-dom";
 
 import Loading from "./components/Loading";
 import Header from "./components/Header";
@@ -13,9 +13,33 @@ const LevelError = lazy(() => import('./components/LevelError'));
 
 
 const App = () => {
-  const [currentLevel, setCurrentLevel] = useState(1);
-  const [levelCompleted, setLevelCompleted] = useState();
-  const [allStaff, setAllStaff] = useState([]);
+  const [currentLevel] = useState(() => {
+    const currentLevel = localStorage.getItem('current_level');
+
+    if (null !== currentLevel) {
+      return parseInt(currentLevel);
+    }
+
+    return 1;
+  });
+  const [levelCompleted] = useState(() => {
+    const levelCompleted = localStorage.getItem('level_completed');
+
+    if (null !== levelCompleted) {
+      return parseInt(levelCompleted);
+    }
+
+    return 0;
+  });
+  const [allStaff, setAllStaff] = useState(() => {
+    const staff = localStorage.getItem('staff');
+
+    if (null !== staff) {
+      return JSON.parse(staff);
+    }
+
+    return [];
+  });
   const [currentPage, setCurrentPage] = useState();
   const [timeLeft, setTimeLeft] = useState(null);
   const timerRunning = useRef(false);
@@ -24,12 +48,50 @@ const App = () => {
   // console.log('levelCompleted in app.js:', levelCompleted);
   // let timer;
 
-  const countdown = () => {
-    timerRunning.current = true;
+  const decrementTimer = () => {
     setTimeout(() => {
       setTimeLeft((timeLeft) => timeLeft > 0 ? timeLeft - 1 : timeLeft);
-      if (timerRunning.current) countdown();
     }, 1000);
+  };
+
+  useEffect(() => {
+    console.log('timer running', timerRunning);
+    console.log('allow timer to run', timerRunning.current);
+    if (!timerRunning.current) return;
+
+    console.log(timeLeft);
+    if (timeLeft === 0) {
+      console.log('redirect');
+      window.location.replace('level-error');
+      return;
+    }
+
+    decrementTimer();
+  }, [timeLeft, setTimeLeft]);
+
+  // const countdown = () => {
+  //   timerRunning.current = true;
+  //   setTimeout(() => {
+  //     console.log('time left:', timeLeft);
+  //     if (timeLeft === 0) {
+  //       console.log('redirect');
+  //       window.location.replace('level-error');
+  //       return;
+  //     }
+  //
+  //     setTimeLeft((timeLeft) => timeLeft > 0 ? timeLeft - 1 : timeLeft);
+  //     if (timerRunning.current) countdown();
+  //   }, 1000);
+  // };
+
+  // const setTimeLeft = (value) => {
+  //   timeLeft.current = value;
+  // };
+
+  const countdown = () => {
+    timerRunning.current = true;
+
+    decrementTimer();
   };
 
   const stopTimer = () => {
@@ -39,26 +101,33 @@ const App = () => {
 
   const nextLevel = () => {
     if (currentLevel === 1) {
-      // setTimeLeft(20);
-      setCurrentLevel(2);
-      setLevelCompleted(1);
-
-    } else if (currentLevel === 2) {
       // setTimeLeft(30);
-      setCurrentLevel(3);
-      setLevelCompleted(2)
-    } else if (currentLevel === 3) {
-      setCurrentLevel(4);
-      setLevelCompleted(3)
+      localStorage.setItem('current_level', 2);
+      localStorage.setItem('level_completed', 1);
+
+      countdown();
+    } else if (currentLevel === 2) {
+      localStorage.setItem('current_level', 3);
+      localStorage.setItem('level_completed', 2);
+
+      countdown();
     }
   }
 
   const hasLoaded = useRef(false);
 
   const getStaffData = () => {
+    console.log('ALL STAFF DATA CALL');
     fetch(`https://twom061-003.s3.amazonaws.com/s2d-prod/api/team.json`)
       .then((response) => response.json())
-      .then((jsonResponse) => setAllStaff(jsonResponse));
+      .then((jsonResponse) => {
+        const staff = jsonResponse;
+
+        localStorage.setItem('staff', JSON.stringify(staff));
+
+        setAllStaff(staff);
+      })
+      .catch((e) => console.error(e));
   };
 
   console.log('All Staff', allStaff);
@@ -66,7 +135,8 @@ const App = () => {
   useEffect(() => {
     if (hasLoaded.current) return;
     hasLoaded.current = true;
-    getStaffData();
+
+    if (0 === allStaff.length) getStaffData();
   }, []);
 
   const filteredAllStaff = allStaff.filter((teamMember) => {
@@ -205,7 +275,6 @@ const App = () => {
               currentLevel={currentLevel}
               nextLevel={nextLevel}
               setCurrentPage={setCurrentPage}
-              timeLeft={timeLeft}
               setTimeLeft={setTimeLeft}
               countdown={countdown}
               stopTimer={stopTimer}

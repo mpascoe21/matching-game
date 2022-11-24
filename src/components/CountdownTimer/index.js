@@ -2,14 +2,14 @@ import React, {useEffect, useState, useRef} from "react";
 import styles from './styles.module.scss';
 
 const CountdownTimer = ({timeLeft, setTimeLeft, countdown}) => {
+   const hasLoaded = useRef(false);
+  // const [timeLeft, setTimeLeft] = useState(10);
 
-     const hasLoaded = useRef(false);
-    // const [timeLeft, setTimeLeft] = useState(10);
-
-    useEffect(() => {
+  useEffect(() => {
       if (hasLoaded.current) return;
       hasLoaded.current = true;
 
+      console.log('START COUNTDOWN');
       countdown();
       //
       // const countdown = () => {
@@ -24,8 +24,7 @@ const CountdownTimer = ({timeLeft, setTimeLeft, countdown}) => {
       // }
       //
       // countdown();
-
-    },[]);
+  },[]);
 
   return (
     <div className={styles.counter}>
