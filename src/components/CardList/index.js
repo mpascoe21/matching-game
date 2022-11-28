@@ -123,9 +123,10 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
       stopTimer();
       // setTimerRunning(false);
       // console.log('TIme left when all card match', timeLeft);
-      navigate("/level-results");
+
       console.log('Well done!');
       nextLevel();
+      // navigate("/level-results");
     }
   }, [cards, stopTimer, navigate, nextLevel]);
 

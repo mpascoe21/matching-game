@@ -13,6 +13,11 @@ const LevelError = lazy(() => import('./components/LevelError'));
 
 
 const App = () => {
+  //
+  const [randomTeam, setRandomTeam] = useState([]);
+  const [staffArr, setStaffArr] = useState([]);
+  // const [teamsArr, setTeamsArr] = useState([]);
+
   const [currentLevel] = useState(() => {
     const currentLevel = localStorage.getItem('current_level');
 
@@ -59,7 +64,7 @@ const App = () => {
     console.log('allow timer to run', timerRunning.current);
     if (!timerRunning.current) return;
 
-    console.log(timeLeft);
+    console.log('TIME LEFT', timeLeft);
     if (timeLeft === 0) {
       console.log('redirect');
       window.location.replace('level-error');
@@ -67,6 +72,10 @@ const App = () => {
     }
 
     decrementTimer();
+
+    // setTimeout(() => {
+    //   setTimeLeft((timeLeft) => timeLeft > 0 ? timeLeft - 1 : timeLeft);
+    // }, 1000);
   }, [timeLeft, setTimeLeft]);
 
   // const countdown = () => {
@@ -93,6 +102,10 @@ const App = () => {
 
     decrementTimer();
   };
+
+  // useEffect(() => {
+  //
+  // });
 
   const stopTimer = () => {
     timerRunning.current = false;
@@ -150,17 +163,13 @@ const App = () => {
     digitalTeam: [],
     creativeTeam: [],
     clientServicesTeam: [],
-    partnerMarketingTeam: [],
+    partnerMarketingTeam: [],//Channel
     mediaTeam: [],
     strategyTeam: [],
     businessSupportTeam: [],
     managementTeam: []
   };
   console.log('teams', teams);
-
-  // filteredAllStaff.forEach((staffMember) => {
-  //
-  // }
 
 
     filteredAllStaff.forEach((staffMember) => {
@@ -185,42 +194,77 @@ const App = () => {
 
   console.log('teams', teams);
 
-  let teamsArr = [];
+  // let teamsArr = [];
 
-  teamsArr.push(Object.values(teams));
-
+  // setTeamsArr(teamsArr.push(Object.values(teams)));
   //
-  // teamsArr.push(
-  //   digitalTeam,
-  //   creativeTeam,
-  //   clientServicesTeam,
-  //   partnerMarketingTeam,
-  //   mediaTeam,
-  //   strategyTeam,
-  //   businessSupportTeam,
-  //   managementTeam
-  // );
-  console.log('Teams arr:', teamsArr[0]);
+  // teamsArr.push(Object.values(teams));
+  //
+  // console.log('Teams arr:', teamsArr[0]);
 
-  teamsArr[0].sort(() => Math.random() - 0.5);
-  console.log('Randomized Teams arr:', teamsArr);
+  // teamsArr[0].sort(() => Math.random() - 0.5);
+  // console.log('Randomized Teams arr:', teamsArr);
 
-  if (currentLevel === 1) {
-    teamsArr = teamsArr.filter((team) => team.length >= 3);
-    console.log('Level 1 teams arr:', teamsArr);
-  } else if (currentLevel === 2) {
-    teamsArr = teamsArr.filter((team) => team.length >= 6);
-    console.log('Level 2 teams arr:', teamsArr);
-  } else if (currentLevel === 3) {
-    teamsArr = teamsArr.filter((team) => team.length >= 12);
-    console.log('Level 3 teams arr:', teamsArr);
-  }
+  // if (currentLevel === 1) {
+  //   teamsArr = teamsArr.filter((team) => team.length >= 3);
+  //   console.log('Level 1 teams arr:', teamsArr);
+  // } else if (currentLevel === 2) {
+  //   teamsArr = teamsArr.filter((team) => team.length >= 6);
+  //   console.log('Level 2 teams arr:', teamsArr);
+  // } else if (currentLevel === 3) {
+  //   teamsArr = teamsArr.filter((team) => team.length >= 12);
+  //   console.log('Level 3 teams arr:', teamsArr);
+  // }
 
-  const randomTeam = teamsArr[0][0];
-  console.log('Random Team:', randomTeam);
+  // if (currentLevel === 1) {
+  //   setTeamsArr(teamsArr.filter((team) => team.length >= 3));
+  //   console.log('Level 1 teams arr:', teamsArr);
+  // } else if (currentLevel === 2) {
+  //   setTeamsArr(teamsArr.filter((team) => team.length >= 6));
+  //   console.log('Level 2 teams arr:', teamsArr);
+  // } else if (currentLevel === 3) {
+  //   setTeamsArr(teamsArr.filter((team) => team.length >= 12));
+  //   console.log('Level 3 teams arr:', teamsArr);
+  // }
 
-  const staffArr = randomTeam;
-  console.log('Staff Arr in App', staffArr);
+  // renders on every countdown - useEffect
+  // const randomTeam = teamsArr[0][0];
+  // console.log('Random Team:', randomTeam);
+  //
+  // const staffArr = randomTeam;
+  // console.log('Staff Arr in App', staffArr);
+
+  useEffect(() => {
+
+    let teamsArr = [];
+
+    teamsArr.push(Object.values(teams));
+    // setTeamsArr(teamsArr.push(Object.values(teams)));
+
+    teamsArr[0].sort(() => Math.random() - 0.5);
+    console.log('Randomized Teams arr:', teamsArr);
+
+    if (currentLevel === 1) {
+      teamsArr = teamsArr.filter((team) => team.length >= 3);
+      console.log('Level 1 teams arr:', teamsArr);
+    } else if (currentLevel === 2) {
+      teamsArr = teamsArr.filter((team) => team.length >= 6);
+      console.log('Level 2 teams arr:', teamsArr);
+    } else if (currentLevel === 3) {
+      teamsArr = teamsArr.filter((team) => team.length >= 12);
+      console.log('Level 3 teams arr:', teamsArr);
+    }
+
+    // setRandomTeam(teamsArr[0][0]);
+    // console.log('Random Team:', randomTeam);
+
+    setStaffArr(teamsArr[0][0]);
+    console.log('Staff Arr in App', staffArr);
+  }, []);
+
+
+  // renders on every countdown - useEffect
+
 
   // // passed to header
   // let teamName;
