@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import CountdownTimer from "../CountdownTimer";
 import HeaderTitle from "../HeaderTitle";
 
-const Header = ({currentPage, timeLeft, setTimeLeft, countdown, currentLevel, teamName}) => {
+const Header = ({currentPage, timeLeft, setTimeLeft, countdown, currentLevel, teamName, time, isActive, isPaused, handleStart, setTime, handleReset, handlePauseResume}) => {
 
 
 
@@ -14,6 +14,13 @@ const Header = ({currentPage, timeLeft, setTimeLeft, countdown, currentLevel, te
       <div>
         <HeaderTitle currentPage={currentPage}
                      timeLeft={timeLeft}
+                     isActive={isActive}
+                     isPaused={isPaused}
+                     setTime={setTime}
+                     time={time}
+                     handleStart={handleStart}
+                     handlePauseResume={handlePauseResume}
+                     handleReset={handleReset}
                      setTimeLeft={setTimeLeft}
                      countdown={countdown}
                      currentLevel={currentLevel}

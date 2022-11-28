@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import Card from "../Card";
 import {useNavigate} from "react-router-dom";
 
-const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, timeLeft, setTimeLeft, countdown, stopTimer }) => {
+const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, timeLeft, setTimeLeft, countdown, stopTimer, time, isPaused, setIsPaused, setTime, handlePauseResume, handleReset, handleStart, isActive }) => {
 
   console.log('Checking time left in cardList.', timeLeft);
 
@@ -15,6 +15,8 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
   const navigate = useNavigate();
+
+  handleStart();
 
   //* Adds 'matched' to each staff member
   filteredAllStaff.forEach((staffMember) => {
@@ -36,13 +38,16 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
 
     if (currentLevel === 1) {
       setGameArr(staffArr.slice(0, 3));
-      setTimeLeft(15);
+      // setTimeLeft(15);
+
     } else if (currentLevel === 2) {
       setGameArr(staffArr.slice(0, 6));
-      setTimeLeft(30);
+      setTime(30000);
+      setIsPaused(false);
     } else if (currentLevel === 3) {
       setGameArr(staffArr.slice(0, 12));
-      setTimeLeft(45);
+      setTime(45000);
+      setIsPaused(false);
     }
   }, [currentLevel, staffArr, setTimeLeft, hasLoaded, setGameArr]);
 
@@ -120,15 +125,28 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
     // Checks if all cards are matched.
     if (cards.every(card => card.matched === true)) {
       console.log('STOP THE TIMER');
-      stopTimer();
-      // setTimerRunning(false);
+      handlePauseResume();
+      console.log('TIME LEFT', time);
+
+
       // console.log('TIme left when all card match', timeLeft);
 
       console.log('Well done!');
       nextLevel();
-      // navigate("/level-results");
+      //delay not working
+      navigate("/level-results", [1000]);
     }
-  }, [cards, stopTimer, navigate, nextLevel]);
+
+    console.log('TIME LEFT', time);
+    if (time === 0) {
+      // console.log('redirect');
+      // window.location.replace('level-error');
+      // return;
+
+      navigate("/level-error");
+    }
+
+  }, [cards, navigate, nextLevel]);
 
   return (
     <div className={styles.cardGrid + ' ' + (currentLevel === 3 ? styles.cardLevel3 : '')}>

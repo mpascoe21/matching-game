@@ -13,7 +13,13 @@ const LevelError = lazy(() => import('./components/LevelError'));
 
 
 const App = () => {
-  //
+
+  const [currentPage, setCurrentPage] = useState();
+  const [isActive, setIsActive] = useState(false);
+  const [isPaused, setIsPaused] = useState(true);
+  const [timeLeft, setTimeLeft] = useState(null);
+  const [time, setTime] = useState(10000);
+  const timerRunning = useRef(false);
   const [randomTeam, setRandomTeam] = useState([]);
   const [staffArr, setStaffArr] = useState([]);
   // const [teamsArr, setTeamsArr] = useState([]);
@@ -27,6 +33,7 @@ const App = () => {
 
     return 1;
   });
+
   const [levelCompleted] = useState(() => {
     const levelCompleted = localStorage.getItem('level_completed');
 
@@ -45,85 +52,68 @@ const App = () => {
 
     return [];
   });
-  const [currentPage, setCurrentPage] = useState();
-  const [timeLeft, setTimeLeft] = useState(null);
-  const timerRunning = useRef(false);
 
-  // console.log('current level in app.js:', currentLevel);
-  // console.log('levelCompleted in app.js:', levelCompleted);
-  // let timer;
 
-  const decrementTimer = () => {
-    setTimeout(() => {
-      setTimeLeft((timeLeft) => timeLeft > 0 ? timeLeft - 1 : timeLeft);
-    }, 1000);
+  const handleStart = () => {
+    setIsActive(true);
+    setIsPaused(false);
   };
 
-  useEffect(() => {
-    console.log('timer running', timerRunning);
-    console.log('allow timer to run', timerRunning.current);
-    if (!timerRunning.current) return;
+  const handlePauseResume = () => {
+    // setIsPaused(!isPaused);
+    setIsPaused(true);
+  }
 
-    console.log('TIME LEFT', timeLeft);
-    if (timeLeft === 0) {
-      console.log('redirect');
-      window.location.replace('level-error');
-      return;
-    }
+  const handleReset = () => {
+    setIsActive(false);
+    setTime(10000)
+  }
 
-    decrementTimer();
-
-    // setTimeout(() => {
-    //   setTimeLeft((timeLeft) => timeLeft > 0 ? timeLeft - 1 : timeLeft);
-    // }, 1000);
-  }, [timeLeft, setTimeLeft]);
-
-  // const countdown = () => {
-  //   timerRunning.current = true;
-  //   setTimeout(() => {
-  //     console.log('time left:', timeLeft);
-  //     if (timeLeft === 0) {
-  //       console.log('redirect');
-  //       window.location.replace('level-error');
-  //       return;
-  //     }
-  //
-  //     setTimeLeft((timeLeft) => timeLeft > 0 ? timeLeft - 1 : timeLeft);
-  //     if (timerRunning.current) countdown();
-  //   }, 1000);
-  // };
-
-  // const setTimeLeft = (value) => {
-  //   timeLeft.current = value;
-  // };
-
-  const countdown = () => {
-    timerRunning.current = true;
-
-    decrementTimer();
-  };
 
   // useEffect(() => {
+  //   console.log('timer running', timerRunning);
+  //   console.log('allow timer to run', timerRunning.current);
+  //   // if (!timerRunning.current) return;
+  //   if (!isActive.current) return;
   //
-  // });
+  //
+  //   // console.log('TIME LEFT', time);
+  //   // if (time === 0) {
+  //   //   console.log('redirect');
+  //   //   window.location.replace('level-error');
+  //   //   return;
+  //   // }
+  //
+  //   // setTimeout(() => {
+  //   //   setTimeLeft((timeLeft) => timeLeft > 0 ? timeLeft - 1 : timeLeft);
+  //   // }, 1000);
+  // }, [time, setTime]);
 
-  const stopTimer = () => {
-    timerRunning.current = false;
-    console.log('stopped timer');
-  };
 
   const nextLevel = () => {
     if (currentLevel === 1) {
       // setTimeLeft(30);
+      // setTime(30000);
+      // handleStart();
+      // setIsPaused(false);
       localStorage.setItem('current_level', 2);
       localStorage.setItem('level_completed', 1);
 
-      countdown();
+      // countdown();
     } else if (currentLevel === 2) {
+      // setTime(30000);
+      // handleStart();
       localStorage.setItem('current_level', 3);
       localStorage.setItem('level_completed', 2);
 
-      countdown();
+      // countdown();
+    } else if (currentLevel === 3) {
+      // setTime(30000);
+      // handleStart();
+      localStorage.setItem('current_level', 4);
+      localStorage.setItem('level_completed', 3);
+
+      // countdown();
     }
   }
 
@@ -170,6 +160,16 @@ const App = () => {
     managementTeam: []
   };
   console.log('teams', teams);
+
+  filteredAllStaff.forEach((staffMember) => {
+    //get department
+    // staffMember.department[0];
+    // if department === a department in teams
+    //push to department
+    // if department !== a department in teams
+    // add a department to teams of that name
+    // push staffMember to department
+  })
 
 
     filteredAllStaff.forEach((staffMember) => {
@@ -245,20 +245,26 @@ const App = () => {
     console.log('Randomized Teams arr:', teamsArr);
 
     if (currentLevel === 1) {
-      teamsArr = teamsArr.filter((team) => team.length >= 3);
+      teamsArr = teamsArr[0].filter((team) => team.length >= 3);
       console.log('Level 1 teams arr:', teamsArr);
     } else if (currentLevel === 2) {
-      teamsArr = teamsArr.filter((team) => team.length >= 6);
+      teamsArr = teamsArr[0].filter((team) => team.length >= 6);
       console.log('Level 2 teams arr:', teamsArr);
     } else if (currentLevel === 3) {
-      teamsArr = teamsArr.filter((team) => team.length >= 12);
+      teamsArr = teamsArr[0].filter((team) => {
+        console.log("team array filter:", team);
+
+        console.log("team array length check:",team.length >= 12);
+
+        return team.length >= 12;
+      });
       console.log('Level 3 teams arr:', teamsArr);
     }
 
     // setRandomTeam(teamsArr[0][0]);
     // console.log('Random Team:', randomTeam);
 
-    setStaffArr(teamsArr[0][0]);
+    setStaffArr(teamsArr[0]);
     console.log('Staff Arr in App', staffArr);
   }, []);
 
@@ -303,7 +309,13 @@ const App = () => {
         <Header currentPage={currentPage}
                 timeLeft={timeLeft}
                 setTimeLeft={setTimeLeft}
-                countdown={countdown}
+                isActive={isActive}
+                isPaused={isPaused}
+                setTime={setTime}
+                time={time}
+                handleStart={handleStart}
+                handlePauseResume={handlePauseResume}
+                handleReset={handleReset}
                 currentLevel={currentLevel}/>
         <Routes>
           <Route
@@ -318,10 +330,16 @@ const App = () => {
               filteredAllStaff={filteredAllStaff}
               currentLevel={currentLevel}
               nextLevel={nextLevel}
+              isActive={isActive}
+              isPaused={isPaused}
+              setIsPaused={setIsPaused}
+              setTime={setTime}
+              time={time}
+              handleStart={handleStart}
+              handlePauseResume={handlePauseResume}
+              handleReset={handleReset}
               setCurrentPage={setCurrentPage}
               setTimeLeft={setTimeLeft}
-              countdown={countdown}
-              stopTimer={stopTimer}
               />}/>
           <Route
             path='/level-error'

@@ -5,7 +5,7 @@ import StopTimer from "../StopTimer";
 
 // {timeLeft, setTimeLeft, countdown}
 
-const CountdownTimer = () => {
+const CountdownTimer = ({time, setTime, handleStart, handleReset, isActive, isPaused, handlePauseResume}) => {
   //  const hasLoaded = useRef(false);
   // // const [timeLeft, setTimeLeft] = useState(10);
   //
@@ -30,9 +30,9 @@ const CountdownTimer = () => {
   //     // countdown();
   // },[]);
 
-  const [isActive, setIsActive] = useState(false);
-  const [isPaused, setIsPaused] = useState(true);
-  const [time, setTime] = useState(10000);
+  // const [isActive, setIsActive] = useState(false);
+  // const [isPaused, setIsPaused] = useState(true);
+  // const [time, setTime] = useState(10000);
 
   useEffect(() => {
     let interval = null;
@@ -49,30 +49,36 @@ const CountdownTimer = () => {
     };
   }, [isActive, isPaused]);
 
-  const handleStart = () => {
-    setIsActive(true);
-    setIsPaused(false);
-  };
+  // handleStart()
+  //
+  // handlePauseResume();
+  //
+  // handleReset()
 
-  const handlePauseResume = () => {
-    setIsPaused(!isPaused);
-  }
-
-  const handleReset = () => {
-    setIsActive(false);
-    setTime(10000)
-  }
+  // const handleStart = () => {
+  //   setIsActive(true);
+  //   setIsPaused(false);
+  // };
+  //
+  // const handlePauseResume = () => {
+  //   setIsPaused(!isPaused);
+  // }
+  //
+  // const handleReset = () => {
+  //   setIsActive(false);
+  //   setTime(10000)
+  // }
 
   return (
     <div>
       <Timer time={time} />
-      <StopTimer
-        active={isActive}
-        isPaused={isPaused}
-        handleStart={handleStart}
-        handlePauseResume={handlePauseResume}
-        handleReset={handleReset}
-      />
+      {/*<StopTimer*/}
+      {/*  active={isActive}*/}
+      {/*  isPaused={isPaused}*/}
+      {/*  handleStart={handleStart}*/}
+      {/*  handlePauseResume={handlePauseResume}*/}
+      {/*  handleReset={handleReset}*/}
+      {/*/>*/}
 
     </div>
 
