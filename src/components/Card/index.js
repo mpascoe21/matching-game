@@ -1,7 +1,5 @@
-import React, {useState} from "react";
+import React from "react";
 import styles from './styles.module.scss';
-import CardBack from "../CardBack";
-import CardFront from "../CardFront";
 
 const Card = ({ card, handleChoice, flipped, disabled, currentLevel }) => {
 

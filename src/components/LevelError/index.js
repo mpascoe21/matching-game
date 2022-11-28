@@ -1,10 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from './styles.module.scss';
-// import background from '../../../public/images/failed.jpg'
 
 const LevelError = ({setCurrentPage}) => {
-
 
   setCurrentPage('errorPage');
 

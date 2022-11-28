@@ -6,9 +6,7 @@ import LevelConfig from '../../config/LevelConfig';
 import styles from './styles.module.scss';
 import Cache from "../../service/Cache";
 
-const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, timeLeft, setTimeLeft, countdown, stopTimer, time, isPaused, setIsPaused, setTime, handlePauseResume, handleReset, handleStart, isActive }) => {
-
-  console.log('Checking time left in cardList.', timeLeft);
+const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, setTimeLeft, time, handlePauseResume, handleStart}) => {
 
   const cache = new Cache();
 
@@ -31,7 +29,6 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
   console.log('Checking if cards matched.', cards.map(card => card.matched));
 
   setCurrentPage('cardList');
-  // console.log('currentPage is:', currentPage);
 
   // Randomizes images
   staffArr.sort(() => Math.random() - 0.5);
@@ -60,20 +57,6 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
     setCards(shuffledCards);
     setTurns(0);
   }, [gameArr]);
-
-  // let gameArr = []; //set as state
-// Cuts array dependent on game level
-//   if (currentLevel === 1) {
-//     gameArr = staffArr.slice(0, 3);
-//     setTimeLeft(15);
-//   } else if (currentLevel === 2) {
-//     gameArr = staffArr.slice(0, 6);
-//     setTimeLeft(30);
-//     // console.log('Timeleft in card list:', timeLeft);
-//   } else if (currentLevel === 3) {
-//     gameArr = staffArr.slice(0, 12);
-//     setTimeLeft(45);
-//   }
 
   //* shuffle cards
   console.log('cards in cardList', cards);
@@ -126,9 +109,6 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
       handlePauseResume();
       console.log('TIME LEFT', time);
 
-
-      // console.log('TIme left when all card match', timeLeft);
-
       console.log('Well done!');
       nextLevel();
       //delay not working
@@ -137,13 +117,8 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
 
     console.log('TIME LEFT', time);
     if (time === 0) {
-      // console.log('redirect');
-      // window.location.replace('level-error');
-      // return;
-
       navigate("/level-error");
     }
-
   }, [cards, navigate, nextLevel]);
 
   return (

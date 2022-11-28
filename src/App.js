@@ -23,8 +23,6 @@ const App = () => {
   const [isPaused, setIsPaused] = useState(true);
   const [timeLeft, setTimeLeft] = useState(null);
 
-  // const timerRunning = useRef(false);
-  // const [randomTeam, setRandomTeam] = useState([]);
   const [staffArr, setStaffArr] = useState([]);
 
   const [currentLevel] = useState(() => {
@@ -78,7 +76,6 @@ const App = () => {
         "Time Left": time,
         "Completed In": (LevelConfig[currentLevel].time * 1000) - time,
       }
-
     });
   };
 
@@ -159,14 +156,9 @@ const App = () => {
               filteredAllStaff={filteredAllStaff}
               currentLevel={currentLevel}
               nextLevel={nextLevel}
-              isActive={isActive}
-              isPaused={isPaused}
-              setIsPaused={setIsPaused}
-              setTime={setTime}
               time={time}
               handleStart={handleStart}
               handlePauseResume={handlePauseResume}
-              handleReset={handleReset}
               setCurrentPage={setCurrentPage}
               setTimeLeft={setTimeLeft}
               />}/>

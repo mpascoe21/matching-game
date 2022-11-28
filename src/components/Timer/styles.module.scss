@@ -1,0 +1,23 @@
+.timer {
+  font-family: proxima-nova, sans-serif, Arial, Helvetica;
+  font-size: 20px;
+  background-color: rgb(219, 40, 133);
+  height: fit-content;
+  width: fit-content;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  .timeTitle {
+    padding-right: 10px;
+    font-size: 12px;
+  }
+}

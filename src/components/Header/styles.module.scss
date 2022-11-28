@@ -9,15 +9,6 @@
   img {
     height: 30px;
   }
-
-  p {
-    font-family: Prometo;
-    color: #202349;
-    font-size: 18px;
-    line-height: 23px;
-    font-weight: 700;
-    margin: 0;
-  }
 }
 
 .placeholder {
@@ -26,4 +17,10 @@
 
 .gameHeader {
   background: #00223e;
+}
+
+@media screen and (max-width: 767px) {
+  .noPlaceholder {
+    display: none;
+  }
 }

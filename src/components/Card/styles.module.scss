@@ -22,15 +22,11 @@
 }
 
 .cardLevel2 {
-  //height: 237px;
-  //width: 335px;
   height: 148px;
   width: calc((100% - 20px) / 3);
-  //width: 98.9px;
 
   @media screen and (min-width: 768px) {
     height: 204.79px;
-    //width: 223.64px;
   }
 
   @media screen and (min-width: 1000px) {
@@ -41,18 +37,14 @@
 
 .cardLevel3 {
   height: 96.2px;
-  //width: 72.5px;
   width: calc((100% - 30px) / 4);
-  //width: calc((100% - 20px) / 3);
 
   @media screen and (min-width: 768px) {
     height: 138.24px;
-    //width: 167px;
   }
 
   @media screen and (min-width: 1000px) {
     height: 170px;
-    //width: 210px;
     width: calc((90% - 50px) / 6);
   }
 }
@@ -83,13 +75,8 @@
       padding: 10px;
     }
 
-    @media screen and (min-width: 1000px) {
-      //padding: 10px 10px;
-    }
-
     h4 {
       font-family: Prometo;
-      //font-weight: 700; original
       font-weight: 500;
       font-size: 14px;
       line-height: 18px;
@@ -134,18 +121,7 @@
   transition-delay: 0.2s;
 
   .cardBackImg {
-    //height: 42px;
     width: 36%;
-
-    @media screen and (min-width: 768px) {
-      //height: 57px;
-      //width: 223.64px;
-    }
-
-    @media screen and (min-width: 1366px) {
-      //height: 66px;
-      //width: 330px;
-    }
   }
 }
 
