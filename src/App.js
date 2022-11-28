@@ -1,9 +1,13 @@
-import React, { useEffect, useRef, useState, lazy, Suspense } from "react";
-import {BrowserRouter, Routes, Route, Navigate, Link} from "react-router-dom";
+import React, { useEffect, useRef, useState, lazy, Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Cache from './service/Cache';
+import Loading from './components/Loading';
+import Header from './components/Header';
+import Team from './api/Team';
 
-import Loading from "./components/Loading";
-import Header from "./components/Header";
 import styles from './App.module.scss';
+import AuditLog from "./api/AuditLog";
+import LevelConfig from "./config/LevelConfig";
 
 const Intro = lazy(() => import('././components/Intro'));
 const CardList = lazy(() => import('././components/CardList'));
@@ -11,39 +15,20 @@ const CardList = lazy(() => import('././components/CardList'));
 const LevelResults = lazy(() => import('./components/LevelResults'));
 const LevelError = lazy(() => import('./components/LevelError'));
 
-
 const App = () => {
-  //
+  const cache = new Cache();
   const [randomTeam, setRandomTeam] = useState([]);
   const [staffArr, setStaffArr] = useState([]);
   // const [teamsArr, setTeamsArr] = useState([]);
 
   const [currentLevel] = useState(() => {
-    const currentLevel = localStorage.getItem('current_level');
-
-    if (null !== currentLevel) {
-      return parseInt(currentLevel);
-    }
-
-    return 1;
+    return cache.get('current_level') ?? 1;
   });
   const [levelCompleted] = useState(() => {
-    const levelCompleted = localStorage.getItem('level_completed');
-
-    if (null !== levelCompleted) {
-      return parseInt(levelCompleted);
-    }
-
-    return 0;
+    return cache.get('level_completed') ?? 0;
   });
   const [allStaff, setAllStaff] = useState(() => {
-    const staff = localStorage.getItem('staff');
-
-    if (null !== staff) {
-      return JSON.parse(staff);
-    }
-
-    return [];
+    return cache.get('staff') ?? [];
   });
   const [currentPage, setCurrentPage] = useState();
   const [timeLeft, setTimeLeft] = useState(null);
@@ -113,34 +98,36 @@ const App = () => {
   };
 
   const nextLevel = () => {
-    if (currentLevel === 1) {
-      // setTimeLeft(30);
-      localStorage.setItem('current_level', 2);
-      localStorage.setItem('level_completed', 1);
+    cache.set('current_level', currentLevel + 1, 1);
+    cache.set('level_completed', currentLevel, 1);
 
-      countdown();
-    } else if (currentLevel === 2) {
-      localStorage.setItem('current_level', 3);
-      localStorage.setItem('level_completed', 2);
+    AuditLog.process({
+      type: 'level_completed',
+      event: {
+        category: 'Level',
+        action: 'completed',
+        label: currentLevel,
+      },
+      dimension: {
+        a: '',
+        b: '',
+        c: '',
+      },
+      extra: {
+        timeLeft: timeLeft,
+        completedIn: LevelConfig[currentLevel].time - timeLeft,
+      }
+    });
 
-      countdown();
-    }
-  }
+    countdown();
+  };
 
   const hasLoaded = useRef(false);
 
   const getStaffData = () => {
-    console.log('ALL STAFF DATA CALL');
-    fetch(`https://twom061-003.s3.amazonaws.com/s2d-prod/api/team.json`)
-      .then((response) => response.json())
-      .then((jsonResponse) => {
-        const staff = jsonResponse;
-
-        localStorage.setItem('staff', JSON.stringify(staff));
-
-        setAllStaff(staff);
-      })
-      .catch((e) => console.error(e));
+    Team.get().then((response) => {
+      setAllStaff(response);
+    }).catch((e) => console.error(e));
   };
 
   console.log('All Staff', allStaff);

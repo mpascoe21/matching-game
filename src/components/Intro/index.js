@@ -1,14 +1,25 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from 'react';
+import Cache from '../../service/Cache';
+import IntroStaffCard from '../IntroStaffCard';
+
 import styles from './styles.module.scss';
-import IntroStaffCard from "../IntroStaffCard";
 
 const Intro = ({ filteredAllStaff }) => {
+  const cache = new Cache();
+  const [staffGridArr] = useState(() => {
+    filteredAllStaff.sort(() => Math.random() - 0.5);
 
-  filteredAllStaff.sort(() => Math.random() - 0.5);
+    return filteredAllStaff.slice(0, 6);
+  });
+  const hasLoaded = useRef(false);
 
-  let staffGridArr = filteredAllStaff.slice(0, 6);
-  console.log('StaffGrid in Intro', staffGridArr);
+  useEffect(() => {
+    if (hasLoaded.current) return;
+    hasLoaded.current = true;
+
+    // Reset cache
+    cache.reset();
+  }, []);
 
   return (
     <div className={styles.background}>

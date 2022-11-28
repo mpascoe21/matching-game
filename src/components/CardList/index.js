@@ -1,7 +1,9 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Card from '../Card';
+import LevelConfig from '../../config/LevelConfig';
+
 import styles from './styles.module.scss';
-import Card from "../Card";
-import {useNavigate} from "react-router-dom";
 
 const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, timeLeft, setTimeLeft, countdown, stopTimer }) => {
 
@@ -34,16 +36,11 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
     if (hasLoaded.current === currentLevel) return;
     hasLoaded.current = currentLevel;
 
-    if (currentLevel === 1) {
-      setGameArr(staffArr.slice(0, 3));
-      setTimeLeft(15);
-    } else if (currentLevel === 2) {
-      setGameArr(staffArr.slice(0, 6));
-      setTimeLeft(30);
-    } else if (currentLevel === 3) {
-      setGameArr(staffArr.slice(0, 12));
-      setTimeLeft(45);
-    }
+    // Set amount of cards from config
+    setGameArr(staffArr.slice(0, LevelConfig[currentLevel].cards));
+
+    // Set level time from config
+    setTimeLeft(LevelConfig[currentLevel].time);
   }, [currentLevel, staffArr, setTimeLeft, hasLoaded, setGameArr]);
 
   useEffect(() => {
