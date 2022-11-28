@@ -1,11 +1,16 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Card from '../Card';
+import LevelConfig from '../../config/LevelConfig';
+
 import styles from './styles.module.scss';
-import Card from "../Card";
-import {useNavigate} from "react-router-dom";
+import Cache from "../../service/Cache";
 
 const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, timeLeft, setTimeLeft, countdown, stopTimer, time, isPaused, setIsPaused, setTime, handlePauseResume, handleReset, handleStart, isActive }) => {
 
   console.log('Checking time left in cardList.', timeLeft);
+
+  const cache = new Cache();
 
   const hasLoaded = useRef(false);
   const [cards, setCards] = useState([]);
@@ -36,19 +41,12 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
     if (hasLoaded.current === currentLevel) return;
     hasLoaded.current = currentLevel;
 
-    if (currentLevel === 1) {
-      setGameArr(staffArr.slice(0, 3));
-      // setTimeLeft(15);
+    // Set amount of cards from config
+    setGameArr(staffArr.slice(0, LevelConfig[currentLevel].cards));
 
-    } else if (currentLevel === 2) {
-      setGameArr(staffArr.slice(0, 6));
-      setTime(30000);
-      setIsPaused(false);
-    } else if (currentLevel === 3) {
-      setGameArr(staffArr.slice(0, 12));
-      setTime(45000);
-      setIsPaused(false);
-    }
+    // Set level time from config
+    setTimeLeft(LevelConfig[currentLevel].time * 1000);
+
   }, [currentLevel, staffArr, setTimeLeft, hasLoaded, setGameArr]);
 
   useEffect(() => {
