@@ -97,7 +97,7 @@ const App = () => {
     hasLoaded.current = true;
 
     if (0 === allStaff.length) getStaffData();
-  }, []);
+  }, [allStaff]);
 
   useEffect(() => {
     if (0 !== filteredAllStaff.length) return;
@@ -131,7 +131,7 @@ const App = () => {
     cache.set('teams', teams, 1);
 
     setTeams(teams);
-  }, [filteredAllStaff]);
+  }, [filteredAllStaff, cache]);
 
   useEffect(() => {
     let teamsArr = [];

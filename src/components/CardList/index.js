@@ -4,10 +4,10 @@ import Card from '../Card';
 import LevelConfig from '../../config/LevelConfig';
 
 import styles from './styles.module.scss';
-import Cache from "../../service/Cache";
+// import Cache from "../../service/Cache";
 
 const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, setTimeLeft, time, handlePauseResume, handleStart}) => {
-  const cache = new Cache();
+  // const cache = new Cache();
 
   const hasLoaded = useRef(false);
   const [cards, setCards] = useState([]);

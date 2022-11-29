@@ -1,15 +1,14 @@
+@import '../../scss/variables';
+
 .bgContainer {
-
-  background-size: cover;
   margin: auto;
-  height: 100vh;
-  width: 100vw;
+  height: calc(100vh - 60px);
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-
-
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
 
   .copyContainer {
     h1 {
@@ -37,27 +36,29 @@
     font-family: Roboto;
     font-size: 20px;
     font-weight: 700;
-    background-color: #2098D1;
     padding: 10px 20px;
-    transition: all .3s ease-in-out;
     cursor: pointer;
+    color: $color-white;
     display: inline-block;
     text-decoration: none;
+    background-color: $brand-primary-color;
+    transition: all .3s ease-in-out;
 
     &:hover {
-
+      color: $brand-secondary-color;
+      background-color: $brand-tertiary-color;
     }
   }
 }
 
 .completed1 {
-  background: url("../../../public/images/img-level1.jpg") top center no-repeat;
+  background: url('../../../public/images/img-level1.jpg') top center no-repeat;
 }
 
 .completed2 {
-  background: url("../../../public/images/img-level2.jpg") top center no-repeat;
+  background: url('../../../public/images/img-level2.jpg') top center no-repeat;
 }
 
 .completed3 {
-  background: url("../../../public/images/img-level3.jpg") top center no-repeat;
+  background: url('../../../public/images/img-level3.jpg') top center no-repeat;
 }

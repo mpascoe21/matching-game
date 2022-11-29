@@ -1,9 +1,11 @@
+@import '../../scss/variables';
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  background: #fff;
+  background: $color-white;
   padding: 0 20px;
 
   img {
@@ -16,7 +18,7 @@
 }
 
 .gameHeader {
-  background: #00223e;
+  background: $color-dark-blue;
 }
 
 @media screen and (max-width: 767px) {

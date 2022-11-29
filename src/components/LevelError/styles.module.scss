@@ -1,5 +1,7 @@
+@import '../../scss/variables';
+
 .bgContainer {
-  background: url("../../../public/images/img-failed.jpg") top center no-repeat;
+  background: url('../../../public/images/img-failed.jpg') top center no-repeat;
   background-size: cover;
   margin: auto;
   height: 100vh;
@@ -35,15 +37,17 @@
     font-family: Roboto;
     font-size: 20px;
     font-weight: 700;
-    background-color: #2098D1;
     padding: 10px 20px;
-    transition: all .3s ease-in-out;
     cursor: pointer;
+    color: $color-white;
     display: inline-block;
     text-decoration: none;
+    background-color: $brand-primary-color;
+    transition: all .3s ease-in-out;
 
     &:hover {
-
+      color: $brand-secondary-color;
+      background-color: $brand-tertiary-color;
     }
   }
 }
