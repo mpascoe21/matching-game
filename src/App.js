@@ -8,6 +8,7 @@ import Team from './api/Team';
 // import styles from './App.module.scss';
 import AuditLog from "./api/AuditLog";
 import LevelConfig from "./config/LevelConfig";
+import TeamsData from "./data/TeamsData";
 
 const Intro = lazy(() => import('././components/Intro'));
 const CardList = lazy(() => import('././components/CardList'));
@@ -21,6 +22,7 @@ const App = () => {
   const [isActive, setIsActive] = useState(false);
   const [isPaused, setIsPaused] = useState(true);
   const [staffArr, setStaffArr] = useState([]);
+  const [teamName, setTeamName] = useState('');
   const [turns, setTurns] = useState(0);
 
   const [teams, setTeams] = useState(() => {
@@ -74,6 +76,7 @@ const App = () => {
         "Time Left": time,
         "Completed In": (LevelConfig[currentLevel].time * 1000) - time,
         "Attempts": turns,
+        "Team": teamName,
       }
     });
   };
@@ -130,49 +133,59 @@ const App = () => {
   }, [cache, filteredStaff]);
 
   useEffect(() => {
-    setStaffArr(() => {
+    setStaffArr((existingStaffArr) => {
+      if (0 !== existingStaffArr.length) return existingStaffArr;
+
+
+      // let a = [
+      //   [staff, staff, staff], // digital
+      //   [staff, staff, staff], // media
+      //   [staff, staff, staff],
+      //   [staff, staff, staff],
+      //   [staff, staff, staff],
+      // ]
+      //
+      // let n = [{
+      //   key: "dep",
+      //   staff: [staff, staff, staff],
+      // },{
+      //   key: "dep",
+      //   staff: [staff, staff, staff],
+      // },{
+      //   key: "dep",
+      //   staff: [staff, staff, staff],
+      // }]
+
+
       let teamsArr = [];
-      teamsArr.push(Object.values(teams));
-      teamsArr[0].sort(() => Math.random() - 0.5);
-      teamsArr = teamsArr[0].filter(
-        (team) => team.length >= LevelConfig[currentLevel].cards
-      );
-      teamsArr[0].forEach((staffMember) => {
+
+      for (let idx in teams) {
+        if (teams[idx].length < LevelConfig[currentLevel].cards) {
+          continue;
+        }
+
+        teamsArr.push({
+          key: idx,
+          staff: teams[idx]
+        });
+      }
+
+      teamsArr.sort(() => Math.random() - 0.5);
+      console.log('teamsArr', teamsArr);
+
+      const selTeamsArr = teamsArr[0];
+      selTeamsArr.staff.forEach((staffMember) => {
         staffMember.matched = false;
       });
 
-      return teamsArr[0];
+      console.log("selected teams array:", selTeamsArr);
+      console.log("Selected Department:", TeamsData[selTeamsArr.key]);
+
+      setTeamName(TeamsData[selTeamsArr.key]);
+
+      return selTeamsArr.staff;
     });
   }, [teams, currentLevel]);
-
-  // // passed to header
-  // let teamName;
-  //
-  // if (staffArr === digitalTeam) {
-  //   teamName = 'Digital Team';
-  //   console.log(teamName);
-  // } else if (staffArr === creativeTeam) {
-  //   teamName = 'Creative Team';
-  //   console.log(teamName);
-  // } else if (staffArr === clientServicesTeam) {
-  //   teamName = 'Client Services Team';
-  //   console.log(teamName);
-  // } else if (staffArr === partnerMarketingTeam) {
-  //   teamName = 'Partner Marketing Team';
-  //   console.log(teamName);
-  // } else if (staffArr === mediaTeam) {
-  //   teamName = 'Media Team';
-  //   console.log(teamName);
-  // } else if (staffArr === strategyTeam) {
-  //   teamName = 'Strategy Team';
-  //   console.log(teamName);
-  // } else if (staffArr === businessSupportTeam) {
-  //   teamName = 'Business Support Team';
-  //   console.log(teamName);
-  // } else if (staffArr === managementTeam) {
-  //   teamName = 'Management Team';
-  //   console.log(teamName);
-  // }
 
   return (
     <BrowserRouter>
@@ -203,6 +216,7 @@ const App = () => {
               handleStart={handleStart}
               handlePause={handlePause}
               setCurrentPage={setCurrentPage}
+              teamName={teamName}
             />}
           />
           <Route

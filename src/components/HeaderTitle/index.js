@@ -20,6 +20,7 @@ const HeaderTitle = ({ currentPage, currentLevel, teamName, time, isActive, isPa
         isPaused={isPaused}
         setTime={setTime}
         time={time}/>
+      {/*<p>{teamName}</p>*/}
     </>;
   }
 

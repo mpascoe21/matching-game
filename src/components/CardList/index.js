@@ -5,7 +5,7 @@ import LevelConfig from '../../config/LevelConfig';
 
 import styles from './styles.module.scss';
 
-const CardList = ({ staffArr, currentLevel, nextLevel, setTurns, setCurrentPage, handlePause, handleStart}) => {
+const CardList = ({ staffArr, currentLevel, nextLevel, setTurns, setCurrentPage, handlePause, handleStart, teamName}) => {
   const hasLoaded = useRef(false);
   const [cards, setCards] = useState([]);
   const [gameArr, setGameArr] = useState([]);
@@ -98,18 +98,21 @@ const CardList = ({ staffArr, currentLevel, nextLevel, setTurns, setCurrentPage,
   }, [cards, navigate, handlePause, nextLevel]);
 
   return (
-    <div className={styles.cardGrid + ' ' + (currentLevel === 3 ? styles.cardLevel3 : '')}>
-      {cards.map(card => (
-        <Card
-          key={card.id}
-          card={card}
-          handleChoice={handleChoice}
-          flipped={card === choiceOne || card === choiceTwo || card.matched}
-          disabled={disabled}
-          currentLevel={currentLevel}
-        />
-      ))}
-    </div>
+    <>
+      <p className={styles.teamName}>{teamName}</p>
+      <div className={styles.cardGrid + ' ' + (currentLevel === 3 ? styles.cardLevel3 : '')}>
+        {cards.map(card => (
+          <Card
+            key={card.id}
+            card={card}
+            handleChoice={handleChoice}
+            flipped={card === choiceOne || card === choiceTwo || card.matched}
+            disabled={disabled}
+            currentLevel={currentLevel}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 
