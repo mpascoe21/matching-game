@@ -15,7 +15,6 @@ const LevelResults = lazy(() => import('./components/LevelResults'));
 const LevelError = lazy(() => import('./components/LevelError'));
 
 const App = () => {
-
   const cache = new Cache();
 
   const [currentPage, setCurrentPage] = useState();
@@ -26,6 +25,12 @@ const App = () => {
   // const timerRunning = useRef(false);
   // const [randomTeam, setRandomTeam] = useState([]);
   const [staffArr, setStaffArr] = useState([]);
+  const [teams, setTeams] = useState(() => {
+    return cache.get('teams') ?? [];
+  });
+  const [filteredAllStaff, setFilteredAllStaff] = useState(() => {
+    return cache.get('all_staff_filtered') ?? [];
+  });
 
   const [currentLevel] = useState(() => {
     return cache.get('current_level') ?? 1;
@@ -78,7 +83,6 @@ const App = () => {
         "Time Left": time,
         "Completed In": (LevelConfig[currentLevel].time * 1000) - time,
       }
-
     });
   };
 
@@ -90,8 +94,6 @@ const App = () => {
     }).catch((e) => console.error(e));
   };
 
-  console.log('All Staff', allStaff);
-
   useEffect(() => {
     if (hasLoaded.current) return;
     hasLoaded.current = true;
@@ -99,26 +101,41 @@ const App = () => {
     if (0 === allStaff.length) getStaffData();
   }, []);
 
-  const filteredAllStaff = allStaff.filter((teamMember) => {
-    if (!(teamMember.image.mobile || teamMember.image.desktop).includes('team-avatar')) {
-      return teamMember.title;
-    }
-  })
-  console.log('filteredAllStaff', filteredAllStaff);
+  useEffect(() => {
+    if (0 !== filteredAllStaff.length) return;
 
-  const teams = {};
+    console.log('All Staff', allStaff);
 
-  filteredAllStaff.forEach((staffMember) => {
-    staffMember.department.forEach((department) => {
-      if(!teams.hasOwnProperty(department)) {
-        teams[department] = [];
-      }
-      teams[department].push(staffMember);
-    })
-  })
+    const filtered = allStaff.filter(
+      (teamMember) => !(teamMember.image.mobile || teamMember.image.desktop).includes('team-avatar') ? teamMember : null
+    );
+
+    // Cache filtered staff array to avoid keep rebuilding array data
+    cache.set('all_staff_filtered', filtered, 1)
+
+    setFilteredAllStaff(filtered);
+    console.log('setFilteredAllStaff', filtered);
+  }, []);
 
   useEffect(() => {
+    if (0 !== teams.length) return;
 
+    filteredAllStaff.forEach((staffMember) => {
+      staffMember.department.forEach((department) => {
+        if (!teams.hasOwnProperty(department)) {
+          teams[department] = [];
+        }
+        teams[department].push(staffMember);
+      });
+    });
+
+    // Cache teams to avoid keep rebuilding array data
+    cache.set('teams', teams, 1);
+
+    setTeams(teams);
+  }, [filteredAllStaff]);
+
+  useEffect(() => {
     let teamsArr = [];
 
     teamsArr.push(Object.values(teams));
@@ -130,28 +147,32 @@ const App = () => {
 
     setStaffArr(teamsArr[0]);
     console.log('Staff Arr in App', staffArr);
-  }, []);
+  }, [teams]);
 
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
-        <Header currentPage={currentPage}
-                timeLeft={timeLeft}
-                setTimeLeft={setTimeLeft}
-                isActive={isActive}
-                isPaused={isPaused}
-                setTime={setTime}
-                time={time}
-                handleStart={handleStart}
-                handlePauseResume={handlePauseResume}
-                handleReset={handleReset}
-                currentLevel={currentLevel}/>
+        <Header
+          currentPage={currentPage}
+          timeLeft={timeLeft}
+          setTimeLeft={setTimeLeft}
+          isActive={isActive}
+          isPaused={isPaused}
+          setTime={setTime}
+          time={time}
+          handleStart={handleStart}
+          handlePauseResume={handlePauseResume}
+          handleReset={handleReset}
+          currentLevel={currentLevel}
+        />
         <Routes>
           <Route
             path='/'
             element={<Intro
               filteredAllStaff={filteredAllStaff}
-              setCurrentPage={setCurrentPage} />}/>
+              setCurrentPage={setCurrentPage}
+            />}
+          />
           <Route
             path='/card-list'
             element={<CardList
@@ -169,18 +190,22 @@ const App = () => {
               handleReset={handleReset}
               setCurrentPage={setCurrentPage}
               setTimeLeft={setTimeLeft}
-              />}/>
+            />}
+          />
           <Route
             path='/level-error'
             element={<LevelError
-              setCurrentPage={setCurrentPage}/>}/>
+              setCurrentPage={setCurrentPage}
+            />}
+          />
           <Route
             path='/level-results'
             element={<LevelResults
               currentLevel={currentLevel}
               levelCompleted={levelCompleted}
               setCurrentPage={setCurrentPage}
-            />}/>
+            />}
+          />
         </Routes>
       </Suspense>
     </BrowserRouter>

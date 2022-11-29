@@ -6,10 +6,7 @@ import LevelConfig from '../../config/LevelConfig';
 import styles from './styles.module.scss';
 import Cache from "../../service/Cache";
 
-const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, timeLeft, setTimeLeft, countdown, stopTimer, time, isPaused, setIsPaused, setTime, handlePauseResume, handleReset, handleStart, isActive }) => {
-
-  console.log('Checking time left in cardList.', timeLeft);
-
+const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, setTimeLeft, countdown, stopTimer, time, isPaused, setIsPaused, setTime, handlePauseResume, handleReset, handleStart, isActive }) => {
   const cache = new Cache();
 
   const hasLoaded = useRef(false);
@@ -23,19 +20,26 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
 
   handleStart();
 
-  //* Adds 'matched' to each staff member
-  filteredAllStaff.forEach((staffMember) => {
-    staffMember.matched = false;
-  });
-  console.log('filtered All Staff in card list', filteredAllStaff);
-  console.log('Checking if cards matched.', cards.map(card => card.matched));
-
-  setCurrentPage('cardList');
-  // console.log('currentPage is:', currentPage);
+  useEffect(() => {
+    //* Adds 'matched' to each staff member
+    filteredAllStaff.forEach((staffMember) => {
+      staffMember.matched = false;
+    });
+    console.log('filtered All Staff in card list', filteredAllStaff);
+    console.log('Checking if cards matched.', cards.map(card => card.matched));
+  }, [filteredAllStaff]);
 
   // Randomizes images
-  staffArr.sort(() => Math.random() - 0.5);
-  console.log('Staff arr in card list.', staffArr);
+  useEffect(() => {
+    if (0 === staffArr.length) return;
+
+    //* shuffle cards
+    console.log('cards in cardList', cards);
+
+    staffArr.sort(() => Math.random() - 0.5);
+
+    console.log('Staff arr in card list.', staffArr);
+  }, [staffArr]);
 
   useEffect(() => {
     if (hasLoaded.current === currentLevel) return;
@@ -47,6 +51,8 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
     // Set level time from config
     setTimeLeft(LevelConfig[currentLevel].time * 1000);
 
+    // Set current page (for header)
+    setCurrentPage('cardList');
   }, [currentLevel, staffArr, setTimeLeft, hasLoaded, setGameArr]);
 
   useEffect(() => {
@@ -75,8 +81,6 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
 //     setTimeLeft(45);
 //   }
 
-  //* shuffle cards
-  console.log('cards in cardList', cards);
 
   //* handle a choice
   const handleChoice = (card) => {
@@ -126,7 +130,6 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
       handlePauseResume();
       console.log('TIME LEFT', time);
 
-
       // console.log('TIme left when all card match', timeLeft);
 
       console.log('Well done!');
@@ -143,7 +146,6 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
 
       navigate("/level-error");
     }
-
   }, [cards, navigate, nextLevel]);
 
   return (

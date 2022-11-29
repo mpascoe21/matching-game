@@ -6,7 +6,6 @@ import StopTimer from "../StopTimer";
 // {timeLeft, setTimeLeft, countdown}
 
 const CountdownTimer = ({time, setTime, isActive, isPaused}) => {
-
   useEffect(() => {
     let interval = null;
 
