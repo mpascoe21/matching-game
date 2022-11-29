@@ -136,27 +136,6 @@ const App = () => {
     setStaffArr((existingStaffArr) => {
       if (0 !== existingStaffArr.length) return existingStaffArr;
 
-
-      // let a = [
-      //   [staff, staff, staff], // digital
-      //   [staff, staff, staff], // media
-      //   [staff, staff, staff],
-      //   [staff, staff, staff],
-      //   [staff, staff, staff],
-      // ]
-      //
-      // let n = [{
-      //   key: "dep",
-      //   staff: [staff, staff, staff],
-      // },{
-      //   key: "dep",
-      //   staff: [staff, staff, staff],
-      // },{
-      //   key: "dep",
-      //   staff: [staff, staff, staff],
-      // }]
-
-
       let teamsArr = [];
 
       for (let idx in teams) {
