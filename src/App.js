@@ -20,42 +20,35 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState();
   const [isActive, setIsActive] = useState(false);
   const [isPaused, setIsPaused] = useState(true);
-  const [timeLeft, setTimeLeft] = useState(null);
-
   const [staffArr, setStaffArr] = useState([]);
+  const [turns, setTurns] = useState(0);
+
   const [teams, setTeams] = useState(() => {
     return cache.get('teams') ?? [];
   });
-  const [filteredAllStaff, setFilteredAllStaff] = useState(() => {
+  const [allStaff, setAllStaff] = useState(() => {
+    return cache.get('staff') ?? [];
+  });
+  const [filteredStaff, setFilteredStaff] = useState(() => {
     return cache.get('all_staff_filtered') ?? [];
   });
-
+  const [levelCompleted] = useState(() => {
+    return cache.get('level_completed') ?? 0;
+  });
   const [currentLevel] = useState(() => {
     return cache.get('current_level') ?? 1;
   });
 
   const [time, setTime] = useState(LevelConfig[currentLevel].time * 1000);
 
-  const [levelCompleted] = useState(() => {
-    return cache.get('level_completed') ?? 0;
-  });
-  const [allStaff, setAllStaff] = useState(() => {
-    return cache.get('staff') ?? [];
-  });
-
   const handleStart = () => {
     setIsActive(true);
     setIsPaused(false);
   };
 
-  const handlePauseResume = () => {
+  const handlePause = () => {
     // setIsPaused(!isPaused);
     setIsPaused(true);
-  }
-
-  const handleReset = () => {
-    setIsActive(false);
-    setTime(10000)
   }
 
   const nextLevel = () => {
@@ -80,6 +73,7 @@ const App = () => {
       extra: {
         "Time Left": time,
         "Completed In": (LevelConfig[currentLevel].time * 1000) - time,
+        "Attempts": turns,
       }
     });
   };
@@ -100,7 +94,7 @@ const App = () => {
   }, [allStaff]);
 
   useEffect(() => {
-    setFilteredAllStaff((existingFilteredStaff) => {
+    setFilteredStaff((existingFilteredStaff) => {
       if (0 !== existingFilteredStaff.length) return existingFilteredStaff;
 
       const filtered = allStaff.filter(
@@ -119,7 +113,7 @@ const App = () => {
       if (0 !== existingTeams.length) return existingTeams;
 
       const newTeams = {};
-      filteredAllStaff.forEach((staffMember) => {
+      filteredStaff.forEach((staffMember) => {
         staffMember.department.forEach((department) => {
           if (!newTeams.hasOwnProperty(department)) {
             newTeams[department] = [];
@@ -133,7 +127,7 @@ const App = () => {
 
       return newTeams;
     });
-  }, [cache, filteredAllStaff]);
+  }, [cache, filteredStaff]);
 
   useEffect(() => {
     setStaffArr(() => {
@@ -143,6 +137,9 @@ const App = () => {
       teamsArr = teamsArr[0].filter(
         (team) => team.length >= LevelConfig[currentLevel].cards
       );
+      teamsArr[0].forEach((staffMember) => {
+        staffMember.matched = false;
+      });
 
       return teamsArr[0];
     });
@@ -153,22 +150,17 @@ const App = () => {
       <Suspense fallback={<Loading />}>
         <Header
           currentPage={currentPage}
-          timeLeft={timeLeft}
-          setTimeLeft={setTimeLeft}
           isActive={isActive}
           isPaused={isPaused}
-          setTime={setTime}
           time={time}
-          handleStart={handleStart}
-          handlePauseResume={handlePauseResume}
-          handleReset={handleReset}
+          setTime={setTime}
           currentLevel={currentLevel}
         />
         <Routes>
           <Route
             path='/'
             element={<Intro
-              filteredAllStaff={filteredAllStaff}
+              filteredStaff={filteredStaff}
               setCurrentPage={setCurrentPage}
             />}
           />
@@ -176,11 +168,11 @@ const App = () => {
             path='/card-list'
             element={<CardList
               staffArr={staffArr}
-              filteredAllStaff={filteredAllStaff}
               currentLevel={currentLevel}
+              setTurns={setTurns}
               nextLevel={nextLevel}
               handleStart={handleStart}
-              handlePauseResume={handlePauseResume}
+              handlePause={handlePause}
               setCurrentPage={setCurrentPage}
             />}
           />

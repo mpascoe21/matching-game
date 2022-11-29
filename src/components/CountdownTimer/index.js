@@ -24,7 +24,7 @@ const CountdownTimer = ({time, setTime, isActive, isPaused}) => {
     return () => {
       clearInterval(interval);
     };
-  }, [isActive, isPaused]);
+  }, [isActive, isPaused, setTime]);
 
   return (
     <div>

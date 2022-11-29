@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
+import HeaderTitle from '../HeaderTitle';
+
 import styles from './styles.module.scss';
-import HeaderTitle from "../HeaderTitle";
 
-const Header = ({currentPage, currentLevel, teamName, time, isActive, isPaused, setTime}) => {
-
+const Header = ({ currentPage, currentLevel, teamName, time, isActive, isPaused, setTime }) => {
   return (
     <div className={styles.header + ' ' + (currentPage === 'cardList' ? styles.gameHeader : '')}>
       <img src='/images/img-rhino-logo.png' alt="Twogether Rhino Logo"/>
@@ -15,7 +15,8 @@ const Header = ({currentPage, currentLevel, teamName, time, isActive, isPaused, 
           setTime={setTime}
           time={time}
           currentLevel={currentLevel}
-          teamName={teamName}/>
+          teamName={teamName}
+        />
       </div>
       <div className={styles.placeholder + ' ' + (currentPage === 'cardList' ? styles.noPlaceholder : '')}></div>
     </div>

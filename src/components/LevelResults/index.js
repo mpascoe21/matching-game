@@ -5,11 +5,6 @@ import styles from './styles.module.scss';
 
 const LevelResults = ({setCurrentPage}) => {
   const cache = new Cache();
-  const titles = [
-    'Great job!',
-    'Awesome!',
-    'You’re a real pro!',
-  ];
   const hasLoaded = useRef(false);
   const [title, setTitle] = useState('');
   const [levelCompleted] = useState(() => {
@@ -28,17 +23,27 @@ const LevelResults = ({setCurrentPage}) => {
     if (hasLoaded.current) return;
     hasLoaded.current = true;
 
+    const titles = [
+      'Great job!',
+      'Awesome!',
+      'You’re a real pro!',
+    ];
+
     // Set a random title
     setTitle(titles[Math.floor(Math.random() * titles.length)]);
 
     setCurrentPage('resultsPage');
-  }, []);
+  }, [setCurrentPage]);
 
   return (
     <div className={styles.bgContainer + ' ' + styles['completed' + levelCompleted]}>
       <div className={styles.copyContainer}>
-        <h1>{title}</h1>
-        <h4>You completed level {levelCompleted} in {results} seconds!</h4>
+        <h1>
+          {title}
+        </h1>
+        <h4>
+          You completed level {levelCompleted} in {results} seconds!
+        </h4>
         <a href='/card-list' className={styles.button}>
           Next Level
         </a>
