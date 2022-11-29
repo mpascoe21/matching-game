@@ -5,10 +5,9 @@ import LevelConfig from '../../config/LevelConfig';
 
 import styles from './styles.module.scss';
 
-const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, handlePauseResume, handleStart}) => {
+const CardList = ({ staffArr, currentLevel, nextLevel, setTurns, setCurrentPage, handlePause, handleStart}) => {
   const hasLoaded = useRef(false);
   const [cards, setCards] = useState([]);
-  const [turns, setTurns] = useState(0);
   const [gameArr, setGameArr] = useState([]);
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
@@ -17,22 +16,11 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
 
   handleStart();
 
-  useEffect(() => {
-    //* Adds 'matched' to each staff member
-    filteredAllStaff.forEach((staffMember) => {
-      staffMember.matched = false;
-    });
-    console.log('filtered All Staff in card list', filteredAllStaff);
-    console.log('Checking if cards matched.', cards.map(card => card.matched));
-  }, [filteredAllStaff]);
-
   // Randomizes images
   useEffect(() => {
     if (0 === staffArr.length) return;
 
     //* shuffle cards
-    console.log('cards in cardList', cards);
-
     staffArr.sort(() => Math.random() - 0.5);
 
     console.log('Staff arr in card list.', staffArr);
@@ -47,7 +35,7 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
 
     // Set current page (for header)
     setCurrentPage('cardList');
-  }, [currentLevel, staffArr, hasLoaded, setGameArr]);
+  }, [currentLevel, staffArr, hasLoaded, setGameArr, setCurrentPage]);
 
   useEffect(() => {
     // Duplicate each member for matching
@@ -58,7 +46,6 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
     setChoiceOne(null);
     setChoiceTwo(null);
     setCards(shuffledCards);
-    // setTurns(0);
   }, [gameArr]);
 
   //* handle a choice
@@ -68,50 +55,47 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
 
   //* compare 2 selected cards
   useEffect(() => {
+    //* reset choices & increase turn
+    const resetTurn = () => {
+      setChoiceOne(null);
+      setChoiceTwo(null);
+      setTurns(prevTurns => prevTurns + 1);
+      setDisabled(false);
+    }
+
     if (choiceOne && choiceTwo) {
       setDisabled(true)
       if (choiceOne.slug === choiceTwo.slug) {
-        console.log('cards match')
+        console.log('cards match');
         setCards((prevCards) => {
-          return prevCards.map(card => {
-            if (card.slug === choiceOne.slug) {
-              return {...card, matched: true}
-            } else {
-              return card;
-            }
-          })
-        })
-        resetTurn()
+          return prevCards.map(card =>
+            (card.slug === choiceOne.slug) ? { ...card, matched: true } : card
+          );
+        });
+        resetTurn();
       } else {
-        console.log('cards do not match')
+        console.log('cards do not match');
 
         //* delays the turn of un-matched cards by 0.5s.
         setTimeout(() => resetTurn(), 500);
       }
     }
-  }, [choiceOne, choiceTwo]);
+  }, [choiceOne, choiceTwo, setTurns]);
 
-  //* reset choices & increase turn
-  const resetTurn = () => {
-    setChoiceOne(null)
-    setChoiceTwo(null)
-    setTurns(prevTurns => prevTurns + 1)
-    setDisabled(false)
-  }
 
   useEffect(() => {
-    console.log(cards);
     if (cards.length === 0) return;
 
     // Checks if all cards are matched.
     if (cards.every(card => card.matched === true)) {
-      handlePauseResume();
-
       console.log('Well done!');
+
+      handlePause();
       nextLevel();
+
       setTimeout(() => navigate("/level-results"), 1000);
     }
-  }, [cards, navigate, nextLevel]);
+  }, [cards, navigate, handlePause, nextLevel]);
 
   return (
     <div className={styles.cardGrid + ' ' + (currentLevel === 3 ? styles.cardLevel3 : '')}>

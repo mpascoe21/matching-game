@@ -1,16 +1,20 @@
 import React from 'react';
-import CountdownTimer from "../CountdownTimer";
+import CountdownTimer from '../CountdownTimer';
+
 import styles from './styles.module.scss';
 
-const HeaderTitle = ({currentPage, currentLevel, teamName, time, isActive, isPaused, setTime}) => {
-
+const HeaderTitle = ({ currentPage, currentLevel, teamName, time, isActive, isPaused, setTime }) => {
   const introHeader = () => {
-    return <p className={styles.introTitle}>Twogether</p>;
+    return <p className={styles.introTitle}>
+      Twogether
+    </p>;
   }
 
   const cardListHeader = () => {
     return <>
-      <p className={styles.cardListTitle}>Level {currentLevel}</p>
+      <p className={styles.cardListTitle}>
+        Level {currentLevel}
+      </p>
       <CountdownTimer
         isActive={isActive}
         isPaused={isPaused}
@@ -20,9 +24,9 @@ const HeaderTitle = ({currentPage, currentLevel, teamName, time, isActive, isPau
   }
 
   return (
-      <div className={styles.titleContainer}>
-        {currentPage === 'cardList' ? cardListHeader() : introHeader()}
-      </div>
+    <div className={styles.titleContainer}>
+      {currentPage === 'cardList' ? cardListHeader() : introHeader()}
+    </div>
   );
 }
 

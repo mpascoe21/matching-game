@@ -4,18 +4,19 @@ import IntroStaffCard from '../IntroStaffCard';
 
 import styles from './styles.module.scss';
 
-const Intro = ({ filteredAllStaff }) => {
-  const cache = new Cache();
+const Intro = ({ filteredStaff }) => {
   const [staffGridArr] = useState(() => {
-    filteredAllStaff.sort(() => Math.random() - 0.5);
+    filteredStaff.sort(() => Math.random() - 0.5);
 
-    return filteredAllStaff.slice(0, 6);
+    return filteredStaff.slice(0, 6);
   });
   const hasLoaded = useRef(false);
 
   useEffect(() => {
     if (hasLoaded.current) return;
     hasLoaded.current = true;
+
+    const cache = new Cache();
 
     // Reset cache
     cache.reset();
