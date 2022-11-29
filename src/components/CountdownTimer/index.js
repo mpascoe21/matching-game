@@ -1,7 +1,17 @@
 import React, {useEffect} from "react";
+import { useNavigate } from 'react-router-dom';
 import Timer from "../Timer";
 
 const CountdownTimer = ({time, setTime, isActive, isPaused}) => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log('TIME LEFT', time);
+    if (time === 0) {
+      navigate("/level-error");
+    }
+  })
+
   useEffect(() => {
     let interval = null;
 

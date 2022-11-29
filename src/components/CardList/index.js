@@ -4,11 +4,8 @@ import Card from '../Card';
 import LevelConfig from '../../config/LevelConfig';
 
 import styles from './styles.module.scss';
-// import Cache from "../../service/Cache";
 
-const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, setTimeLeft, time, handlePauseResume, handleStart}) => {
-  // const cache = new Cache();
-
+const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, handlePauseResume, handleStart}) => {
   const hasLoaded = useRef(false);
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
@@ -48,12 +45,9 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
     // Set amount of cards from config
     setGameArr(staffArr.slice(0, LevelConfig[currentLevel].cards));
 
-    // Set level time from config
-    setTimeLeft(LevelConfig[currentLevel].time * 1000);
-
     // Set current page (for header)
     setCurrentPage('cardList');
-  }, [currentLevel, staffArr, setTimeLeft, hasLoaded, setGameArr]);
+  }, [currentLevel, staffArr, hasLoaded, setGameArr]);
 
   useEffect(() => {
     // Duplicate each member for matching
@@ -64,7 +58,7 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
     setChoiceOne(null);
     setChoiceTwo(null);
     setCards(shuffledCards);
-    setTurns(0);
+    // setTurns(0);
   }, [gameArr]);
 
   //* handle a choice
@@ -111,21 +105,11 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
 
     // Checks if all cards are matched.
     if (cards.every(card => card.matched === true)) {
-      console.log('STOP THE TIMER');
       handlePauseResume();
-      console.log('TIME LEFT', time);
-
-      // console.log('TIme left when all card match', timeLeft);
 
       console.log('Well done!');
       nextLevel();
-      //delay not working
-      navigate("/level-results", [1000]);
-    }
-
-    console.log('TIME LEFT', time);
-    if (time === 0) {
-      navigate("/level-error");
+      setTimeout(() => navigate("/level-results"), 1000);
     }
   }, [cards, navigate, nextLevel]);
 

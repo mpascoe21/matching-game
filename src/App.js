@@ -178,11 +178,9 @@ const App = () => {
               filteredAllStaff={filteredAllStaff}
               currentLevel={currentLevel}
               nextLevel={nextLevel}
-              time={time}
               handleStart={handleStart}
               handlePauseResume={handlePauseResume}
               setCurrentPage={setCurrentPage}
-              setTimeLeft={setTimeLeft}
             />}
           />
           <Route
