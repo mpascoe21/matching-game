@@ -6,7 +6,7 @@ import LevelConfig from '../../config/LevelConfig';
 import styles from './styles.module.scss';
 import Cache from "../../service/Cache";
 
-const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, setTimeLeft, countdown, stopTimer, time, isPaused, setIsPaused, setTime, handlePauseResume, handleReset, handleStart, isActive }) => {
+const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurrentPage, setTimeLeft, time, handlePauseResume, handleStart}) => {
   const cache = new Cache();
 
   const hasLoaded = useRef(false);
@@ -67,21 +67,6 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
     setTurns(0);
   }, [gameArr]);
 
-  // let gameArr = []; //set as state
-// Cuts array dependent on game level
-//   if (currentLevel === 1) {
-//     gameArr = staffArr.slice(0, 3);
-//     setTimeLeft(15);
-//   } else if (currentLevel === 2) {
-//     gameArr = staffArr.slice(0, 6);
-//     setTimeLeft(30);
-//     // console.log('Timeleft in card list:', timeLeft);
-//   } else if (currentLevel === 3) {
-//     gameArr = staffArr.slice(0, 12);
-//     setTimeLeft(45);
-//   }
-
-
   //* handle a choice
   const handleChoice = (card) => {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
@@ -140,10 +125,6 @@ const CardList = ({ staffArr, filteredAllStaff, currentLevel, nextLevel, setCurr
 
     console.log('TIME LEFT', time);
     if (time === 0) {
-      // console.log('redirect');
-      // window.location.replace('level-error');
-      // return;
-
       navigate("/level-error");
     }
   }, [cards, navigate, nextLevel]);

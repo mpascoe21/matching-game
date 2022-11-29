@@ -1,11 +1,8 @@
 .staff {
-  //border: 1px solid greenyellow;
   position: relative;
   display: flex;
-  //width: 210px;
   height: auto;
   width: 120px;
-  //height: 120px;
 
   @media screen and (min-width: 768px) {
     width: 211px;
@@ -15,11 +12,8 @@
     max-height: 160px;
   }
 
-
   .staffImg {
-    //border: 1px solid red;
     bottom: 0;
-    //width: 210px;
     width: 100%;
     height: auto;
 

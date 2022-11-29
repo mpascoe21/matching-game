@@ -1,9 +1,5 @@
-import React, {useEffect, useState, useRef} from "react";
-import styles from './styles.module.scss';
+import React, {useEffect} from "react";
 import Timer from "../Timer";
-import StopTimer from "../StopTimer";
-
-// {timeLeft, setTimeLeft, countdown}
 
 const CountdownTimer = ({time, setTime, isActive, isPaused}) => {
   useEffect(() => {
