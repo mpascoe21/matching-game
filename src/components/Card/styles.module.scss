@@ -1,3 +1,5 @@
+@import '../../scss/variables';
+
 .card {
   position: relative;
   cursor: pointer;
@@ -67,7 +69,7 @@
     position: absolute;
     bottom: 0;
     padding: 5px 10px;
-    background: #486681;
+    background: $color-mid-gray;
     opacity: .78;
     width: 100%;
 
@@ -113,7 +115,7 @@
 .cardBack {
   height: 100%;
   width: 100%;
-  background-color: #27A2C7;
+  background-color: $brand-primary-color;
   display: flex;
   justify-content: center;
   align-items: center;

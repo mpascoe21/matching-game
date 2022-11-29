@@ -1,3 +1,5 @@
+@import '../../scss/variables';
+
 .background {
   padding: 40px;
   background: linear-gradient(120deg,#30a2c5,#272a49) no-repeat;
@@ -35,8 +37,10 @@
 
     p {
       font-family: proxima-nova, sans-serif, Arial, Helvetica;
+      font-weight: 500;
       margin-bottom: 30px;
       line-height: 1.5;
+      color: $color-white;
 
       @media screen and (min-width: 768px) {
         font-size: 18px;
@@ -56,11 +60,11 @@
 
     .button {
       font-family: Prometo;
-      background: #202349;
+      background: $brand-secondary-color;
       font-weight: 700;
       font-size: 20px;
       line-height: 20px;
-      color: white;
+      color: $color-white;
       padding: 13px 20px 10px;
       border-style: none;
       display: inline-block;
