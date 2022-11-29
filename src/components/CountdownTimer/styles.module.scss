@@ -1,5 +1,7 @@
+@import '../../scss/variables';
+
 .counter {
-  background-color: rgb(219, 40, 133);
+  background-color: $brand-tertiary-color;
   height: fit-content;
   width: fit-content;
   padding: 10px 20px;

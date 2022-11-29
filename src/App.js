@@ -145,6 +145,35 @@ const App = () => {
     });
   }, [teams, currentLevel]);
 
+  // // passed to header
+  // let teamName;
+  //
+  // if (staffArr === digitalTeam) {
+  //   teamName = 'Digital Team';
+  //   console.log(teamName);
+  // } else if (staffArr === creativeTeam) {
+  //   teamName = 'Creative Team';
+  //   console.log(teamName);
+  // } else if (staffArr === clientServicesTeam) {
+  //   teamName = 'Client Services Team';
+  //   console.log(teamName);
+  // } else if (staffArr === partnerMarketingTeam) {
+  //   teamName = 'Partner Marketing Team';
+  //   console.log(teamName);
+  // } else if (staffArr === mediaTeam) {
+  //   teamName = 'Media Team';
+  //   console.log(teamName);
+  // } else if (staffArr === strategyTeam) {
+  //   teamName = 'Strategy Team';
+  //   console.log(teamName);
+  // } else if (staffArr === businessSupportTeam) {
+  //   teamName = 'Business Support Team';
+  //   console.log(teamName);
+  // } else if (staffArr === managementTeam) {
+  //   teamName = 'Management Team';
+  //   console.log(teamName);
+  // }
+
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
