@@ -6,7 +6,6 @@ const CountdownTimer = ({time, setTime, isActive, isPaused}) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log('TIME LEFT', time);
     if (time === 0) {
       navigate("/level-error");
     }

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, lazy, Suspense } from 'react';
+import React, { useEffect, useRef, useState, useMemo, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Cache from './service/Cache';
 import Loading from './components/Loading';
@@ -15,7 +15,7 @@ const LevelResults = lazy(() => import('./components/LevelResults'));
 const LevelError = lazy(() => import('./components/LevelError'));
 
 const App = () => {
-  const cache = new Cache();
+  const cache = useMemo(() => new Cache(), []);
 
   const [currentPage, setCurrentPage] = useState();
   const [isActive, setIsActive] = useState(false);
@@ -100,52 +100,53 @@ const App = () => {
   }, [allStaff]);
 
   useEffect(() => {
-    if (0 !== filteredAllStaff.length) return;
+    setFilteredAllStaff((existingFilteredStaff) => {
+      if (0 !== existingFilteredStaff.length) return existingFilteredStaff;
 
-    console.log('All Staff', allStaff);
+      const filtered = allStaff.filter(
+        (teamMember) => !(teamMember.image.mobile || teamMember.image.desktop).includes('team-avatar') ? teamMember : null
+      );
 
-    const filtered = allStaff.filter(
-      (teamMember) => !(teamMember.image.mobile || teamMember.image.desktop).includes('team-avatar') ? teamMember : null
-    );
+      // Cache filtered staff array to avoid keep rebuilding array data
+      cache.set('all_staff_filtered', filtered, 1);
 
-    // Cache filtered staff array to avoid keep rebuilding array data
-    cache.set('all_staff_filtered', filtered, 1)
-
-    setFilteredAllStaff(filtered);
-    console.log('setFilteredAllStaff', filtered);
-  }, []);
-
-  useEffect(() => {
-    if (0 !== teams.length) return;
-
-    filteredAllStaff.forEach((staffMember) => {
-      staffMember.department.forEach((department) => {
-        if (!teams.hasOwnProperty(department)) {
-          teams[department] = [];
-        }
-        teams[department].push(staffMember);
-      });
+      return filtered;
     });
-
-    // Cache teams to avoid keep rebuilding array data
-    cache.set('teams', teams, 1);
-
-    setTeams(teams);
-  }, [filteredAllStaff, cache]);
+  }, [cache, allStaff]);
 
   useEffect(() => {
-    let teamsArr = [];
+    setTeams((existingTeams) => {
+      if (0 !== existingTeams.length) return existingTeams;
 
-    teamsArr.push(Object.values(teams));
+      const newTeams = {};
+      filteredAllStaff.forEach((staffMember) => {
+        staffMember.department.forEach((department) => {
+          if (!newTeams.hasOwnProperty(department)) {
+            newTeams[department] = [];
+          }
+          newTeams[department].push(staffMember);
+        });
+      });
 
-    teamsArr[0].sort(() => Math.random() - 0.5);
-    console.log('Randomized Teams arr:', teamsArr);
+      // Cache teams to avoid keep rebuilding array data
+      cache.set('teams', newTeams, 1);
 
-    teamsArr = teamsArr[0].filter((team) => team.length >= LevelConfig[currentLevel].cards);
+      return newTeams;
+    });
+  }, [cache, filteredAllStaff]);
 
-    setStaffArr(teamsArr[0]);
-    console.log('Staff Arr in App', staffArr);
-  }, [teams]);
+  useEffect(() => {
+    setStaffArr(() => {
+      let teamsArr = [];
+      teamsArr.push(Object.values(teams));
+      teamsArr[0].sort(() => Math.random() - 0.5);
+      teamsArr = teamsArr[0].filter(
+        (team) => team.length >= LevelConfig[currentLevel].cards
+      );
+
+      return teamsArr[0];
+    });
+  }, [teams, currentLevel]);
 
   return (
     <BrowserRouter>
