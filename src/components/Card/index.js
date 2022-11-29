@@ -10,7 +10,7 @@ const Card = ({ card, handleChoice, flipped, disabled, currentLevel }) => {
   }
 
   return (
-    <div className={styles.card + ' ' + (flipped ? styles.flipped : '') + ' ' + (currentLevel === 1 ? styles.cardLevel1 : currentLevel === 2 ? styles.cardLevel2 : styles.cardLevel3)}>
+    <div className={styles.card + ' ' + (flipped ? styles.flipped : '') + ' ' + styles['cardLevel' + currentLevel]}>
       <div className={styles.cardFront}>
         <img className={styles.cardFrontImg} src={card.image.desktop} alt="card front"/>
         <div className={styles.staffDetails}>
