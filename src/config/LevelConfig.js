@@ -8,7 +8,7 @@ const LevelConfig = {
     cards: 6
   },
   3: {
-    time: 45,
+    time: 90,
     cards: 12
   }
 };
