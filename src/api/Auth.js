@@ -25,13 +25,13 @@ const Auth = {
 
     // If we don't have a token already lets get one
     if (null === cache.get('auth_token')) {
-      this.login().then((response) => {
-        console.log(response);
-
+      Auth.login().then((response) => {
         // Save token to be used later
         cache.set('auth_token', response.token, 1);
 
         return response.token;
+      }).catch((e) => {
+        console.log('auth error:', e);
       });
     }
 

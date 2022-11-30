@@ -11,18 +11,19 @@ const AuditLog = {
     formData.append('dimensionA', data.dimension.a ?? '');
     formData.append('dimensionB', data.dimension.b ?? '');
     formData.append('dimensionC', data.dimension.c ?? '');
-    formData.append('extra', JSON.stringify(data.extra));
 
-    console.log('AUDIT LOG:', formData);
+    for (const key in data.extra) {
+      formData.append(`extra[${key}]`, data.extra[key]);
+    }
 
     return new Promise((resolve, reject) => {
       fetch(process.env.REACT_APP_HOST_API + '/api/processor', {
         method: 'POST',
-        headers: {
+        headers: new Headers({
           'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          'Authorization': ['Bearer', Auth.getToken()].join(' '),
-        },
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Authorization': `Bearer ${Auth.getToken()}`,
+        }),
         body: new URLSearchParams(formData)
       })
         .then(response => response.json())

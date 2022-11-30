@@ -58,8 +58,6 @@ const App = () => {
     cache.set('level_completed', currentLevel, 1);
     cache.set('results', (LevelConfig[currentLevel].time * 1000) - time, 1);
 
-    console.log("COMPLETED IN:", (LevelConfig[currentLevel].time * 1000) - time);
-
     AuditLog.process({
       type: 'level_completed',
       event: {
@@ -78,6 +76,8 @@ const App = () => {
         "Attempts": turns,
         "Team": teamName,
       }
+    }).then(() => {}).catch((e) => {
+      console.log('audit error:', e);
     });
   };
 
