@@ -12,7 +12,7 @@
 
   .copyContainer {
     h1 {
-      font-family: Prometo;
+      font-family: Prometo, sans-serif, Arial, Helvetica;
       font-size: 40px;
       margin-bottom: 20px;
 
@@ -33,7 +33,7 @@
   }
 
   .button {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif, Arial, Helvetica;
     font-size: 20px;
     font-weight: 700;
     padding: 10px 20px;
@@ -52,13 +52,28 @@
 }
 
 .completed1 {
-  background: url('../../../public/images/img-level1.jpg') top center no-repeat;
+  background: url('../../../public/images/img-level1.webp') top center no-repeat;
 }
 
 .completed2 {
-  background: url('../../../public/images/img-level2.jpg') top center no-repeat;
+  background: url('../../../public/images/img-level2.webp') top center no-repeat;
 }
 
 .completed3 {
-  background: url('../../../public/images/img-level3.jpg') top center no-repeat;
+  background: url('../../../public/images/img-level3.webp') top center no-repeat;
+}
+
+
+body.no-webp {
+  .completed1 {
+    background: url('../../../public/images/img-level1.jpg') top center no-repeat;
+  }
+
+  .completed2 {
+    background: url('../../../public/images/img-level2.jpg') top center no-repeat;
+  }
+
+  .completed3 {
+    background: url('../../../public/images/img-level3.jpg') top center no-repeat;
+  }
 }
