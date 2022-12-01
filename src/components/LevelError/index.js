@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from './styles.module.scss';
 
 const LevelError = ({setCurrentPage}) => {
 
-  setCurrentPage('errorPage');
+  useEffect(() => {
+    setCurrentPage('errorPage');
+  }, [setCurrentPage]);
 
   return (
     <div className={styles.bgContainer}>
