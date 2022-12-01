@@ -6,7 +6,6 @@ const Loading = () => {
     <div className={styles.loading}>
       <p>Loading...</p>
       <div className={styles.loader}></div>
-      {/*<img src="/images/icon-spinner-solid.svg" alt=""/>*/}
     </div>
   );
 }
