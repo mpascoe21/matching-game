@@ -1,4 +1,5 @@
 import Cache from '../service/Cache';
+import Api from '../Api';
 
 const Auth = {
   login: () => {
@@ -25,7 +26,7 @@ const Auth = {
 
     // If we don't have a token already lets get one
     if (null === cache.get('auth_token')) {
-      Auth.login().then((response) => {
+      Api.Auth.login().then((response) => {
         // Save token to be used later
         cache.set('auth_token', response.token, 1);
 
