@@ -2,11 +2,12 @@ import React from 'react';
 import HeaderTitle from '../HeaderTitle';
 
 import styles from './styles.module.scss';
+import Image from "../Image";
 
 const Header = ({ currentPage, currentLevel, time, isActive, isPaused, setTime }) => {
   return (
     <div className={styles.header + ' ' + (currentPage === 'cardList' ? styles.gameHeader : '')}>
-      <img src='/images/img-rhino-logo.png' alt="Twogether Rhino Logo"/>
+      <Image className={styles.logo} src='/images/img-rhino-logo' alt='Twogether rhino logo' />
       <div>
         <HeaderTitle
           currentPage={currentPage}
