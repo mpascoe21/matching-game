@@ -3,10 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Cache from './service/Cache';
 import Loading from './components/Loading';
 import Header from './components/Header';
-import Team from './api/Team';
+import Api from './Api';
 
 // import styles from './App.module.scss';
-import AuditLog from "./api/AuditLog";
 import LevelConfig from "./config/LevelConfig";
 import TeamsData from "./data/TeamsData";
 
@@ -58,7 +57,7 @@ const App = () => {
     cache.set('level_completed', currentLevel, 1);
     cache.set('results', (LevelConfig[currentLevel].time * 1000) - time, 1);
 
-    AuditLog.process({
+    Api.AuditLog.process({
       type: 'level_completed',
       event: {
         category: 'Level',
@@ -84,7 +83,7 @@ const App = () => {
   const hasLoaded = useRef(false);
 
   const getStaffData = () => {
-    Team.get().then((response) => {
+    Api.Team.get().then((response) => {
       setAllStaff(response);
     }).catch((e) => console.error(e));
   };

@@ -1,4 +1,4 @@
-import Auth from './Auth';
+import Api from '../Api';
 
 const AuditLog = {
   process: (data) => {
@@ -22,7 +22,7 @@ const AuditLog = {
         headers: new Headers({
           'Accept': 'application/json',
           'Content-Type': 'application/x-www-form-urlencoded',
-          'Authorization': `Bearer ${Auth.getToken()}`,
+          'Authorization': `Bearer ${Api.Auth.getToken()}`,
         }),
         body: new URLSearchParams(formData)
       })

@@ -5,12 +5,10 @@ const Team = {
     const cache = new Cache();
 
     if (null !== cache.get('staff')) {
-      console.log('loading staff from cache:', cache.get('staff').length);
       resolve(cache.get('staff'));
       return;
     }
 
-    console.log('fetching latest staff');
     fetch(process.env.REACT_APP_TEAM_DATA_URL, {
       method: 'GET',
       headers: {
