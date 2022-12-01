@@ -3,7 +3,7 @@ import CountdownTimer from '../CountdownTimer';
 
 import styles from './styles.module.scss';
 
-const HeaderTitle = ({ currentPage, currentLevel, teamName, time, isActive, isPaused, setTime }) => {
+const HeaderTitle = ({ currentPage, currentLevel, time, isActive, isPaused, setTime }) => {
   const introHeader = () => {
     return <p className={styles.introTitle}>
       Twogether
@@ -20,7 +20,6 @@ const HeaderTitle = ({ currentPage, currentLevel, teamName, time, isActive, isPa
         isPaused={isPaused}
         setTime={setTime}
         time={time}/>
-      {/*<p>{teamName}</p>*/}
     </>;
   }
 
