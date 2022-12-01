@@ -78,7 +78,7 @@
     }
 
     h4 {
-      font-family: Prometo;
+      font-family: Prometo, sans-serif, Arial, Helvetica;
       font-weight: 500;
       font-size: 14px;
       line-height: 18px;
@@ -126,14 +126,4 @@
   .cardBackImg {
     width: 36%;
   }
-}
-
-.flipped .cardFront {
-  transform: rotateY(0deg);
-  transition-delay: 0.2s;
-}
-
-.flipped .cardBack {
-  transform: rotateY(90deg);
-  transition-delay: 0s;
 }

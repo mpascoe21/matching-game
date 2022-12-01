@@ -1,12 +1,28 @@
+@import '../../scss/variables';
+
 .cardBack {
-  height: 365px;
-  width: 450px;
-  background-color: #27A2C7;
+  height: 100%;
+  width: 100%;
+  background-color: $brand-primary-color;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+  margin: auto;
+
+  picture {
+    display: flex;
+    justify-content: center;
+  }
 
   .cardBackImg {
-    height: 100px;
+    width: 36%;
+    justify-self: center;
+  }
+
+  &.flipped {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
   }
 }
