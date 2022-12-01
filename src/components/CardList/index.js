@@ -22,8 +22,6 @@ const CardList = ({ staffArr, currentLevel, nextLevel, setTurns, setCurrentPage,
 
     //* shuffle cards
     staffArr.sort(() => Math.random() - 0.5);
-
-    console.log('Staff arr in card list.', staffArr);
   }, [staffArr]);
 
   useEffect(() => {
@@ -35,7 +33,7 @@ const CardList = ({ staffArr, currentLevel, nextLevel, setTurns, setCurrentPage,
 
     // Set current page (for header)
     setCurrentPage('cardList');
-  }, [currentLevel, staffArr, hasLoaded, setGameArr, setCurrentPage]);
+  }, [currentLevel, staffArr, hasLoaded, setGameArr, setCurrentPage, cards]);
 
   useEffect(() => {
     // Duplicate each member for matching
@@ -46,7 +44,7 @@ const CardList = ({ staffArr, currentLevel, nextLevel, setTurns, setCurrentPage,
     setChoiceOne(null);
     setChoiceTwo(null);
     setCards(shuffledCards);
-  }, [gameArr]);
+  }, [gameArr, setChoiceOne, setChoiceTwo, setCards]);
 
   //* handle a choice
   const handleChoice = (card) => {
@@ -59,14 +57,13 @@ const CardList = ({ staffArr, currentLevel, nextLevel, setTurns, setCurrentPage,
     const resetTurn = () => {
       setChoiceOne(null);
       setChoiceTwo(null);
-      setTurns(prevTurns => prevTurns + 1);
+      // setTurns(prevTurns => prevTurns + 1);
       setDisabled(false);
     }
 
     if (choiceOne && choiceTwo) {
       setDisabled(true)
       if (choiceOne.slug === choiceTwo.slug) {
-        console.log('cards match');
         setCards((prevCards) => {
           return prevCards.map(card =>
             (card.slug === choiceOne.slug) ? { ...card, matched: true } : card
@@ -74,13 +71,11 @@ const CardList = ({ staffArr, currentLevel, nextLevel, setTurns, setCurrentPage,
         });
         resetTurn();
       } else {
-        console.log('cards do not match');
-
         //* delays the turn of un-matched cards by 0.5s.
         setTimeout(() => resetTurn(), 500);
       }
     }
-  }, [choiceOne, choiceTwo, setTurns]);
+  }, [choiceOne, choiceTwo, setTurns, setChoiceOne, setChoiceTwo, setDisabled, setCards]);
 
 
   useEffect(() => {
@@ -88,11 +83,8 @@ const CardList = ({ staffArr, currentLevel, nextLevel, setTurns, setCurrentPage,
 
     // Checks if all cards are matched.
     if (cards.every(card => card.matched === true)) {
-      console.log('Well done!');
-
       handlePause();
       nextLevel();
-
       setTimeout(() => navigate("/level-results"), 1000);
     }
   }, [cards, navigate, handlePause, nextLevel]);
