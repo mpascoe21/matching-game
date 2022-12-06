@@ -40,9 +40,9 @@ const App = () => {
     return cache.get('current_level') ?? 1;
   });
 
-  console.log('currentLevel', currentLevel);
+  // console.log('currentLevel', currentLevel);
   const [time, setTime] = useState(LevelConfig[currentLevel].time * 1000);
-  console.log('currentLevel', currentLevel);
+  // console.log('currentLevel', currentLevel);
 
   const handleStart = () => {
     setIsActive(true);
