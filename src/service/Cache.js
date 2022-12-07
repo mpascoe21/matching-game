@@ -49,6 +49,7 @@ class Cache {
   reset() {
     this.remove('current_level');
     this.remove('level_completed');
+    this.remove('level_results');
   }
 
   remove(key) {

@@ -54,10 +54,13 @@ const App = () => {
   }
 
   const nextLevel = () => {
+    if (undefined === LevelConfig[currentLevel]) return;
+
     cache.set('current_level', currentLevel + 1, 1);
     cache.set('level_completed', currentLevel, 1);
     cache.set('results', (LevelConfig[currentLevel].time * 1000) - time, 1);
 
+    console.log('audit time left', time);
     Api.AuditLog.process({
       type: 'level_completed',
       event: {
@@ -73,12 +76,13 @@ const App = () => {
       extra: {
         "Time Left": time,
         "Completed In": (LevelConfig[currentLevel].time * 1000) - time,
-        "Attempts": turns,
+        "Cards turned": turns,
         "Team": teamName,
       }
     }).then(() => {}).catch((e) => {
       // console.log('audit error:', e);
     });
+    console.log('2-CARD TURNS', turns);
   };
 
   const hasLoaded = useRef(false);
@@ -201,6 +205,7 @@ const App = () => {
           <Route
             path='/level-error'
             element={<LevelError
+              currentLevel={currentLevel}
               setCurrentPage={setCurrentPage}
             />}
           />
@@ -210,6 +215,7 @@ const App = () => {
               currentLevel={currentLevel}
               levelCompleted={levelCompleted}
               setCurrentPage={setCurrentPage}
+              turns={turns}
             />}
           />
         </Routes>

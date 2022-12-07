@@ -21,6 +21,16 @@
       }
     }
 
+    h2 {
+      font-family: Prometo, sans-serif, Arial, Helvetica;
+      font-size: 24px;
+      margin-bottom: 20px;
+
+      @media screen and (min-width: 768px) {
+        font-size: 36px;
+      }
+    }
+
     h4 {
       font-family: proxima-nova, sans-serif, Arial, Helvetica;
       font-size: 20px;
@@ -28,6 +38,40 @@
 
       @media screen and (min-width: 768px) {
         font-size: 30px;
+      }
+    }
+
+    .table {
+      margin: auto;
+      padding-bottom: 30px;
+
+      @media screen and (min-width: 768px) {
+        border-spacing: 10px 5px;
+      }
+
+      th {
+        font-family: proxima-nova, sans-serif, Arial, Helvetica;
+        font-size: 16px;
+        padding: 0 5px;
+        color: $color-dark-blue;
+        background-color: $brand-tertiary-color;
+        border: 1px solid transparent;
+
+        @media screen and (min-width: 768px) {
+          font-size: 24px;
+          padding: 0 10px;
+        }
+      }
+
+      td {
+        font-family: Prometo, sans-serif, Arial, Helvetica;
+        padding: 0 5px;
+        padding-bottom: 5px;
+
+        @media screen and (min-width: 768px) {
+          font-size: 24px;
+          padding: 0 10px;
+        }
       }
     }
   }
@@ -61,10 +105,6 @@
 
 .completed3 {
   background: url('../../../public/images/img-level3.webp') top center no-repeat;
-
-  //.button {
-  //  display: none;
-  //}
 }
 
 

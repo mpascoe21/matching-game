@@ -57,7 +57,7 @@ const CardList = ({ staffArr, currentLevel, nextLevel, setTurns, setCurrentPage,
     const resetTurn = () => {
       setChoiceOne(null);
       setChoiceTwo(null);
-      // setTurns(prevTurns => prevTurns + 1);
+      setTurns(prevTurns => prevTurns + 1);
       setDisabled(false);
     }
 

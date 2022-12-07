@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import Cache from '../../service/Cache';
 
 import styles from './styles.module.scss';
-import InitialResultsData from "../../data/ResultsData";
+import InitialResultsData from "../../data/InitialResultsData";
 
-const LevelResults = ({setCurrentPage}) => {
+const LevelResults = ({setCurrentPage, turns}) => {
   const cache = new Cache();
   const hasLoaded = useRef(false);
   const [title, setTitle] = useState('');
@@ -22,48 +22,70 @@ const LevelResults = ({setCurrentPage}) => {
     return results;
   });
 
-    // const [level1Results, setLevel1Results] = useState(() => {
-    //   if (levelCompleted === 1) {
-    //     let results = localStorage.getItem('level_1_results');
-    //     return results;
-    //   }
-    // })
+  const [levelResults, setLevelResults] = useState(() => {
+    const levelResultsCache = cache.get('level_results');
 
-  // console.log('current level', currentLevel);
+    if (null !== levelResultsCache) {
+      return levelResultsCache;
+    }
+
+    return InitialResultsData;
+  });
+
+
   console.log('level completed', levelCompleted);
   console.log('RESULTS', results);
-  // console.log('L1 RESULTS', level1Results);
-
-  if (levelCompleted === 1) {
-    localStorage.setItem('level_1_results', results);
-    console.log('level_1_results', localStorage.getItem('level_1_results'));
-  } else if (levelCompleted === 2) {
-    localStorage.setItem('level_2_results', results);
-    console.log('level_2_results', localStorage.getItem('level_2_results'));
-  } else if (levelCompleted === 3) {
-    localStorage.setItem('level_3_results', results);
-    console.log('level_3_results', localStorage.getItem('level_3_results'));
-  }
 
   const resultsMessage = () => {
     if (levelCompleted === 1 || levelCompleted === 2) {
       return <h4>
-        You completed level {levelCompleted} in {results} seconds!
+        You completed level {levelCompleted} in {results} seconds and turned {turns * 2} cards!
       </h4>
     } else if (levelCompleted === 3) {
       return <>
-        <h4>
-          You completed level 1 in {localStorage.getItem('level_1_results')} seconds!
-        </h4>
-        <h4>
-          You completed level 2 in {localStorage.getItem('level_2_results')} seconds!
-        </h4>
-        <h4>
-          You completed level 3 in {localStorage.getItem('level_3_results')} seconds!
-        </h4>
+        <h2>Here are your results</h2>
+        <table className={styles.table}>
+          <tr className={styles.tableRow}>
+            <th>Level</th>
+            <th>Seconds</th>
+            <th>Cards turned</th>
+            <th>Attempts</th>
+          </tr>
+          <tr className={styles.tableRow}>
+            <td>1</td>
+            <td>{levelResults.level1.completedIn}</td>
+            <td>{levelResults.level1.cardTurns * 2}</td>
+            <td>{levelResults.level1.attempts}</td>
+          </tr>
+          <tr className={styles.tableRow}>
+            <td>2</td>
+            <td>{levelResults.level2.completedIn}</td>
+            <td>{levelResults.level2.cardTurns * 2}</td>
+            <td>{levelResults.level2.attempts}</td>
+          </tr>
+          <tr className={styles.tableRow}>
+            <td>3</td>
+            <td>{levelResults.level3.completedIn}</td>
+            <td>{levelResults.level3.cardTurns * 2}</td>
+            <td>{levelResults.level3.attempts}</td>
+          </tr>
+        </table>
       </>
     }
   }
+
+  const updateLevelResults = (results, turns) => {
+    const curLevelResults = { ...levelResults };
+    curLevelResults['level' + levelCompleted] = {
+      completedIn: results,
+      cardTurns: turns,
+      attempts: levelResults['level' + levelCompleted].attempts
+    };
+
+    cache.set('level_results', curLevelResults);
+
+    setLevelResults(curLevelResults);
+  };
 
   useEffect(() => {
     if (hasLoaded.current) return;
@@ -72,6 +94,8 @@ const LevelResults = ({setCurrentPage}) => {
     if (levelCompleted === 3) {
       setBtnText('Play Again');
     }
+
+    updateLevelResults(results, turns);
 
     const titles = [
       'Great job!',
@@ -83,29 +107,7 @@ const LevelResults = ({setCurrentPage}) => {
     setTitle(titles[Math.floor(Math.random() * titles.length)]);
 
     setCurrentPage('resultsPage');
-  }, [setCurrentPage]);
-
-  // const resultsMessage = () => {
-  //   if (levelCompleted === 1 || levelCompleted === 2) {
-  //     return <h4>
-  //       You completed level {levelCompleted} in {results} seconds!
-  //     </h4>
-  //   } else if (levelCompleted === 3) {
-  //     return <>
-  //       <h4>
-  //         You completed level 1 in {localStorage.getItem('level_1_results')} seconds!
-  //       </h4>
-  //       <h4>
-  //         You completed level 2 in {localStorage.getItem('level_2_results')} seconds!
-  //       </h4>
-  //       <h4>
-  //         You completed level 3 in {localStorage.getItem('level_3_results')} seconds!
-  //       </h4>
-  //     </>
-  //   }
-  // }
-
-  // console.log(InitialResultsData);
+  }, [setCurrentPage, updateLevelResults]);
 
   return (
     <div className={styles.bgContainer + ' ' + styles['completed' + levelCompleted]}>
@@ -113,9 +115,6 @@ const LevelResults = ({setCurrentPage}) => {
         <h1>
           {title}
         </h1>
-        {/*<h4>*/}
-        {/*  You completed level {levelCompleted} in {results} seconds!*/}
-        {/*</h4>*/}
         <div>
           {resultsMessage()}
         </div>
