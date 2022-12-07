@@ -93,6 +93,7 @@ const LevelResults = ({setCurrentPage, turns}) => {
 
     if (levelCompleted === 3) {
       setBtnText('Play Again');
+      cache.reset();
     }
 
     updateLevelResults(results, turns);
@@ -107,6 +108,7 @@ const LevelResults = ({setCurrentPage, turns}) => {
     setTitle(titles[Math.floor(Math.random() * titles.length)]);
 
     setCurrentPage('resultsPage');
+
   }, [setCurrentPage, updateLevelResults]);
 
   return (
