@@ -12,7 +12,6 @@ const LevelError = ({currentLevel, setCurrentPage}) => {
     if (null !== levelResultsCache) {
       return levelResultsCache;
     }
-
     return InitialResultsData;
   });
 

@@ -5,7 +5,6 @@ import Loading from './components/Loading';
 import Header from './components/Header';
 import Api from './Api';
 
-// import styles from './App.module.scss';
 import LevelConfig from "./config/LevelConfig";
 import TeamsData from "./data/TeamsData";
 
@@ -40,9 +39,7 @@ const App = () => {
     return cache.get('current_level') ?? 1;
   });
 
-  // console.log('currentLevel', currentLevel);
   const [time, setTime] = useState(LevelConfig[currentLevel].time * 1000);
-  // console.log('currentLevel', currentLevel);
 
   const handleStart = () => {
     setIsActive(true);
@@ -80,7 +77,6 @@ const App = () => {
         "Team": teamName,
       }
     }).then(() => {}).catch((e) => {
-      // console.log('audit error:', e);
     });
     console.log('2-CARD TURNS', turns);
   };
@@ -154,15 +150,11 @@ const App = () => {
       }
 
       teamsArr.sort(() => Math.random() - 0.5);
-      // console.log('teamsArr', teamsArr);
 
       const selTeamsArr = teamsArr[0];
       selTeamsArr.staff.forEach((staffMember) => {
         staffMember.matched = false;
       });
-
-      // console.log("selected teams array:", selTeamsArr);
-      // console.log("Selected Department:", TeamsData[selTeamsArr.key]);
 
       setTeamName(TeamsData[selTeamsArr.key]);
 

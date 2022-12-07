@@ -32,10 +32,6 @@ const LevelResults = ({setCurrentPage, turns}) => {
     return InitialResultsData;
   });
 
-
-  console.log('level completed', levelCompleted);
-  console.log('RESULTS', results);
-
   const resultsMessage = () => {
     if (levelCompleted === 1 || levelCompleted === 2) {
       return <h4>

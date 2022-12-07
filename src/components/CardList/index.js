@@ -77,7 +77,6 @@ const CardList = ({ staffArr, currentLevel, nextLevel, setTurns, setCurrentPage,
     }
   }, [choiceOne, choiceTwo, setTurns, setChoiceOne, setChoiceTwo, setDisabled, setCards]);
 
-
   useEffect(() => {
     if (cards.length === 0) return;
 
