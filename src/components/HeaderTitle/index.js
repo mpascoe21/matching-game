@@ -5,7 +5,8 @@ import styles from './styles.module.scss';
 
 const HeaderTitle = ({ currentPage, currentLevel, time, isActive, isPaused, setTime }) => {
   const introHeader = () => {
-    return <p className={styles.introTitle}>
+    return
+    <p className={styles.introTitle}>
       Twogether
     </p>;
   }

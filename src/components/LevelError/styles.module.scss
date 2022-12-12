@@ -44,6 +44,7 @@
     text-decoration: none;
     background-color: $brand-primary-color;
     transition: all .3s ease-in-out;
+    border: none;
 
     &:hover {
       color: $brand-secondary-color;
